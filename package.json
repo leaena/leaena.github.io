@@ -4,10 +4,8 @@
   "private": true,
   "dependencies": {
     "hexo-broken-link-checker": "^1.0.3",
-    "hexo-livereload": "^0.1.0",
-    "hexo-local-image": "0.0.2",
-    "hexo-migrator-image": "^1.0.3",
-    "hexo-migrator-wordpress": "^0.1.1",
+    "hexo-generator-feed": "^0.1.2",
+    "hexo-generator-sitemap": "^0.1.4",
     "hexo-renderer-ejs": "*",
     "hexo-renderer-jade": "^0.1.0",
     "hexo-renderer-less": "^0.1.1",

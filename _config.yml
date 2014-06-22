@@ -87,7 +87,8 @@ exclude_generator:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: github
+  repo: https://github.com/leaena/leaena.github.io.git
 
 #Plugins
 plugins:
@@ -98,3 +99,11 @@ link_checker:
   enabled: true
   storage_dir: temp/link_checker
   silent_logs: false
+
+feed:
+    type: atom
+    path: atom.xml
+    limit: 20
+
+sitemap:
+    path: sitemap.xml
