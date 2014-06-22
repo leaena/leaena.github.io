@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="Lindsey Smith"><meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a software engineering bootcamp. Now I blog a mixture of programming, women in tech, life, and cats."><title>Setting Up a Database Node Module on a Node/Express Server With Sequelize&nbsp;&mdash; Leaena.com</title><link href="/favicon.png" rel="icon"><link rel="alternate" href="/atom.xml" title="config.title" type="application/atom.xml"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet"><link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/stylesheets/app.css"></head><body><header id="page-header"><div id="masthead"><h1 id="site-title"><a href="/">Leaena.com</a></h1><p id="site-slogan">Coding, cats, California, feminism, and zombies. Your average girl blogger.</p></div></header><section id="content"><article class="post"><h2>Setting Up a Database Node Module on a Node/Express Server With Sequelize</h2><div class="meta">Dec 29 2013 in <a href="/categories/Tech-Tips/">Tech Tips</a>&ensp;</div><p>If you just need to get a node server up and running with very few lines of code then you hopefully already know about <a href="http://nodejs.org/" target="_blank" rel="external">Node</a>/<a href="http://expressjs.com/" target="_blank" rel="external">Express</a> (if you don’t, the Express website has <a href="http://expressjs.com/guide.html" target="_blank" rel="external">a pretty good intro tutorial</a> and has <a href="http://expressjs.com/api.html#app.use" target="_blank" rel="external">good documentation to get started serving up static assets</a>). If you need all of that and to be able to route queries to a database quickly and easily then you might not know about the awesome power of <a href="http://sequelizejs.com/" target="_blank" rel="external">Sequelize</a>.</p>
+<p>If you haven’t messed around with a ORM (<a href="http://en.wikipedia.org/wiki/Object-relational_mapping" target="_blank" rel="external">Object Relational Mapper</a>, a program that maps your code to a database) before, Sequelize is a really straight forward one to start with.</p>
+<pre><code>var voteTable = sequelize.define('vote', {
+  video_id: Sequelize.STRING,
+  timestamp: Sequelize.INTEGER,
+  vote: Sequelize.INTEGER
+});
+
+voteTable.sync();`&lt;/pre&gt;
+Once I had my server set up (<span class="keyword">and</span> installed the sequelize dependencies). This was the line <span class="keyword">of</span> code I needed <span class="keyword">to</span> <span class="keyword">use</span> <span class="keyword">to</span> create a <span class="keyword">new</span> table <span class="keyword">for</span> my current group project. Sequelize automatically includes extra columns like unique id <span class="keyword">and</span> created at/updated at timestamps (there are ways <span class="keyword">to</span> tell it not <span class="keyword">to</span> too).
+
+The rest <span class="keyword">of</span> the initial set up is easy too, but it's well documented over <span class="keyword">in</span> the Sequelize docs. The <span class="keyword">fun</span> part comes <span class="keyword">when</span> you can start <span class="keyword">to</span> make your database more modular. The first thing I did was <span class="keyword">to</span> take out the actual username/password information from my database connection. I stored them <span class="keyword">as</span> an object <span class="keyword">in</span> a separate JavaScript file (so I could add it <span class="keyword">to</span> [.gitignore](https:<span class="comment">//help.github.com/articles/ignoring-files) and not share my passwords with the world).</span>
+&lt;pre&gt;`<span class="comment">//module.exports allows us to use this code in other places as a node module, </span>
+<span class="comment">//we'll see it again when I make the database calls modular</span>
+<span class="keyword">module</span>.exports = { 
+  database: 'database_name', 
+  username: 'username', 
+  password: 'secret_password',
+  host: 'host_url',
+  port: <span class="number">5432</span>,
+  dialect: 'postgres', <span class="comment">//obviously you don't have to use PostgreSQL</span>
+  native: <span class="keyword">true</span> <span class="comment">//required for Heroku Postgres (I'll cover that in another post)</span>
+};`&lt;/pre&gt;
+I saved that snipped <span class="keyword">to</span> a file called `db_config.js` at the root directory <span class="keyword">and</span> <span class="keyword">then</span> created my main database <span class="keyword">module</span> <span class="keyword">in</span> the subfolder `/controller/` called `database.js`. So <span class="keyword">to</span> have access <span class="keyword">to</span> the <span class="keyword">private</span> config object, all I need <span class="keyword">to</span> <span class="keyword">do</span> is set up my dependencies, import the `db_config` file, <span class="keyword">and</span> I can start using my config variables <span class="keyword">to</span> connect <span class="keyword">to</span> my database:
+&lt;pre&gt;`var Sequelize = require('sequelize');
+var pg = require('pg').native; <span class="comment">//again this line is specific to using a Postgres database</span>
+var config = require('../db_config');
+
+var sequelize = <span class="keyword">new</span> Sequelize(config.database, config.username, config.password, {
+  host: config.host,
+  port: config.port,
+  dialect: config.dialect,
+  native: config.native <span class="comment">//Heroku Postgress again</span>
+});`&lt;/pre&gt;
+Now between that code <span class="keyword">and</span> my creating a table I have full access <span class="keyword">to</span> a database, but now I need <span class="keyword">to</span> get this all into my main `app.js` simple server I created <span class="keyword">with</span> Node/Express. This is a super easy leap. First I create my functions <span class="keyword">to</span> send <span class="keyword">and</span> retrieve data <span class="keyword">in</span> `/controller/database.js`:
+&lt;pre&gt;`
+<span class="keyword">module</span>.exports.createVote = <span class="keyword">function</span>(req, res){
+  <span class="comment">//code to bundle up the created object and save it do the database</span>
+};
+
+<span class="keyword">module</span>.exports.getVotes = <span class="keyword">function</span>(req, res){
+  <span class="comment">//code to find votes based on specific requests from the user</span>
+};`&lt;/pre&gt;
+Now <span class="keyword">to</span> have access <span class="keyword">to</span> these functions (which are a part <span class="keyword">of</span> the `database.js` node <span class="keyword">module</span>, thanks <span class="keyword">to</span> the <span class="keyword">module</span>.exports object which is [a feature <span class="keyword">of</span> Node](http:<span class="comment">//nodejs.org/api/modules.html#modules_the_module_object)) I only need to require `database.js` in my main server app and call the functions where I need them:</span>
+&lt;pre&gt;`var database = require('./controllers/database');
+
+<span class="comment">//many lines later</span>
+app.post('/votes', database.createVote);
+app.get('/votes/:vidID', database.getVotes);`&lt;/pre&gt;
+The `/votes/:vidID` is a [handy trick <span class="keyword">of</span> Express](http:<span class="comment">//expressjs.com/api.html#app.param) to pass information to the server. The value gets attached to the `req.param.vidID` property so I can use it when I request specific information from the server. For example if I wanted to query for results from a video ID of 123 I would send a post request to `/votes/123` and then my `req.param.vidID === 123`.</span>
+
+One last trick, <span class="keyword">in</span> Sequelize <span class="keyword">when</span> you query the database you get back quite a few more rows than you might expect. When I query my `voteTable` (the one I only explicitly created three columns <span class="keyword">for</span>?) I get back something that looks like this monster:
+&lt;pre&gt;` { dataValues: 
+     { video_id: '<span class="number">7</span>QBgK0_RbkE', timestamp: <span class="number">2</span>, vote: <span class="number">1</span>, id: <span class="number">192</span>,
+       createdAt: Sun Dec <span class="number">22</span> <span class="number">2013</span> <span class="number">22</span>:<span class="number">19</span>:<span class="number">33</span> GMT-<span class="number">0800</span> (PST),
+       updatedAt: Sun Dec <span class="number">22</span> <span class="number">2013</span> <span class="number">22</span>:<span class="number">19</span>:<span class="number">33</span> GMT-<span class="number">0800</span> (PST) },
+    __options: 
+     { timestamps: <span class="keyword">true</span>, createdAt: 'createdAt', updatedAt: 'updatedAt',
+       deletedAt: 'deletedAt', touchedAt: 'touchedAt', instanceMethods: {}, classMethods: {}, 
+       validate: {}, freezeTableName: <span class="keyword">false</span>, underscored: <span class="keyword">false</span>, syncOnAssociation: <span class="keyword">true</span>,
+       paranoid: <span class="keyword">false</span>, whereCollection: [Object], schema: <span class="keyword">null</span>, schemaDelimiter: '',
+       language: 'en', defaultScope: <span class="keyword">null</span>, scopes: <span class="keyword">null</span>, hooks: [Object], omitNull: <span class="keyword">false</span>, 
+       hasPrimaryKeys: <span class="keyword">false</span> },
+    hasPrimaryKeys: <span class="keyword">false</span>,
+    selectedValues: 
+     { video_id: '<span class="number">7</span>QBgK0_RbkE', timestamp: <span class="number">2</span>, vote: <span class="number">1</span>, id: <span class="number">192</span>,
+       createdAt: Sun Dec <span class="number">22</span> <span class="number">2013</span> <span class="number">22</span>:<span class="number">19</span>:<span class="number">33</span> GMT-<span class="number">0800</span> (PST),
+       updatedAt: Sun Dec <span class="number">22</span> <span class="number">2013</span> <span class="number">22</span>:<span class="number">19</span>:<span class="number">33</span> GMT-<span class="number">0800</span> (PST) },
+    __eagerlyLoadedAssociations: [],
+    isDirty: <span class="keyword">false</span>,
+    isNewRecord: <span class="keyword">false</span>,
+    daoFactoryName: 'votes',
+    daoFactory: 
+     { options: [Object], name: 'votes', tableName: 'votes', rawAttributes: [Object],
+       daoFactoryManager: [Object], associations: {}, scopeObj: {}, primaryKeys: {},
+       primaryKeyCount: <span class="number">0</span>, hasPrimaryKeys: <span class="keyword">false</span>, autoIncrementField: 'id', DAO: [Object] } 
+ } `&lt;/pre&gt;
+And that's just **ONE** entry <span class="keyword">in</span> the database! To fix that add an option <span class="keyword">to</span> your sequelize query: `{raw: <span class="keyword">true</span>}` so the query would look like:
+&lt;pre&gt;`voteTable.findAll(query, {raw: <span class="keyword">true</span>})`&lt;/pre&gt;
+And one entry <span class="keyword">of</span> output would be:
+&lt;pre&gt;`{ video_id: <span class="attribute">'T</span>-D1KVIuvjA',
+    timestamp: <span class="number">2</span>,
+    vote: <span class="number">1</span>,
+    id: <span class="number">1</span>,
+    createdAt: Sat Dec <span class="number">21</span> <span class="number">2013</span> <span class="number">14</span>:<span class="number">55</span>:<span class="number">42</span> GMT-<span class="number">0800</span> (PST),
+    updatedAt: Sat Dec <span class="number">21</span> <span class="number">2013</span> <span class="number">14</span>:<span class="number">55</span>:<span class="number">42</span> GMT-<span class="number">0800</span> (PST) }
+</code></pre><p>That is enough database tricks for today. If you want to just stare at my code for a while to create &amp; retrieve votes from our database you can find <a href="https://gist.github.com/leaena/8174127" target="_blank" rel="external">my gist here</a> (with sanitized login info for the db_config). The real (still being modded by the team) code is <a href="https://github.com/leaena/videoheatmap" target="_blank" rel="external">forked on my GitHub</a>. I have a few more of these in the works from my adventures slinging code and I hope to post a few more before Hack Reactor starts back up and I lose all free time again.</p>
+</article><nav id="article-pagination"><a href="/2013/12/cloud-postgresql-servers-with-heroku/" title="Previous article: Cloud Postgre Sql Servers With Heroku" class="prev">&larr; Previous article</a><a href="/2013/12/week-6-whole-new-ballgame/" title="Next article: Week 6: Whole New Ballgame" class="next">Next article &rarr;</a></nav></section><footer id="page-footer"><section><nav id="footer-menu"><ul><li><a href="/about">About</a></li><li><a href="/archives">Archive</a></li><li><a href="http://github.com/leaena/leaena.github.io">Source</a></li><li><a href="/atom.xml">Feed</a></li></ul></nav></section></footer></body></html>

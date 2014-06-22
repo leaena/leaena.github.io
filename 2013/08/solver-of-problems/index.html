@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="Lindsey Smith"><meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a software engineering bootcamp. Now I blog a mixture of programming, women in tech, life, and cats."><title>Solver of Problems&nbsp;&mdash; Leaena.com</title><link href="/favicon.png" rel="icon"><link rel="alternate" href="/atom.xml" title="config.title" type="application/atom.xml"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet"><link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/stylesheets/app.css"></head><body><header id="page-header"><div id="masthead"><h1 id="site-title"><a href="/">Leaena.com</a></h1><p id="site-slogan">Coding, cats, California, feminism, and zombies. Your average girl blogger.</p></div></header><section id="content"><article class="post"><h2>Solver of Problems</h2><div class="meta">Aug 12 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div><p>I figured it out! Sort of on my own, sort of studying how others had “solved” it in different languages (a few of the “solutions” didn’t seem to work). Array Addition I is now my bitch. Also the next 10 easy problems from <a href="http://coderbyte.com" target="_blank" rel="external">Coderbyte</a> are on my <a href="http://github.com/leaena/coderbyte" target="_blank" rel="external">GitHub</a>. 6 more to go (well 7 actually, I gave up on ArithGeo, but the solving of Array Addition gives me hope that I will figure it out tomorrow). <strong>Problem description:</strong> Using the JavaScript language, have the function ArrayAdditionI(<strong>arr</strong>) take the array of numbers stored in <strong>arr</strong> and return the string <strong>true</strong> if any combination of numbers in the array can be added up to equal the <strong>largest number</strong> in the array, otherwise return the string <strong>false</strong>. For example: if <strong>arr</strong> contains [4, 6, 23, 10, 1, 3] the output should return <strong>true</strong> because 4 + 6 + 10 + 3 = 23. The array will not be empty, will not contain all the same elements, and may contain negative numbers. <strong>And my solution:</strong> (basically grabs the largest value out of a provided array and it runs through all the possible sum combinations of all the other numbers to see if one of those sums equals the largest values)</p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">ArrayAdditionI</span><span class="params">(arr)</span> { </span>
+  <span class="transposed_variable">arr.</span>sort(<span class="function"><span class="keyword">function</span><span class="params">(a,b)</span>{<span class="title">return</span> <span class="title">a</span> - <span class="title">b</span>})</span>
+  var largest = <span class="transposed_variable">arr.</span>pop();
+  var <span class="built_in">sum</span> = <span class="number">0</span>;
+
+  <span class="keyword">for</span> (var i = <span class="number">0</span>; i &amp;amp;lt; <span class="transposed_variable">arr.</span><span class="built_in">length</span>; i++){
+    <span class="built_in">sum</span> += arr<span class="matrix">[i]</span>;
+
+    <span class="keyword">for</span> (var j = <span class="number">0</span>; j &amp;amp;lt; <span class="transposed_variable">arr.</span><span class="built_in">length</span>; j++){
+      <span class="keyword">if</span> (i != j) {
+        <span class="built_in">sum</span> += arr<span class="matrix">[j]</span>;
+        <span class="keyword">if</span> (<span class="built_in">sum</span> == largest) {
+          <span class="keyword">return</span> true;
+        }
+      }
+    }
+
+    <span class="keyword">for</span> (var k = <span class="number">0</span>; k &amp;amp;lt; <span class="transposed_variable">arr.</span><span class="built_in">length</span>; k++) {
+      <span class="keyword">if</span> (i != k) {
+        <span class="built_in">sum</span> -= arr<span class="matrix">[k]</span>;
+        <span class="keyword">if</span> (<span class="built_in">sum</span> == largest) {
+          <span class="keyword">return</span> true;
+        }
+      }
+    }
+
+    <span class="built_in">sum</span> = <span class="number">0</span>;
+  }
+
+  <span class="keyword">return</span> false;      
+}
+</code></pre></article><nav id="article-pagination"><a href="/2013/08/jack-standard/" title="Previous article: Jack Standard" class="prev">&larr; Previous article</a><a href="/2013/08/coderbyteandme/" title="Next article: Coderbyte and Me" class="next">Next article &rarr;</a></nav></section><footer id="page-footer"><section><nav id="footer-menu"><ul><li><a href="/about">About</a></li><li><a href="/archives">Archive</a></li><li><a href="http://github.com/leaena/leaena.github.io">Source</a></li><li><a href="/atom.xml">Feed</a></li></ul></nav></section></footer></body></html>

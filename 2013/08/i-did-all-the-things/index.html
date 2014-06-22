@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="Lindsey Smith"><meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a software engineering bootcamp. Now I blog a mixture of programming, women in tech, life, and cats."><title>I Did All the Things&nbsp;&mdash; Leaena.com</title><link href="/favicon.png" rel="icon"><link rel="alternate" href="/atom.xml" title="config.title" type="application/atom.xml"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet"><link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/stylesheets/app.css"></head><body><header id="page-header"><div id="masthead"><h1 id="site-title"><a href="/">Leaena.com</a></h1><p id="site-slogan">Coding, cats, California, feminism, and zombies. Your average girl blogger.</p></div></header><section id="content"><article class="post"><h2>I Did All the Things</h2><div class="meta">Aug 15 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div><p>Finally finished up the last 6 <a href="http://coderbyte.com" target="_blank" rel="external">Coderbyte</a> challenges. I had planned to finish them on Tuesday but I got home from an all day work “thing”, took a shower and passed out. On Wednesday I had a much-needed pajama party with relatives and watched some old Downton Abbey (season 2, Matthew just got the use of his legs again &#42;sniff&#42;). The last 6 challenges were plagued with me forgetting what variable type I was juggling. Most of my errors were fixed by type conversions. I still believe nothing was as hard as that stupid <a href="https://github.com/leaena/coderbyte/blob/master/17arrayadditioni.js" target="_blank" rel="external">Array Addition</a>. Everything else I was able to piece together on my own, but I don’t think I would have ever solved that one without a bit of a nudge from other coders. I think I need more math logic. I should probably take a class or find a good book (oh the torture) on the subject. I plan on reading through <a href="http://www.amazon.com/Professional-JavaScript-Developers-Nicholas-Zakas/dp/1118026691" target="_blank" rel="external">Professional JavaScript for Web Developers</a> over the weekend and maybe running through all 26 again (no peeking!) on Sunday as prep for Tuesday’s interview. After I get in (I need to tone down the bravado), I want to go back and try the harder challenges. Wish me luck on everything! Also, as always, my <a href="http://github.com/leaena/coderbyte/" target="_blank" rel="external">Github</a> with the updates. My favorite code this time was MeanMode which checks to see if the mean and the mode of an array are the same. It’s probably my favorite because I literally couldn’t remember what the mode of an array was and had to look up remedial math stuffs. That was humbling.</p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">MeanMode</span><span class="params">(arr)</span> {  </span>
+  var mode;  
+  var modeCount = <span class="matrix">[]</span>;  
+  var count = <span class="number">0</span>;  
+  var sum = <span class="number">0</span>;  
+
+  <span class="keyword">for</span> (<span class="built_in">i</span> = <span class="number">0</span>; <span class="built_in">i</span> &amp;amp;lt; <span class="transposed_variable">arr.</span><span class="built_in">length</span>; <span class="built_in">i</span>++) <span class="cell">{  
+    sum += arr[i];
+
+    if(!modeCount[arr[i]-<span class="number">1</span>]){   
+      modeCount[arr[i]-<span class="number">1</span>] = <span class="number">0</span>;  
+    }</span>
+
+    modeCount<span class="matrix">[arr[i]</span>-<span class="number">1</span>] += <span class="number">1</span>;  
+  }  
+  <span class="keyword">for</span>(<span class="built_in">i</span> = <span class="number">0</span>; <span class="built_in">i</span> &amp;amp;lt; <span class="transposed_variable">modeCount.</span><span class="built_in">length</span>; <span class="built_in">i</span>++) <span class="cell">{
+
+    if(modeCount[i] &amp;amp;gt; count) {  
+      mode = i+<span class="number">1</span>;  
+      count = modeCount[i];  
+    }</span>  
+  }
+
+  var mean = sum/<span class="transposed_variable">arr.</span><span class="built_in">length</span>;
+
+  <span class="keyword">if</span> (mean === mode) <span class="cell">{  
+    return <span class="number">1</span>;  
+  }</span> <span class="keyword">else</span> <span class="cell">{  
+    return <span class="number">0</span>;  
+  }</span>  
+}  
+</code></pre></article><nav id="article-pagination"><a href="/2013/08/doctor-javascript/" title="Previous article: Doctor Java Script?" class="prev">&larr; Previous article</a><a href="/2013/08/jack-standard/" title="Next article: Jack Standard" class="next">Next article &rarr;</a></nav></section><footer id="page-footer"><section><nav id="footer-menu"><ul><li><a href="/about">About</a></li><li><a href="/archives">Archive</a></li><li><a href="http://github.com/leaena/leaena.github.io">Source</a></li><li><a href="/atom.xml">Feed</a></li></ul></nav></section></footer></body></html>
