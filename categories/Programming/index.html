@@ -1,1 +1,748 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="Lindsey Smith"><meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a software engineering bootcamp. Now I blog a mixture of programming, women in tech, life, and cats."><title>Programming&mdash;Leaena.com</title><link href="/favicon.png" rel="icon"><link rel="alternate" href="/atom.xml" title="config.title" type="application/atom.xml"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet"><link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/stylesheets/app.css"></head><body><header id="page-header"><div id="masthead"><h1 id="site-title"><a href="/">Leaena.com</a></h1><p id="site-slogan">Coding, cats, California, feminism, and zombies. Your average girl blogger.</p></div></header><section id="content"><header><h2>Programming</h2></header><ul class="article-list"><li><article><h3><a href="/2014/06/bored-again-time-to-create/">Bored Again   Time to Create</a></h3><div class="meta">Jun 13 2014 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li><li><article><h3><a href="/2014/03/week-2-ticking-all-the-checkboxes/">Week 2: Ticking All the Checkboxes</a></h3><div class="meta">Mar 28 2014 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li><li><article><h3><a href="/2014/02/i-feel-legit/">I Feel Legit!</a></h3><div class="meta">Feb 16 2014 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li><li><article><h3><a href="/2013/11/inside-my-head-learning-javascript/">Inside My Head: Learning Java Script</a></h3><div class="meta">Nov 30 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li><li><article><h3><a href="/2013/11/time-complexity-in-algorithms/">Time Complexity in Algorithms</a></h3><div class="meta">Nov 29 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li><li><article><h3><a href="/2013/10/lindsey-learns-apis/">Lindsey Learns Ap Is</a></h3><div class="meta">Oct 23 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li><li><article><h3><a href="/2013/10/regex-for-fun-and-profit/">Regex for Fun and Profit</a></h3><div class="meta">Oct 17 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li><li><article><h3><a href="/2013/10/ux-design-vs-sticky-nav/">Ux Design vs Sticky Nav</a></h3><div class="meta">Oct 12 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li><li><article><h3><a href="/2013/08/acceptance/">Acceptance</a></h3><div class="meta">Aug 28 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li><li><article><h3><a href="/2013/08/on-track/">on Track</a></h3><div class="meta">Aug 27 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li></ul></section><footer id="page-footer"><section><nav id="footer-menu"><ul><li><a href="/about">About</a></li><li><a href="/archives">Archive</a></li><li><a href="http://github.com/leaena/leaena.github.io">Source</a></li><li><a href="/atom.xml">Feed</a></li></ul></nav></section></footer></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Category: Programming | Leaena.com</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Leaena.com">
+<meta property="og:url" content="http://leaena.github.io/categories/Programming/">
+<meta property="og:site_name" content="Leaena.com">
+<meta property="og:description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Leaena.com">
+<meta name="twitter:description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+  
+    <link rel="alternative" href="/atom.xml" title="Leaena.com" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="../../css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://leaena.github.io"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="post-bored-again-time-to-create" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/06/bored-again-time-to-create/" class="article-date">
+  <time datetime="2014-06-14T04:31:34.000Z" itemprop="datePublished">Jun 13 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/06/bored-again-time-to-create/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/06/bored-again-time-to-create/">Bored Again - Time to Create</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><strong>On Repeat</strong></p>
+<iframe src="https://embed.spotify.com/?uri=spotify:track:3bJ73tmHnoeBfDZ4pLZqZ8" width="300" height="380" frameborder="0"></iframe>
+
+<p>Tomorrow is my three-month reunion for Hack Reactor. I’ve done some cool things since I graduated, but I’m still not doing everything I wanted to. I want to be the change I want to see in the world, or however that goes. I just became a mentor for Hackbright Academy so I feel a little less adrift without a social purpose, but I’m still itching to create things.</p>
+<p>I’ve started knitting again, but it’s not solving the itch. I have half-finished things on the needles again, but I’m still bored. I think there is no hope for me. I just need to be coding.</p>
+<p>About a year ago. I was sitting in a crappy gelato shop in downtown Burlingame with two of my best friends who already lived in California. I was still living and working in Oregon, but I knew I needed to be moving on soon. I was getting restless. That day we made a pact, all of us before this crazy thing called a dream turned us into a software engineer, a software engineer, and a novel writer. We were The Clever Girls and we were going to create something amazing together eventually. Part of that dream is how I ended up down here and now I’m realizing I need to start doing my share.</p>
+<p>So I’m going to dive back into programming completely solo, completely public, with my work, as shitty as a lot of it probably is, committed for all to see on Github. I hope soon the three of us can get back on the same page and actually make something amazing. For now I’ll just leave you with the copy I wrote for a fake starter page a year ago when The Clever Girls were still fresh in my mind:</p>
+<blockquote>
+<p>“Computing is too important to be left to men.”<br><small style="color: #999999;">Karen Spärck Jones</small></p>
+</blockquote>
+<p>Women are underrepresented in computing not because they aren’t good with computers but because they are never given the opportunity to fall in love with them. <em>The Code Girls</em>‘ goal is to create fun, educational games geared toward younger girls that will teach them the basics of how programs work. Using an easily readable language like Python, girls will code their way through the platform challenges and create fully functioning programs as they progress.</p>
+<p><strong>Code Girls present Octavia and the Clockwork Code</strong> is the first game in the series. It tells the tale of 12-year-old Octavia, a precocious tween who sets out to win a mechanical competition. Along the way she codes her way through puzzles and helps out friends and competition alike.</p>
+<p>The Code Girls is a fledgling startup created by three women who are passionate about women in computing.</p>
+<p><strong>Lindsey - The Creator</strong></p>
+<p>Founder, primary coder and herder of cats. Lindsey always wanted a game like this when she was growing up. Now that she’s technically grown up, she decided to take the idea into her own hands.</p>
+<p><strong>Ava - The Teacher</strong></p>
+<p>Our resident little girl expert. Ava has a Masters in Education and a passion for teaching children using methods that create a deeper understanding.</p>
+<p><strong>Alyssa - The Storyteller</strong></p>
+<p>World builder and character flaw creator. Alyssa creates and drives the stories we tell. She lives and breathes the Code Girl worlds.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/clever-girls">clever girls</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/inspiration">inspiration</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/octavia">octavia</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-2-ticking-all-the-checkboxes" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/03/week-2-ticking-all-the-checkboxes/" class="article-date">
+  <time datetime="2014-03-29T05:50:05.000Z" itemprop="datePublished">Mar 28 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/03/week-2-ticking-all-the-checkboxes/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/03/week-2-ticking-all-the-checkboxes/">Week 2: Ticking All the Checkboxes</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>How is it possible that I’ve already been working for Udacity for two weeks?!</p>
+<p>I have done real tangible things since last week (I did real, tangible things my first week but nothing I could really point you to). This week, I integrated Github linking!! If you have an account on Udacity, you can now link your Github account to it <a href="https://www.udacity.com/account#!/linked-accounts" target="_blank" rel="external">here</a>. This doesn’t actually do much more at the moment, but it’s all a part of a master plan. If you don’t have a Udacity account (why not?!) or aren’t using Github, here’s an action shot from my account:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/v1396072152/github_on_udacity_dgpebo.png" alt="My first contribution to Udacity"></p>
+<p>I’m settling in to my place a little more (I also discovered the spider I threw outside was not Selma, but Selma is in fact outside now too). I have a new whiteboard that is currently just practical (groceries and upcoming things), but I’m sure it will end up with weird pictures of animals and penises.</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,w_612/v1396072062/2014-03-27_08_17_12_pbukzw.jpg" alt="The Whiteboard of Doom"></p>
+<p>My plans this weekend involve groceries and finally getting a San Mateo County library card, so I’m pretty excited!</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Udacity">Udacity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/work">work</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-i-feel-legit" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/02/i-feel-legit/" class="article-date">
+  <time datetime="2014-02-17T02:49:22.000Z" itemprop="datePublished">Feb 16 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/02/i-feel-legit/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/02/i-feel-legit/">I Feel Legit!</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>One of my teammates just notified me that Helix had a paragraph (and video link!) in a <a href="http://t.co/dXUM8PCout" target="_blank" rel="external">Forbes tech article</a> yesterday!</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Helix">Helix</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/forbes">forbes</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-inside-my-head-learning-javascript" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/11/inside-my-head-learning-javascript/" class="article-date">
+  <time datetime="2013-11-30T21:06:16.000Z" itemprop="datePublished">Nov 30 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/11/inside-my-head-learning-javascript/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/11/inside-my-head-learning-javascript/">Inside My Head: Learning JavaScript</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>I have had a very productive weekend so far (and it’s only Saturday!). I am spending some of my day today going back through my easy <a href="http://coderbyte.com/" target="_blank" rel="external">Coderbyte</a> solutions and cleaning most of them up. I will also be adding in comments for most of the lines explaining my logic. So a lot of the files will look like this:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="function"><span class="keyword">function</span> <span class="title">FirstReverse</span><span class="params">(str)</span> {</span>
+  <span class="keyword">return</span> str.split(<span class="string">""</span>)  <span class="comment">//splits the string into an array of characters</span>
+            .reverse()  <span class="comment">//reverses the array</span>
+            .join(<span class="string">""</span>);  <span class="comment">//joins the array back into a string, with no space between the characters</span>
+}
+</pre></td></tr></table></figure>
+
+<p>This is actually a lot of fun for me. Now that we’re getting into more abstract concepts like MVCs and servers it’s nice to just go back and power through some JavaScript code and understand exactly what it’s doing.</p>
+<p>As always, you can find my <a href="https://github.com/leaena/coderbyte" target="_blank" rel="external">coderbyte solutions on GitHub</a> (I will be posting updates to it throughout the day), but I feel like I need to start adding a caveat, because of the amount of people who have said they found my blog looking for coderbyte solutions. Just staring at my code isn’t going to make you understand JavaScript. You need to do it for yourself. If you’re brand new to JavaScript, just seeing the cool tricks is not going to make you a programmer. I really recommend things like <a href="https://www.udacity.com/" target="_blank" rel="external">Udacity</a>, <a href="http://www.codecademy.com/" target="_blank" rel="external">Codecademy</a> and other sites that talk about the fundamentals of comp sci/programming.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/coderbyte">coderbyte</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/javascript">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-time-complexity-in-algorithms" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/11/time-complexity-in-algorithms/" class="article-date">
+  <time datetime="2013-11-30T01:09:20.000Z" itemprop="datePublished">Nov 29 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/11/time-complexity-in-algorithms/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/11/time-complexity-in-algorithms/">Time Complexity in Algorithms</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Time complexity is a useful concept in programming. It’s essential for job interviews, but beyond that to really be a good programmer you need to know how cumbersome your algorithm is going to be. For 10 items, something that takes 2 seconds per item is only 20 seconds, but what if you have a million items?</p>
+<p>In general, time complexity is measured by how long it takes a number of items (n) to be processed. It is the relationship between the number of things you have to do and the work to be done. Something that takes the same amount of time no matter have much of it you have to do, would be constant time. If I had 10 items or 1 million it would only take me 2 seconds to process. On another extreme is something called the handshake problem. If you only have two people in a room they only have to shake one another’s hands (one handshake). If you have 10 people, they each shake 9 other hands (55 handshakes total, we’ll get to the math in a moment). This is quadratic time.</p>
+<p>Here’s a visual of the common programming time complexities:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/v1391709344/bigo_rqzv9e.png" alt="Time complexities!"></p>
+<p>Lets start with <strong>constant time</strong> again. In programming, constant time is like deciding whether a number is even or odd:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>n % <span class="number">2</span> = ?
+</pre></td></tr></table></figure>
+
+<p>This is just one expression. You run and you’re done. It’s always going to take a certain amount of time, no matter what n you give it. <span style="text-decoration: underline;">In big O notation we would write this as O(1).</span></p>
+<p>Next, my favorite, as far as understanding goes. <strong>Linear time.</strong> In programming, linear time, is like running through a loop of n numbers and doing something.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>; i &lt; n; i++ ){
+   <span class="keyword">do</span> something..
+ }
+</pre></td></tr></table></figure>
+
+<p>The more things (‘n’s) you have, the longer the algorithm is going to take. It’s a 1:1 ratio. If 1 thing takes 1 second, 2 things are going to take 2 seconds. <span style="text-decoration: underline;">This is O(n).</span></p>
+<p><strong>Quadratic time</strong> is worse than linear time. It’s like the handshake problem or in programming terms a for loop within a for loop. For each n we need to run through all the numbers 1 through n.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>; i &lt; n; i++ ){
+   <span class="keyword">for</span>( <span class="keyword">var</span> j = <span class="number">0</span>; j &lt; n; j++ ){
+     <span class="keyword">do</span> something..
+   }
+ }
+</pre></td></tr></table></figure>
+
+<p>Each n thing is done n times. <span style="text-decoration: underline;">This is n * n or in big O terms O(n<sup>2</sup>).</span></p>
+<p><strong>Logarithmic time</strong> is all kinds of magic. It tapers off to a near constant for larger ‘n’s. This is possible because of the magic of halves. In a binary search tree there are only two options to descend, left (options lower than the current value) or right (options higher than the current value). Either choice will cut off roughly half of all the possible values. On the next level, you have the same choice, either you’ve found your value, or you go left or right, halving your options again.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="keyword">while</span> ( low &lt;= high ) {
+   <span class="keyword">var</span> mid = ( low + high ) / <span class="number">2</span>;
+   <span class="keyword">if</span> ( target &lt; list[mid] ){
+     <span class="keyword">var</span> high = mid - <span class="number">1</span>;
+   } <span class="keyword">else</span> <span class="keyword">if</span> ( target &gt; list[mid] ){
+     <span class="keyword">var</span> low = mid + <span class="number">1</span>;
+   } <span class="keyword">else</span> { <span class="keyword">break</span>; }
+ }
+</pre></td></tr></table></figure>
+
+<p>If you’re constantly halving the amount of things you have to check, eventually you hit a roughly constant time for an n search. <span style="text-decoration: underline;">This is O(log n).</span></p>
+<p><em>This post has been brought to you by <a href="http://www.daniweb.com/software-development/computer-science/threads/13488/time-complexity-of-algorithm" target="_blank" rel="external">a forum post on time complexity</a>, bits and pieces of <a href="http://en.wikipedia.org/wiki/Time_complexity" target="_blank" rel="external">the wiki article on time complexity</a>, and <a href="https://www.youtube.com/watch?v=sh4O6DRs26M" target="_blank" rel="external">this inspirational code class ad featuring my lead instructor from his Twitter days</a>.</em></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Interview">Interview</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/big-o">big o</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/knowledge">knowledge</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-lindsey-learns-apis" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/10/lindsey-learns-apis/" class="article-date">
+  <time datetime="2013-10-23T20:14:23.000Z" itemprop="datePublished">Oct 23 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/10/lindsey-learns-apis/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/10/lindsey-learns-apis/">Lindsey Learns APIs</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Starting this countdown to California/Hack Reactor has brought back my love of learning in ways that online classes couldn’t do. I love to learn. I’m the kind of girl that if I don’t know the answer to your question (<a href="http://www.wisegeek.com/what-are-inchworms.htm" target="_blank" rel="external">“Are inch worms an inch long?”</a> - bad example as I do know that they get their name from the way they “inch” forward, but still), I will stop the conversation immediately, whip out my phone and find you the answer. I’m sure I’ve pissed off friends and relatives, but I think they are used to me by now. It’s something that I just <em>have</em> to do. Some people will make up things or say “who cares”, but I really want to get down to the truth, learn a new bit of trivia, something.</p>
+<p>So now that I’m learning more things I keep coming up with questions. Like suddenly the veil has been lifted and JSON isn’t this mythical acronym but something I can actually parse and use. But my brain of course took it a step further. APIs are similar, right? - said my brain. But what exactly <em>are</em> they? I’ve pulled data out of one but it was very hand-holdy. How does that data even get there? How does an app get an API? To Google, my friends.</p>
+<p>According to <a href="http://apievangelist.com/" target="_blank" rel="external">API Evangelist</a>, APIs are tools individuals can use to access companies’/individual apps’ data and functions. They allow external users to access internal info safely. There’s _lots_of stuff on this page though and my eyes kinda glazed over about half a page down. Time for a new track.</p>
+<p>I learn better by doing so maybe make our own little API? Unsurprisingly, the internet has us covered. Let’s <a href="http://blog.andreaolivato.net/programming/create-your-first-api-set-in-php.html" target="_blank" rel="external">Create your first API</a>. This is in PHP and very straightforward. But if you’re like me, you may want something in our own favorite web app language: JavaScript! So let’s go ahead and try <a href="http://coenraets.org/blog/2012/10/creating-a-rest-api-using-node-js-express-and-mongodb/" target="_blank" rel="external">Creating a REST API Using Node.js</a>.</p>
+<p>Obviously I’ve only just scratched the surface of this stuff but I want to try and play around with this and more in my last two weeks of down time. One last link for good measure: <a href="http://lcsd05.cs.tamu.edu/slides/keynote.pdf" target="_blank" rel="external">How to Design a Good API</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/API">API</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-regex-for-fun-and-profit" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/10/regex-for-fun-and-profit/" class="article-date">
+  <time datetime="2013-10-17T14:24:41.000Z" itemprop="datePublished">Oct 17 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/10/regex-for-fun-and-profit/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/10/regex-for-fun-and-profit/">Regex for Fun and Profit</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>I’ve always been a bit intimidated by regex (or <a href="http://en.wikipedia.org/wiki/Regular_expression" target="_blank" rel="external">Regular Expressions</a> for the uninitiated). In a nutshell, regular expressions are these archaic looking bits of symbols that when put together look bizarre but actually are used to search for specific characters in a chunk of text/input. For example <strong>[^0-9]</strong> means search for the first non-numeric character (the ^ is a not, so <strong>[0-9]</strong> would be search for the first <em>numeric</em> character). I’ve used them a few times, but only by looking up other peoples versions and mucking around with it until it it gives me something like what I want.</p>
+<p>Then <a href="http://avagoestohackbright.blogspot.com/" target="_blank" rel="external">Ava</a> introduced me <a href="http://regexcrossword.com/" target="_blank" rel="external">Regex Crossword</a> and I knew that if she could do it I could sure as heck learn it too. I breezed through (or to be more accurate bashed through utterly confused) the introduction and part of the beginner puzzles and then got royally stuck. I had never formally learned regex and still didn’t have a clue what half of it meant. Off I went searching for a good tutorial, which was harder than I thought.</p>
+<p>I first found <a href="http://regex.learncodethehardway.org/" target="_blank" rel="external">Learn Regex the Hard Way</a>, and while I normally like the <a href="http://learncodethehardway.org/" target="_blank" rel="external">Learn Code the Hard Way</a> stuff the regex version isn’t finished and wasn’t really helping. I like interactive things that tell me whether I am even on to the right track of a clue. But then I found <a href="http://regexone.com/" target="_blank" rel="external">RegexOne</a> which checked all my boxes! It gives you a bit of a lesson on each new character and then makes you test it out before you move on to the next lesson. I completed the beginning tutorials on there and decided to try the Crosswords again, feeling much more confident.</p>
+<p>I got stuck again almost immediately. It was time for some good old fashioned cheating. I discovered <a href="http://www.regexper.com/" target="_blank" rel="external">Regexper</a> and at first didn’t think it would be much of a help, but let me tell you, I was wrong. You can copy a regular expression into the text box and it will give you a humanized version with actual words and descriptions. With that in my tool belt I was no longer stuck and am now halfway through the intermediate challenges.</p>
+<p>I’m not sure I’ll ever really <em>enjoy</em> regex, but at least now it doesn’t just look like magic.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/regex">regex</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-ux-design-vs-sticky-nav" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/10/ux-design-vs-sticky-nav/" class="article-date">
+  <time datetime="2013-10-12T15:21:23.000Z" itemprop="datePublished">Oct 12 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/10/ux-design-vs-sticky-nav/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/10/ux-design-vs-sticky-nav/">UX Design vs Sticky Nav</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>An interesting rant from Reuters on <a href="http://blogs.reuters.com/felix-salmon/2013/10/11/kill-the-sticky-nav/" target="_blank" rel="external">end-user hate of sticky navigation bars</a> (those logo/navigation combos that stay on top of your screen even as you scroll down the page). I find myself more and more interested in user experience data. My first love is definitely promoting/encouraging women in technology, but I can be fickle and have more than one love, right?</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/navigation">navigation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/ux">ux</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-acceptance" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/08/acceptance/" class="article-date">
+  <time datetime="2013-08-28T20:30:06.000Z" itemprop="datePublished">Aug 28 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/08/acceptance/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/08/acceptance/">Acceptance</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>You are looking at a HackR! I just got word that I’m officially in the November cohort for <a href="http://hackreactor.com" target="_blank" rel="external">HackReactor</a>! I don’t think I’ve ever been this excited in my life.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/hackreactor">hackreactor</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-on-track" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/08/on-track/" class="article-date">
+  <time datetime="2013-08-28T03:28:48.000Z" itemprop="datePublished">Aug 27 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/08/on-track/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/08/on-track/">On Track</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>2nd interview with <a href="http://hackreactor.com" target="_blank" rel="external">HackReactor</a> today! This time it was an actual tech interview so I was even more nervous. Once again my interviewer was a pleasure to talk to and very calming. I also picked up my new favorite phrase: “You nailed it with a nail gun.” This was in regards to one of the functions I had to implement. It’s crazy how different my experiences with interviewing for two different schools where. <a href="http://appacademy.io/" target="_blank" rel="external">AppAcademy</a> just was not warm and fuzzy at all which I guess is OK, but they just never seemed to care who I was, just what I could do with code. I did OK (got a conditional acceptance pending a final interview) but I felt like they put so much emphasis on logic puzzles, which, heck, shouldn’t they be helping me with in prep to get me a job? I’m also not sure how I feel about the lack of finding out whether I’m some crazy mouth-breather who can’t even interact with people. I just wonder what types of people end up in the class.</p>
+<p>HR on the other hand has been surprisingly FUN to interview with. It hasn’t been exactly easy, but it has been fun to play with JavaScript. The first interview was nice and lite and I got to show off that I knew what recursion was (but forgot to add a base case initially - d’oh). Then the take home work was well designed and pushed me along to learn some jQuery and how to pull data using AJAX. Then the last tech interview had me creating my own versions of some Underscore.js functions which was fun and thought-provoking and definitely tricky but not in a gotcha sort of way but more of a pushing me in the right direction to learn it myself. If this is what the class feels like, sign me up!! HR just seems so nurturing and I <strong>love </strong>to learn.</p>
+<p>I should know if I got in (or if I have to try again, because goddamnit I’m trying again if I don’t make it this time) by Friday. Keep your fingers and toes and eyes crossed for me!</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Interview">Interview</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/hackreactor">hackreactor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/javascript">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="page/2">2</a><a class="page-number" href="page/3">3</a><a class="extend next" rel="next" href="page/2">Next &raquo;</a>
+    </nav>
+  
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:leaena.github.io">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2014 Lindsey Smith<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'leaena';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="../../js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>

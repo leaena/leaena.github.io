@@ -1,1 +1,692 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="Lindsey Smith"><meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a software engineering bootcamp. Now I blog a mixture of programming, women in tech, life, and cats."><title>Archive&mdash;Leaena.com</title><link href="/favicon.png" rel="icon"><link rel="alternate" href="/atom.xml" title="config.title" type="application/atom.xml"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet"><link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/stylesheets/app.css"></head><body><header id="page-header"><div id="masthead"><h1 id="site-title"><a href="/">Leaena.com</a></h1><p id="site-slogan">Coding, cats, California, feminism, and zombies. Your average girl blogger.</p></div></header><section id="content"><header><h2>Archive</h2></header><ul class="article-list"><li><article><h3><a href="/2013/11/time-complexity-in-algorithms/">Time Complexity in Algorithms</a></h3><div class="meta">Nov 29 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li><li><article><h3><a href="/2013/11/week-3-less-work-more-work/">Week 3   Less Work, More... Work?</a></h3><div class="meta">Nov 28 2013 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2013/11/week-2-programmers-do-it-algorithmically/">Week 2   Programmers Do It Algorithmically</a></h3><div class="meta">Nov 24 2013 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2013/11/week-1-hell-week/">Week 1   &quot;Hell Week&quot;</a></h3><div class="meta">Nov 17 2013 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2013/11/week-0-wrapup/">Week 0 Wrapup</a></h3><div class="meta">Nov 9 2013 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2013/11/week-0-day-3/">Week 0, Day 3</a></h3><div class="meta">Nov 6 2013 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2013/11/prequel-week-0-day-1/">Prequel   Week 0, Day 1</a></h3><div class="meta">Nov 4 2013 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2013/11/home/">Home</a></h3><div class="meta">Nov 3 2013 in <a href="/categories/Life/">Life</a>&ensp;</div></article></li><li><article><h3><a href="/2013/10/quiet-except-for-the-singing/">Quiet Except for the Singing</a></h3><div class="meta">Oct 30 2013 in <a href="/categories/Misc/">Misc</a>&ensp;</div></article></li><li><article><h3><a href="/2013/10/lindsey-learns-apis/">Lindsey Learns Ap Is</a></h3><div class="meta">Oct 23 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li></ul></section><footer id="page-footer"><section><nav id="footer-menu"><ul><li><a href="/about">About</a></li><li><a href="/archives">Archive</a></li><li><a href="http://github.com/leaena/leaena.github.io">Source</a></li><li><a href="/atom.xml">Feed</a></li></ul></nav></section></footer></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Archives | Leaena.com</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Leaena.com">
+<meta property="og:url" content="http://leaena.github.io/archives/page/4/">
+<meta property="og:site_name" content="Leaena.com">
+<meta property="og:description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Leaena.com">
+<meta name="twitter:description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+  
+    <link rel="alternative" href="/atom.xml" title="Leaena.com" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://leaena.github.io"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="post-week-2-programmers-do-it-algorithmically" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/11/week-2-programmers-do-it-algorithmically/" class="article-date">
+  <time datetime="2013-11-24T23:57:12.000Z" itemprop="datePublished">Nov 24 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/11/week-2-programmers-do-it-algorithmically/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/11/week-2-programmers-do-it-algorithmically/">Week 2 - Programmers Do It Algorithmically</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>I have less pretty pictures for you this week. The most I saw of the sunshine looked similar to this:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,h_800/v1391709333/2013-11-23-08_25_08-768x1024_iu84fu.jpg" alt="View from the 8th floor"></p>
+<p>At least it was sunshine. It “rained” for like a minute one day and the umbrellas came out en masse. I was perfectly happy in a hoodie, but I definitely felt like an outsider. I might need to buy an umbrella, this whole trying to not look like a tourist thing is harder than I thought. Although I’ve had more people ask me for directions this week than I ever have in my life combined so I think the hair and the nose piercing are good SF camouflage.</p>
+<p>This week was a teensy bit rollercoastery for me. We started out with a fairly easy CSS/fun jQuery tricks problem and then tackled a pretty epic sprint on the <a href="http://en.wikipedia.org/wiki/Eight_queens_puzzle" target="_blank" rel="external">N-Queens</a> problem. N-queens is the idea that you need to place n (a number) of chess queens on an nxn chess board so that none of the queens can attack any other queen. I think they’ve only solved it up to 27 (<a href="http://www.wired.com/wiredenterprise/2013/06/43651/" target="_blank" rel="external"> and that was people from Hack Reactor</a>). I got a little flustered with that one as algorithms were never my strong suit before this (it’s why I got the “conditionally acceptance” at App Academy - thank god, might I add). I think though I’m just being too hard on myself. Not every software engineer deals with something as crazy as the n-queens problem on an everyday basis. Our more traditional daily toy problems (similar to tech interview questions) are fairly straight forward and I can code a <a href="http://en.wikipedia.org/wiki/Bubble_sort" target="_blank" rel="external">bubble sort</a> algorithm in about 5 minutes (maybe 10 with one hand tied behind my back).</p>
+<p>I think that’s what Hack Reactor has done for me more than anything else. It’s made me accept my flaws, but know that everyone has them and there is always more to learn. I’m a good intuitive coder, but I’m no good with the lingo of it. We all are here to learn to become <strong>great</strong> <del datetime="2013-11-24T22:21:58+00:00">coders</del> Software Engineers.</p>
+<p>Short post this week, sorry. I have dinner with friends to go to and my Sunday is too peaceful and sunny (and full of awesome 50th anniversary Doctor Who) for any more words.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../categories/HackReactor">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/doctor-who">doctor who</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/hackreactor">hackreactor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/javascript">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-1-hell-week" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/11/week-1-hell-week/" class="article-date">
+  <time datetime="2013-11-17T22:02:53.000Z" itemprop="datePublished">Nov 17 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/11/week-1-hell-week/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/11/week-1-hell-week/">Week 1 - &quot;Hell Week&quot;</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>This article could easily be subtitled: <strong>Glimmering punctua of pure clarity and childlike wonderment.</strong> But then I’d be jacking my title from Marcus (our lead instructor/one of Hack Reactor’s co-founders). Hell week (as the instructors affectionately call week one) is semi-officially over and I am more content than I have ever been in my entire life. I will admit that as I got ready and rode the train into the city on Monday morning I had my doubts. Was I cut out for this, would anyone like me, was this program going to be totally not what I expected? Let me tell you my friends, it is more (any adjective is useless here) than I can describe.</p>
+<p>On Monday morning I told myself not to be nervous, but the impostor syndrome and general unknown was super strong. The train ride was scary, the solo walk to the building was scary, the first few uncomfortable introductions in the kitchen area where breakfast is served were scary, but I have come to love this sight:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,h_800/v1391709321/2013-11-15-08_37_27-768x1024_sevvst.jpg" alt="944 Market St"></p>
+<p>It’s so typical San Francisco. Teeny entryway wedged between a Payless Shoes and a sketchy looking pawn shop. It’s after you step into the elevator, which is typically a little creaky, and emerge on the top floor that the magic starts:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,w_800/v1391709325/2013-11-15-08_38_39-1024x768_nawvk9.jpg" alt="First Impressions"></p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,h_800/v1391709313/2013-11-12-20_14_25-768x1024_uhdxuc.jpg" alt="It"></p>
+<p>This week has been a blur. We had lectures that ranged from how to be an effective student to the principles of <a href="http://en.wikipedia.org/wiki/Time_complexity" target="_blank" rel="external">time complexity</a> on different <a href="http://en.wikipedia.org/wiki/Data_structure" target="_blank" rel="external">data structures</a>. We implemented our own auto resizing <a href="http://en.wikipedia.org/wiki/Hash_table" target="_blank" rel="external">hash tables</a> (well some of us did, me and my excellent partner, Sara, who started out as a blog stalker apparently and ended up being an awesome lady and I’m glad to call her my friend, got through most of the extra credit work and so got to a point where we had to tackle resizing hash tables). We tried valiantly to learn 30ish names while trying to cram in as much computer science as possible (I can proudly say I know the whole junior class - my cohort). We learned the least and most reasonable places to eat and wander during the day and after dark and we all developed what I think will be a pretty awesome camaraderie that will definitely benefit me for years to come.</p>
+<p>My life has been completely altered in ways I don’t even know how to quantify yet. We’ve covered computer science concepts in the past week that I learned over the course of a year back in college when I first tried to be a computer science major. The thought scared me at first. When I realized we were covering things I had learned before, I was afraid I would feel the same way about them, like I wasn’t good enough to get through them. That was always my fear in college, that I was just fooling myself and everyone around me.</p>
+<p>So I spent at least half of this first week waiting for the other shoe to drop. Technically it did drop, but not in the ways I thought it would. It dropped when I realized that this thing that I can do with my brain and this keyboard is pretty damn amazing. That I am pretty amazing. I can have an off day, my recursion algorithm can go unexpected places and my crafted tests could not pass, but that’s the life of a software engineer. Things don’t just get done by typing out code as fast as your fingers can move, they get done by running into walls, refactoring, researching what other amazing people have done, and bouncing ideas off of your fellow engineers.</p>
+<p>To sum up all that wall of text: Life is pretty damn awesome now and there was nothing hellish about this week.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../categories/HackReactor">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/friends">friends</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/hackreactor">hackreactor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/programming">programming</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-0-wrapup" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/11/week-0-wrapup/" class="article-date">
+  <time datetime="2013-11-10T01:37:57.000Z" itemprop="datePublished">Nov 9 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/11/week-0-wrapup/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/11/week-0-wrapup/">Week 0 Wrapup</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>I meant to post before today, but the picture I wanted to use in this post wasn’t available yet and I managed to get a cold… Everyone at Hackbright was getting sick and Ava’s husband also got a cold, so I guess my time was nigh. Thankfully Ava’s an amazing nurse (she’s strict though, she won’t even let me have a Diet Coke).</p>
+<p>I did have a fun week rest of the week in spite of how I feel today. Thursday we stayed at home and Ava got some awesome work done on her final project and I just played around some more with Angular tutorials and double checked her semi-colons in JavaScript. Thursday night though, was awesome. We did this:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,w_800/v1391709338/1003237_10151991831757188_1403622445_n_r4nysa.jpg" alt="Geek Girls"></p>
+<p>I got to go to my first ever <a href="http://bayareagirlgeekdinners.com/" target="_blank" rel="external">geek girl dinner</a>! Ava hooked me up and I really hope I can go to more in the future. We went to San Jose to visit <a href="http://www.cisco.com/" target="_blank" rel="external">CISCO</a>‘s main campus. It was super inspiring and totally pumped me up for next week. Also they had tasty food and gave us T-shirts and I got yelled at by Ava for saying I was a student and not an engineer. I won’t make that mistake again!</p>
+<p>Yesterday I trekked through three different transit systems to get back down to San Jose by myself to visit my other bestie and have dinner with her family. We had lots of fun and visited the <a href="http://www.sjlibrary.org/" target="_blank" rel="external">giant library</a> next to the SJSU campus. She and I share a ridiculous love of reading and I think she just wanted to rub it in that I will have no time to read for a long while.</p>
+<p>Hack Reactor starts on Monday and I’ve been drinking tea and sitting around in my pajamas all day in hopes of feeling decent by Monday. Wish me luck!</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../categories/HackReactor">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/geeky">geeky</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-0-day-3" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/11/week-0-day-3/" class="article-date">
+  <time datetime="2013-11-06T23:26:45.000Z" itemprop="datePublished">Nov 6 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/11/week-0-day-3/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/11/week-0-day-3/">Week 0, Day 3</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Still pretty quiet here. I’ve been helping <a href="http://avagoestohackbright.blogspot.com/" target="_blank" rel="external">Ava</a> with her game and looking at some basic tutorials for <a href="http://coenraets.org/blog/2011/12/backbone-js-wine-cellar-tutorial-part-1-getting-started/" target="_blank" rel="external">Backbone</a> and <a href="http://net.tutsplus.com/tutorials/javascript-ajax/building-a-web-app-from-scratch-in-angularjs/" target="_blank" rel="external">Angular</a>. Then I got sidetracked into <a href="http://www.openvim.com/tutorial.html" target="_blank" rel="external">learning</a> <a href="http://www2.geog.ucl.ac.uk/~plewis/teaching/unix/vimtutor" target="_blank" rel="external">VIM</a>.</p>
+<p>I <em>did</em> hike up the epicness that is Taylor St on a lunch break with Ava to go look at <a href="https://plus.google.com/100448725560279017918/about?rfmt=s&amp;hl=en&amp;gl=us" target="_blank" rel="external">Huntington Park</a>. The views were amazing and I <strong>love</strong> that I can still wear a T-shirt (no sweater/coat necessary) at all times, even on my evening trek to the BART station and <del>“home”</del> home (Ava was upset by the quotes around the word home so I had to change it).</p>
+<p>On the way up:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,h_800/v1391709288/2013-11-06-12_41_53-768x1024_yrfvhq.jpg" alt="Up Taylor St"></p>
+<p>Looking down:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,h_800/v1391709307/2013-11-06-12_48_19-768x1024_mj3vrz.jpg" alt="Looking Down Powell St"></p>
+<p>Looking at the Bay Bridge through the buildings (another thing I love, it looks like stereotypical San Francisco everywhere, tall buildings, funky old fixtures, and a strange mixture of people types):</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,h_800/v1391709300/2013-11-06-12_47_39-768x1024_p9tbab.jpg" alt="Bay Bridge on California St"></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../categories/HackReactor">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/San-Francisco">San Francisco</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/hackbright">hackbright</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/javascript">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-prequel-week-0-day-1" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/11/prequel-week-0-day-1/" class="article-date">
+  <time datetime="2013-11-05T00:03:00.000Z" itemprop="datePublished">Nov 4 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/11/prequel-week-0-day-1/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/11/prequel-week-0-day-1/">Prequel - Week 0, Day 1</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Hack Reactor starts next Monday, but that doesn’t mean I’m sitting around in my pajamas petting <a href="http://avagoestohackbright.blogspot.com" target="_blank" rel="external">Ava’s</a> dogs (that’s just what I do on Sundays).</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,h_800/v1391709274/2013-11-03-12_49_28-768x1024_ndejpd.jpg" alt="Jabba"></p>
+<p>I’m having a bit of a “take your roommate to class” week. So I’m crashing <a href="http://hackbrightacademy.com" target="_blank" rel="external">Hackbright</a> for the week. It’s really perfect timing for this because they are just starting on their projects so the aren’t as super formal right now.</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/v1391709282/2013-11-04-13_18_36-1024x1024_rwce6p.jpg" alt="Hackbright"></p>
+<p>Just hanging out in a space with coding going on has been amazing. The women are all spread all around the space working on code and randomly chatting. The instructors have been coming around and giving informal talks on subjects that people are getting stuck on (I’m currently listening to a talk on how 3D works). I’ve finished up some of the extra credit prework for HackReactor and I’m going to be going to some awesome tech talks and a <a href="http://bayareagirlgeekdinners.com/" target="_blank" rel="external">Geek Girl Dinner</a> this week!</p>
+<p>I’m definitely less sad now that I’m busy. I’m worried it’s going to crash at some point, but it still hasn’t caught up that I’m actually here for any time longer than a couple weeks so I think the crash might also lead to some excitement about the fact that I’m in a place I want to be and have been working toward for so long.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../categories/HackReactor">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/bootcamp">bootcamp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/hackbright">hackbright</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/hackreactor">hackreactor</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-home" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/11/home/" class="article-date">
+  <time datetime="2013-11-04T00:12:51.000Z" itemprop="datePublished">Nov 3 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/11/home/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/11/home/">Home</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>I made it. I landed in SFO yesterday and here I am sitting in <a href="http://avagoestohackbright.blogspot.com" target="_blank" rel="external">Ava’s</a> apartment in Burlingame and realizing I packed way too many sweaters. Seriously, it started raining in Portland as we were flying to the airport and then I get here and it’s gorgeous - slightly breezy but super sunny.</p>
+<p>In many ways it feels like I was on vacation and now I’m back, fitting right back in to the swing of friends and California. The other half of me wavers between feeling like now is the vacation and realizing that I’m going to be here for a while. At the airport I was so excited but then as I hugged my parents goodbye and entered the queue for TSA I started bawling. This is new and scary and as much as I want this, my safety net is mostly gone. I can’t just drive an hour and end up at my parents’ house.</p>
+<p>I just need to breathe and give myself some time and start doing fun things. And then just tell myself the worst that could happen is I decided after the three months is over that I want to go home and find a job in Portland (I really doubt I will feel that way by that point, but it’s comforting).</p>
+<p>This was supposed to be a happier post, but really I just needed to say everything that I’m thinking. I also want to be able to link to this post a year from now and see how much has changed because this last year has been tremendous. Also palm trees still make me smile.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../categories/Life">Life</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-quiet-except-for-the-singing" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/10/quiet-except-for-the-singing/" class="article-date">
+  <time datetime="2013-10-30T16:44:49.000Z" itemprop="datePublished">Oct 30 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/10/quiet-except-for-the-singing/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/10/quiet-except-for-the-singing/">Quiet Except for the Singing</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>My apartment is almost bare and I’ll be turning in my keys today. My cats are now with my parents so it’s pretty loud there, but here in Salem it’s quiet. Almost. I’ve been singing at the top of my lungs while I clean (don’t judge the music choices too much, they have fun lyrics and I can dance to them as I scrub my shower):</p>
+<iframe src="https://embed.spotify.com/?uri=spotify:user:awkward.lion:playlist:1ZowG9qWiZ6Fmkb7sJwI2N" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../categories/Misc">Misc</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-lindsey-learns-apis" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/10/lindsey-learns-apis/" class="article-date">
+  <time datetime="2013-10-23T20:14:23.000Z" itemprop="datePublished">Oct 23 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/10/lindsey-learns-apis/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/10/lindsey-learns-apis/">Lindsey Learns APIs</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Starting this countdown to California/Hack Reactor has brought back my love of learning in ways that online classes couldn’t do. I love to learn. I’m the kind of girl that if I don’t know the answer to your question (<a href="http://www.wisegeek.com/what-are-inchworms.htm" target="_blank" rel="external">“Are inch worms an inch long?”</a> - bad example as I do know that they get their name from the way they “inch” forward, but still), I will stop the conversation immediately, whip out my phone and find you the answer. I’m sure I’ve pissed off friends and relatives, but I think they are used to me by now. It’s something that I just <em>have</em> to do. Some people will make up things or say “who cares”, but I really want to get down to the truth, learn a new bit of trivia, something.</p>
+<p>So now that I’m learning more things I keep coming up with questions. Like suddenly the veil has been lifted and JSON isn’t this mythical acronym but something I can actually parse and use. But my brain of course took it a step further. APIs are similar, right? - said my brain. But what exactly <em>are</em> they? I’ve pulled data out of one but it was very hand-holdy. How does that data even get there? How does an app get an API? To Google, my friends.</p>
+<p>According to <a href="http://apievangelist.com/" target="_blank" rel="external">API Evangelist</a>, APIs are tools individuals can use to access companies’/individual apps’ data and functions. They allow external users to access internal info safely. There’s _lots_of stuff on this page though and my eyes kinda glazed over about half a page down. Time for a new track.</p>
+<p>I learn better by doing so maybe make our own little API? Unsurprisingly, the internet has us covered. Let’s <a href="http://blog.andreaolivato.net/programming/create-your-first-api-set-in-php.html" target="_blank" rel="external">Create your first API</a>. This is in PHP and very straightforward. But if you’re like me, you may want something in our own favorite web app language: JavaScript! So let’s go ahead and try <a href="http://coenraets.org/blog/2012/10/creating-a-rest-api-using-node-js-express-and-mongodb/" target="_blank" rel="external">Creating a REST API Using Node.js</a>.</p>
+<p>Obviously I’ve only just scratched the surface of this stuff but I want to try and play around with this and more in my last two weeks of down time. One last link for good measure: <a href="http://lcsd05.cs.tamu.edu/slides/keynote.pdf" target="_blank" rel="external">How to Design a Good API</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../categories/Programming">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/API">API</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-regex-for-fun-and-profit" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/10/regex-for-fun-and-profit/" class="article-date">
+  <time datetime="2013-10-17T14:24:41.000Z" itemprop="datePublished">Oct 17 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/10/regex-for-fun-and-profit/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/10/regex-for-fun-and-profit/">Regex for Fun and Profit</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>I’ve always been a bit intimidated by regex (or <a href="http://en.wikipedia.org/wiki/Regular_expression" target="_blank" rel="external">Regular Expressions</a> for the uninitiated). In a nutshell, regular expressions are these archaic looking bits of symbols that when put together look bizarre but actually are used to search for specific characters in a chunk of text/input. For example <strong>[^0-9]</strong> means search for the first non-numeric character (the ^ is a not, so <strong>[0-9]</strong> would be search for the first <em>numeric</em> character). I’ve used them a few times, but only by looking up other peoples versions and mucking around with it until it it gives me something like what I want.</p>
+<p>Then <a href="http://avagoestohackbright.blogspot.com/" target="_blank" rel="external">Ava</a> introduced me <a href="http://regexcrossword.com/" target="_blank" rel="external">Regex Crossword</a> and I knew that if she could do it I could sure as heck learn it too. I breezed through (or to be more accurate bashed through utterly confused) the introduction and part of the beginner puzzles and then got royally stuck. I had never formally learned regex and still didn’t have a clue what half of it meant. Off I went searching for a good tutorial, which was harder than I thought.</p>
+<p>I first found <a href="http://regex.learncodethehardway.org/" target="_blank" rel="external">Learn Regex the Hard Way</a>, and while I normally like the <a href="http://learncodethehardway.org/" target="_blank" rel="external">Learn Code the Hard Way</a> stuff the regex version isn’t finished and wasn’t really helping. I like interactive things that tell me whether I am even on to the right track of a clue. But then I found <a href="http://regexone.com/" target="_blank" rel="external">RegexOne</a> which checked all my boxes! It gives you a bit of a lesson on each new character and then makes you test it out before you move on to the next lesson. I completed the beginning tutorials on there and decided to try the Crosswords again, feeling much more confident.</p>
+<p>I got stuck again almost immediately. It was time for some good old fashioned cheating. I discovered <a href="http://www.regexper.com/" target="_blank" rel="external">Regexper</a> and at first didn’t think it would be much of a help, but let me tell you, I was wrong. You can copy a regular expression into the text box and it will give you a humanized version with actual words and descriptions. With that in my tool belt I was no longer stuck and am now halfway through the intermediate challenges.</p>
+<p>I’m not sure I’ll ever really <em>enjoy</em> regex, but at least now it doesn’t just look like magic.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../categories/Programming">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/regex">regex</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-my-life-is-like-my-nose-piercing" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/10/my-life-is-like-my-nose-piercing/" class="article-date">
+  <time datetime="2013-10-13T05:39:23.000Z" itemprop="datePublished">Oct 12 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/10/my-life-is-like-my-nose-piercing/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/10/my-life-is-like-my-nose-piercing/">My Life is Like My Nose Piercing</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>=<img src="http://res.cloudinary.com/leaena/image/upload/c_scale,h_800/v1391709262/2013-10-12-17_17_40-756x1024_ltjisj.jpg" alt="Nose Pierced!"></p>
+<blockquote>
+<p>It didn’t hit me until my piercer started talking about the aftercare, but this piercing is probably the best thing I could have done to commemorate my new life as a Software Engineer.</p>
+</blockquote>
+<p>It’s hard to see even in the picture above, but I got my nose pierced today (I also put on makeup and tweezed my eyebrows for the photo so I’m feeling pretty damn girly). There are all sorts of reasons I could have said that I got this piercing: I wanted to celebrate leaving behind Oregon for California, I wanted to celebrate my acceptance into Hack Reactor, I wanted the world to know that I’m finally starting to feel OK in my own skin. None of those was the real reason I walked into that shop. In reality I walked in there because I wanted something different. I wanted to be one of the cool kids and get my nose pierced. Even at 27 I still want “in”.</p>
+<p>What I got out of getting my nose pierced was much more than even the symbolism I wanted to attach to it in the first place. After the initial high of wanting my nose pierced, I walked into the store still a little bouncy and chose my jewelry. Then I sat in the chair, saw the needle and the giant tube they were going to stick in my nose, and started to freak out a little. Even knowing that the pain would last for a second as the piercing dude assured me (while making small talk about how awesome San Francisco is in the process) I was tense. Then I got stabbed with a needle, a piece of metal was twisted in to my nose and I looked at myself in the mirror.</p>
+<p>It was a pretty awesome feeling and it wasn’t even about the jewelry. It was when I saw myself in the mirror that all that symbolism that I’d tried to force on this tiny piece of jewelry suddenly settled around me. It was the nose stud, yes, but it was so much more. It was the Lexapro that I started taking about a year ago after a panic attack left me feeling like I was going to die that very minute alone in my apartment while I sobbed on the phone to my mom that I couldn’t breath and my mom was an hour away and probably feeling pretty helpless herself. It was the car keys to my very first car that I bought last year and the moment this year when I first drove on the freeway alone. And it was the feeling I felt when I visited Ava after she moved to Burlingame. It felt like peace and home and like I could become whoever I wanted to be there. It was then that I started to fight for that dream.</p>
+<p>In the end, I will say that I got this nose piercing for Hack Reactor. This nose will take about 4 months before I can safely put new jewelry in it. This program will be over around the same time. Then I can put on a new career and wear “Software Engineer” like a badge of honor (along with some cute/geeky new nose bling).</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../categories/Life">Life</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/crazy">crazy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/nose-piercing">nose piercing</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="../3">&laquo; Prev</a><a class="page-number" href="../..">1</a><a class="page-number" href="../2">2</a><a class="page-number" href="../3">3</a><span class="page-number current">4</span><a class="page-number" href="../5">5</a><a class="page-number" href="../6">6</a><span class="space">&hellip;</span><a class="page-number" href="../8">8</a><a class="extend next" rel="next" href="../5">Next &raquo;</a>
+    </nav>
+  
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:leaena.github.io">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2014 Lindsey Smith<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'leaena';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="../../../js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>

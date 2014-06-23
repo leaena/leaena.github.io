@@ -1,6 +1,178 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="Lindsey Smith"><meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a software engineering bootcamp. Now I blog a mixture of programming, women in tech, life, and cats."><title>Regex for Fun and Profit&nbsp;&mdash; Leaena.com</title><link href="/favicon.png" rel="icon"><link rel="alternate" href="/atom.xml" title="config.title" type="application/atom.xml"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet"><link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/stylesheets/app.css"></head><body><header id="page-header"><div id="masthead"><h1 id="site-title"><a href="/">Leaena.com</a></h1><p id="site-slogan">Coding, cats, California, feminism, and zombies. Your average girl blogger.</p></div></header><section id="content"><article class="post"><h2>Regex for Fun and Profit</h2><div class="meta">Oct 17 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div><p>I’ve always been a bit intimidated by regex (or <a href="http://en.wikipedia.org/wiki/Regular_expression" target="_blank" rel="external">Regular Expressions</a> for the uninitiated). In a nutshell, regular expressions are these archaic looking bits of symbols that when put together look bizarre but actually are used to search for specific characters in a chunk of text/input. For example <strong>[^0-9]</strong> means search for the first non-numeric character (the ^ is a not, so <strong>[0-9]</strong> would be search for the first <em>numeric</em> character). I’ve used them a few times, but only by looking up other peoples versions and mucking around with it until it it gives me something like what I want.</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Regex for Fun and Profit | Leaena.com</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="I’ve always been a bit intimidated by regex (or Regular Expressions for the uninitiated). In a nutshell, regular expressions are these archaic looking bits of symbols that when put together look bizar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Regex for Fun and Profit">
+<meta property="og:url" content="http://leaena.github.io/2013/10/regex-for-fun-and-profit/">
+<meta property="og:site_name" content="Leaena.com">
+<meta property="og:description" content="I’ve always been a bit intimidated by regex (or Regular Expressions for the uninitiated). In a nutshell, regular expressions are these archaic looking bits of symbols that when put together look bizar">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Regex for Fun and Profit">
+<meta name="twitter:description" content="I’ve always been a bit intimidated by regex (or Regular Expressions for the uninitiated). In a nutshell, regular expressions are these archaic looking bits of symbols that when put together look bizar">
+  
+    <link rel="alternative" href="/atom.xml" title="Leaena.com" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://leaena.github.io"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-regex-for-fun-and-profit" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/10/regex-for-fun-and-profit/" class="article-date">
+  <time datetime="2013-10-17T14:24:41.000Z" itemprop="datePublished">Oct 17 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/10/regex-for-fun-and-profit/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      Regex for Fun and Profit
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>I’ve always been a bit intimidated by regex (or <a href="http://en.wikipedia.org/wiki/Regular_expression" target="_blank" rel="external">Regular Expressions</a> for the uninitiated). In a nutshell, regular expressions are these archaic looking bits of symbols that when put together look bizarre but actually are used to search for specific characters in a chunk of text/input. For example <strong>[^0-9]</strong> means search for the first non-numeric character (the ^ is a not, so <strong>[0-9]</strong> would be search for the first <em>numeric</em> character). I’ve used them a few times, but only by looking up other peoples versions and mucking around with it until it it gives me something like what I want.</p>
 <p>Then <a href="http://avagoestohackbright.blogspot.com/" target="_blank" rel="external">Ava</a> introduced me <a href="http://regexcrossword.com/" target="_blank" rel="external">Regex Crossword</a> and I knew that if she could do it I could sure as heck learn it too. I breezed through (or to be more accurate bashed through utterly confused) the introduction and part of the beginner puzzles and then got royally stuck. I had never formally learned regex and still didn’t have a clue what half of it meant. Off I went searching for a good tutorial, which was harder than I thought.</p>
 <p>I first found <a href="http://regex.learncodethehardway.org/" target="_blank" rel="external">Learn Regex the Hard Way</a>, and while I normally like the <a href="http://learncodethehardway.org/" target="_blank" rel="external">Learn Code the Hard Way</a> stuff the regex version isn’t finished and wasn’t really helping. I like interactive things that tell me whether I am even on to the right track of a clue. But then I found <a href="http://regexone.com/" target="_blank" rel="external">RegexOne</a> which checked all my boxes! It gives you a bit of a lesson on each new character and then makes you test it out before you move on to the next lesson. I completed the beginning tutorials on there and decided to try the Crosswords again, feeling much more confident.</p>
 <p>I got stuck again almost immediately. It was time for some good old fashioned cheating. I discovered <a href="http://www.regexper.com/" target="_blank" rel="external">Regexper</a> and at first didn’t think it would be much of a help, but let me tell you, I was wrong. You can copy a regular expression into the text box and it will give you a humanized version with actual words and descriptions. With that in my tool belt I was no longer stuck and am now halfway through the intermediate challenges.</p>
 <p>I’m not sure I’ll ever really <em>enjoy</em> regex, but at least now it doesn’t just look like magic.</p>
-</article><nav id="article-pagination"><a href="/2013/10/lindsey-learns-apis/" title="Previous article: Lindsey Learns Ap Is" class="prev">&larr; Previous article</a><a href="/2013/10/my-life-is-like-my-nose-piercing/" title="Next article: My Life Is Like My Nose Piercing" class="next">Next article &rarr;</a></nav></section><footer id="page-footer"><section><nav id="footer-menu"><ul><li><a href="/about">About</a></li><li><a href="/archives">Archive</a></li><li><a href="http://github.com/leaena/leaena.github.io">Source</a></li><li><a href="/atom.xml">Feed</a></li></ul></nav></section></footer></body></html>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../categories/Programming">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/regex">regex</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2013/10/lindsey-learns-apis/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Lindsey Learns APIs
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/10/my-life-is-like-my-nose-piercing/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          My Life is Like My Nose Piercing
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:leaena.github.io">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2014 Lindsey Smith<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'leaena';
+  
+  var disqus_url = 'http://leaena.github.io/2013/10/regex-for-fun-and-profit/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="../../../js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>

@@ -1,1 +1,827 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="Lindsey Smith"><meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a software engineering bootcamp. Now I blog a mixture of programming, women in tech, life, and cats."><title>Archive&mdash;Leaena.com</title><link href="/favicon.png" rel="icon"><link rel="alternate" href="/atom.xml" title="config.title" type="application/atom.xml"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet"><link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/stylesheets/app.css"></head><body><header id="page-header"><div id="masthead"><h1 id="site-title"><a href="/">Leaena.com</a></h1><p id="site-slogan">Coding, cats, California, feminism, and zombies. Your average girl blogger.</p></div></header><section id="content"><header><h2>Archive</h2></header><ul class="article-list"><li><article><h3><a href="/2013/11/week-3-less-work-more-work/">Week 3   Less Work, More... Work?</a></h3><div class="meta">Nov 28 2013 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2013/11/week-2-programmers-do-it-algorithmically/">Week 2   Programmers Do It Algorithmically</a></h3><div class="meta">Nov 24 2013 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2013/11/week-0-day-3/">Week 0, Day 3</a></h3><div class="meta">Nov 6 2013 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2013/09/impostor-syndrome/">Impostor Syndrome</a></h3><div class="meta">Sep 5 2013 in <a href="/categories/Life/">Life</a>&ensp;<a href="/categories/Life/Programming/">Programming</a>&ensp;</div></article></li><li><article><h3><a href="/2013/08/on-track/">on Track</a></h3><div class="meta">Aug 27 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li><li><article><h3><a href="/2013/08/fresh-air/">Fresh Air</a></h3><div class="meta">Aug 20 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li><li><article><h3><a href="/2013/08/doctor-javascript/">Doctor Java Script?</a></h3><div class="meta">Aug 16 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li><li><article><h3><a href="/2013/08/i-did-all-the-things/">I Did All the Things</a></h3><div class="meta">Aug 15 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li><li><article><h3><a href="/2013/08/solver-of-problems/">Solver of Problems</a></h3><div class="meta">Aug 12 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li><li><article><h3><a href="/2013/08/coderbyteandme/">Coderbyte and Me</a></h3><div class="meta">Aug 11 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li></ul></section><footer id="page-footer"><section><nav id="footer-menu"><ul><li><a href="/about">About</a></li><li><a href="/archives">Archive</a></li><li><a href="http://github.com/leaena/leaena.github.io">Source</a></li><li><a href="/atom.xml">Feed</a></li></ul></nav></section></footer></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Tag: javascript | Leaena.com</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Leaena.com">
+<meta property="og:url" content="http://leaena.github.io/tags/javascript/page/2/">
+<meta property="og:site_name" content="Leaena.com">
+<meta property="og:description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Leaena.com">
+<meta name="twitter:description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+  
+    <link rel="alternative" href="/atom.xml" title="Leaena.com" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="../../../../css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://leaena.github.io"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="post-week-3-less-work-more-work" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/11/week-3-less-work-more-work/" class="article-date">
+  <time datetime="2013-11-28T22:16:49.000Z" itemprop="datePublished">Nov 28 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/11/week-3-less-work-more-work/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/11/week-3-less-work-more-work/">Week 3 - Less Work, More... Work?</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>School-wise, this week was very, very short. Today is Thanksgiving and I’m almost a little shocked that we got it off (although many of my peers are spending their day at the school if the emails about keys and door opening flying back and forth are a good reference). Because of the shortness I was thrown a bit off guard on Monday when I realized that it was time for our 3rd assessment already! This is week three! It feels simultaneously like I’ve been here for days and for years. The assessment went well and I actually remembered all my things from the previous week without too much panic. I did have a hilarious nightmare afterward that involved me being forced to code a <a href="http://en.wikipedia.org/wiki/Merge_sort" target="_blank" rel="external">merge sort</a> algorithm using a pencil and a very limited amount of paper and my lead instructor yelling at me for my terrible handwriting (this is why I love computers! I have terrible penmanship).</p>
+<p>Because of the short week we basically just went straight into <a href="http://backbonejs.org/" target="_blank" rel="external">Backbone.js</a> this week, which for my non-coding followers is a JavaScript library that allows you to structure your app cleanly by dividing the work that must be done into the actual data “models” and the way you represent that data to individuals “views”. This concept is what’s called an <a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" target="_blank" rel="external">MVC</a>, which is one of those trendy/useful buzzwords you hear a lot in coding. Anyway, it’s what we did in class this week and I plan on working on it a bunch over my long weekend.</p>
+<p>Unfortunately because this is the longest break I have besides solo project time during Christmas break I think I’ve put more on my to-do list than is physically possible (especially since I promised my platonic life partner <a href="http://avagoestohackbright.blogspot.com/" target="_blank" rel="external">Ava</a> I would help her with her Hackbright project too). Lets run down what I have on my list:</p>
+<ul>
+<li>Review algorithm time complexity (<a href="http://en.wikipedia.org/wiki/Big_O_notation" target="_blank" rel="external">Big O notation</a>)</li>
+<li>Practice recursive problems</li>
+<li><p>Make business cards:<br><img src="http://res.cloudinary.com/leaena/image/upload/v1391709350/Screen-Shot-2013-11-28-at-1_33_31-PM_apsxso.png" alt="Personal business cards of awesome"></p>
+</li>
+<li><p>Work on my Backbone project (we are working on it through next Tuesday, but I want to tackle some of the extra credit)</p>
+</li>
+<li>Redo/refactor some of my Coderbytes code - I’ve learned a bunch, I can probably do better</li>
+<li>Research getting involved in some open source stuff/get some pull requests in to bigger projects</li>
+<li>Maybe try learning Ruby on Rails (we might lose out on the Ruby on Rails sprint because of the timeline of holidays)</li>
+</ul>
+<p>So yeah, I’m probably a crazy person. Today I will eat and hang out with friends and be merry though. Tonight I will allow the code to creep its way to the front of my brain again. I also plan on writing a more technical article on time complexity sometime this weekend if I can wrap my brain more fully around it so I can pass along the tips I find.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../../categories/HackReactor">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../backbonejs">backbonejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../hackreactor">hackreactor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../..">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-2-programmers-do-it-algorithmically" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/11/week-2-programmers-do-it-algorithmically/" class="article-date">
+  <time datetime="2013-11-24T23:57:12.000Z" itemprop="datePublished">Nov 24 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/11/week-2-programmers-do-it-algorithmically/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/11/week-2-programmers-do-it-algorithmically/">Week 2 - Programmers Do It Algorithmically</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>I have less pretty pictures for you this week. The most I saw of the sunshine looked similar to this:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,h_800/v1391709333/2013-11-23-08_25_08-768x1024_iu84fu.jpg" alt="View from the 8th floor"></p>
+<p>At least it was sunshine. It “rained” for like a minute one day and the umbrellas came out en masse. I was perfectly happy in a hoodie, but I definitely felt like an outsider. I might need to buy an umbrella, this whole trying to not look like a tourist thing is harder than I thought. Although I’ve had more people ask me for directions this week than I ever have in my life combined so I think the hair and the nose piercing are good SF camouflage.</p>
+<p>This week was a teensy bit rollercoastery for me. We started out with a fairly easy CSS/fun jQuery tricks problem and then tackled a pretty epic sprint on the <a href="http://en.wikipedia.org/wiki/Eight_queens_puzzle" target="_blank" rel="external">N-Queens</a> problem. N-queens is the idea that you need to place n (a number) of chess queens on an nxn chess board so that none of the queens can attack any other queen. I think they’ve only solved it up to 27 (<a href="http://www.wired.com/wiredenterprise/2013/06/43651/" target="_blank" rel="external"> and that was people from Hack Reactor</a>). I got a little flustered with that one as algorithms were never my strong suit before this (it’s why I got the “conditionally acceptance” at App Academy - thank god, might I add). I think though I’m just being too hard on myself. Not every software engineer deals with something as crazy as the n-queens problem on an everyday basis. Our more traditional daily toy problems (similar to tech interview questions) are fairly straight forward and I can code a <a href="http://en.wikipedia.org/wiki/Bubble_sort" target="_blank" rel="external">bubble sort</a> algorithm in about 5 minutes (maybe 10 with one hand tied behind my back).</p>
+<p>I think that’s what Hack Reactor has done for me more than anything else. It’s made me accept my flaws, but know that everyone has them and there is always more to learn. I’m a good intuitive coder, but I’m no good with the lingo of it. We all are here to learn to become <strong>great</strong> <del datetime="2013-11-24T22:21:58+00:00">coders</del> Software Engineers.</p>
+<p>Short post this week, sorry. I have dinner with friends to go to and my Sunday is too peaceful and sunny (and full of awesome 50th anniversary Doctor Who) for any more words.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../../categories/HackReactor">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../doctor-who">doctor who</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../hackreactor">hackreactor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../..">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-0-day-3" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/11/week-0-day-3/" class="article-date">
+  <time datetime="2013-11-06T23:26:45.000Z" itemprop="datePublished">Nov 6 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/11/week-0-day-3/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/11/week-0-day-3/">Week 0, Day 3</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Still pretty quiet here. I’ve been helping <a href="http://avagoestohackbright.blogspot.com/" target="_blank" rel="external">Ava</a> with her game and looking at some basic tutorials for <a href="http://coenraets.org/blog/2011/12/backbone-js-wine-cellar-tutorial-part-1-getting-started/" target="_blank" rel="external">Backbone</a> and <a href="http://net.tutsplus.com/tutorials/javascript-ajax/building-a-web-app-from-scratch-in-angularjs/" target="_blank" rel="external">Angular</a>. Then I got sidetracked into <a href="http://www.openvim.com/tutorial.html" target="_blank" rel="external">learning</a> <a href="http://www2.geog.ucl.ac.uk/~plewis/teaching/unix/vimtutor" target="_blank" rel="external">VIM</a>.</p>
+<p>I <em>did</em> hike up the epicness that is Taylor St on a lunch break with Ava to go look at <a href="https://plus.google.com/100448725560279017918/about?rfmt=s&amp;hl=en&amp;gl=us" target="_blank" rel="external">Huntington Park</a>. The views were amazing and I <strong>love</strong> that I can still wear a T-shirt (no sweater/coat necessary) at all times, even on my evening trek to the BART station and <del>“home”</del> home (Ava was upset by the quotes around the word home so I had to change it).</p>
+<p>On the way up:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,h_800/v1391709288/2013-11-06-12_41_53-768x1024_yrfvhq.jpg" alt="Up Taylor St"></p>
+<p>Looking down:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,h_800/v1391709307/2013-11-06-12_48_19-768x1024_mj3vrz.jpg" alt="Looking Down Powell St"></p>
+<p>Looking at the Bay Bridge through the buildings (another thing I love, it looks like stereotypical San Francisco everywhere, tall buildings, funky old fixtures, and a strange mixture of people types):</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,h_800/v1391709300/2013-11-06-12_47_39-768x1024_p9tbab.jpg" alt="Bay Bridge on California St"></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../../categories/HackReactor">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../San-Francisco">San Francisco</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../hackbright">hackbright</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../..">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-impostor-syndrome" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/09/impostor-syndrome/" class="article-date">
+  <time datetime="2013-09-06T04:25:55.000Z" itemprop="datePublished">Sep 5 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/09/impostor-syndrome/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/09/impostor-syndrome/">Impostor Syndrome</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<blockquote>
+<p><strong>Impostor syndrome</strong> describes a situation where someone feels like an impostor or fraud because they think that their accomplishments are nowhere near as good as those of the people around them. Usually, their accomplishments <em>are</em> just as good, and the person is being needlessly insecure.</p>
+<ul>
+<li><a href="http://geekfeminism.wikia.com/wiki/Impostor_syndrome" target="_blank" rel="external">Geek Feminism Wiki</a><br>The lack of posting this week is entirely related to the above quote. I spent the long weekend working on my pre-course work for HackReactor. It was awesome and fun and sometimes frustrating but I was powering through it. Then somewhere on Sunday, I got stuck. It was a stuckness of monumental proportions and looking back on it now I find it funny.</li>
+</ul>
+</blockquote>
+<p>I have a method to my madness with coding. I add things, test them and add some more until I get stuck at a point where either I’m not sure how to implement something to make it do what I want or something I thought I’d implemented isn’t doing what I expected it to. Then I do a bunch of Googling, look at some examples, hack those examples to fit into my code and all is well again.</p>
+<p>And that’s how it should have gone when I got stuck on Sunday. Instead I kept banging my head against the brick wall of stuckness, moving some code bits, rewording some code bits, and finally starting all over again in frustration. By Tuesday night as I had a Google Hangout date with my best friends, I was freaking out. Please keep in mind that I’d received this homework on Friday and I don’t have to finish it until I start school in November <strong>and </strong>at the point of my stuckness I was <strong>about half way through with all of it</strong>.</p>
+<p>So yeah, the freak out was definitely unwarranted. I made it this far but I’m still worried I’m making a bad choice/going to be that one person in their program who doesn’t get a job/nobody will ever love me. You know normal fears.</p>
+<p>It’s a day by day process telling myself I’m good enough. Today I finally came back to the thing I was stuck on and sorted out my issues in about an hour. Now I’m on to the last step, my best friend <a href="http://en.wikipedia.org/wiki/Recursion" target="_blank" rel="external">recursion</a>.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../../categories/Life">Life</a>»<a class="article-category-link" href="../../../../categories/Life/Programming">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../hackreactor">hackreactor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../..">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-on-track" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/08/on-track/" class="article-date">
+  <time datetime="2013-08-28T03:28:48.000Z" itemprop="datePublished">Aug 27 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/08/on-track/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/08/on-track/">On Track</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>2nd interview with <a href="http://hackreactor.com" target="_blank" rel="external">HackReactor</a> today! This time it was an actual tech interview so I was even more nervous. Once again my interviewer was a pleasure to talk to and very calming. I also picked up my new favorite phrase: “You nailed it with a nail gun.” This was in regards to one of the functions I had to implement. It’s crazy how different my experiences with interviewing for two different schools where. <a href="http://appacademy.io/" target="_blank" rel="external">AppAcademy</a> just was not warm and fuzzy at all which I guess is OK, but they just never seemed to care who I was, just what I could do with code. I did OK (got a conditional acceptance pending a final interview) but I felt like they put so much emphasis on logic puzzles, which, heck, shouldn’t they be helping me with in prep to get me a job? I’m also not sure how I feel about the lack of finding out whether I’m some crazy mouth-breather who can’t even interact with people. I just wonder what types of people end up in the class.</p>
+<p>HR on the other hand has been surprisingly FUN to interview with. It hasn’t been exactly easy, but it has been fun to play with JavaScript. The first interview was nice and lite and I got to show off that I knew what recursion was (but forgot to add a base case initially - d’oh). Then the take home work was well designed and pushed me along to learn some jQuery and how to pull data using AJAX. Then the last tech interview had me creating my own versions of some Underscore.js functions which was fun and thought-provoking and definitely tricky but not in a gotcha sort of way but more of a pushing me in the right direction to learn it myself. If this is what the class feels like, sign me up!! HR just seems so nurturing and I <strong>love </strong>to learn.</p>
+<p>I should know if I got in (or if I have to try again, because goddamnit I’m trying again if I don’t make it this time) by Friday. Keep your fingers and toes and eyes crossed for me!</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../../categories/Programming">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../Interview">Interview</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../hackreactor">hackreactor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../..">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-fresh-air" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/08/fresh-air/" class="article-date">
+  <time datetime="2013-08-20T22:33:34.000Z" itemprop="datePublished">Aug 20 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/08/fresh-air/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/08/fresh-air/">Fresh Air</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>I had my first interview with <a href="http://hackreactor.com" target="_blank" rel="external">Hack Reactor</a> today. That was <em>awesome</em>. It was a 180 from my two <a href="http://appacademy.io" target="_blank" rel="external">App Academy</a> interviews. Doug from HackR was amazing. First of all, he was on time! I figured that was a good omen. But then he was also funny and sweet even though my Skype was being funky initially. I felt very at ease by the time the initial coding assessment came around. It was actually kinda fun and straightforward and he told me I’d moved on to the take home and technical interview! We scheduled it on the spot and I took the first opening available (<em>next</em> Tuesday). We then chatted a bit more (I learned that they take about 30 students now and had 5 women the last go round).</p>
+<p>Basically I’m just really, really excited and <em>beyond</em> glad I decided to focus on just this program. I think it is exactly what I’m looking for.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../../categories/Programming">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../Interview">Interview</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../hackreactor">hackreactor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../..">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-doctor-javascript" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/08/doctor-javascript/" class="article-date">
+  <time datetime="2013-08-17T01:13:44.000Z" itemprop="datePublished">Aug 16 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/08/doctor-javascript/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/08/doctor-javascript/">Doctor JavaScript?</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://www.elijahmanor.com/2013/08/reducing-filter-and-map-down-to-reduce.html" target="_blank" rel="external">http://www.elijahmanor.com/2013/08/reducing-filter-and-map-down-to-reduce.html</a></p>
+<p>Learning JavaScript bits through Doctor Who is possibly the best thing ever.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../../categories/Programming">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../doctor-who">doctor who</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../..">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-i-did-all-the-things" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/08/i-did-all-the-things/" class="article-date">
+  <time datetime="2013-08-16T06:38:14.000Z" itemprop="datePublished">Aug 15 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/08/i-did-all-the-things/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/08/i-did-all-the-things/">I Did All the Things</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Finally finished up the last 6 <a href="http://coderbyte.com" target="_blank" rel="external">Coderbyte</a> challenges. I had planned to finish them on Tuesday but I got home from an all day work “thing”, took a shower and passed out. On Wednesday I had a much-needed pajama party with relatives and watched some old Downton Abbey (season 2, Matthew just got the use of his legs again &#42;sniff&#42;). The last 6 challenges were plagued with me forgetting what variable type I was juggling. Most of my errors were fixed by type conversions. I still believe nothing was as hard as that stupid <a href="https://github.com/leaena/coderbyte/blob/master/17arrayadditioni.js" target="_blank" rel="external">Array Addition</a>. Everything else I was able to piece together on my own, but I don’t think I would have ever solved that one without a bit of a nudge from other coders. I think I need more math logic. I should probably take a class or find a good book (oh the torture) on the subject. I plan on reading through <a href="http://www.amazon.com/Professional-JavaScript-Developers-Nicholas-Zakas/dp/1118026691" target="_blank" rel="external">Professional JavaScript for Web Developers</a> over the weekend and maybe running through all 26 again (no peeking!) on Sunday as prep for Tuesday’s interview. After I get in (I need to tone down the bravado), I want to go back and try the harder challenges. Wish me luck on everything! Also, as always, my <a href="http://github.com/leaena/coderbyte/" target="_blank" rel="external">Github</a> with the updates. My favorite code this time was MeanMode which checks to see if the mean and the mode of an array are the same. It’s probably my favorite because I literally couldn’t remember what the mode of an array was and had to look up remedial math stuffs. That was humbling.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+</pre></td><td class="code"><pre><span class="function"><span class="keyword">function</span> <span class="title">MeanMode</span><span class="params">(arr)</span> {</span>  
+  <span class="keyword">var</span> mode;  
+  <span class="keyword">var</span> modeCount = [];  
+  <span class="keyword">var</span> count = <span class="number">0</span>;  
+  <span class="keyword">var</span> sum = <span class="number">0</span>;  
+
+  <span class="keyword">for</span> (i = <span class="number">0</span>; i &amp;lt; arr.length; i++) {  
+    sum += arr[i];
+
+    <span class="keyword">if</span>(!modeCount[arr[i]-<span class="number">1</span>]){
+      modeCount[arr[i]-<span class="number">1</span>] = <span class="number">0</span>;  
+    }
+
+    modeCount[arr[i]-<span class="number">1</span>] += <span class="number">1</span>;  
+  }  
+  <span class="keyword">for</span>(i = <span class="number">0</span>; i &amp;lt; modeCount.length; i++) {
+
+    <span class="keyword">if</span>(modeCount[i] &amp;gt; count) {  
+      mode = i+<span class="number">1</span>;  
+      count = modeCount[i];  
+    }  
+  }
+
+  <span class="keyword">var</span> mean = sum/arr.length;
+
+  <span class="keyword">if</span> (mean === mode) {  
+    <span class="keyword">return</span> <span class="number">1</span>;  
+  } <span class="keyword">else</span> {  
+    <span class="keyword">return</span> <span class="number">0</span>;  
+  }  
+}
+</pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../../categories/Programming">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../coderbyte">coderbyte</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../..">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-solver-of-problems" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/08/solver-of-problems/" class="article-date">
+  <time datetime="2013-08-13T05:20:42.000Z" itemprop="datePublished">Aug 12 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/08/solver-of-problems/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/08/solver-of-problems/">Solver of Problems</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>I figured it out! Sort of on my own, sort of studying how others had “solved” it in different languages (a few of the “solutions” didn’t seem to work). Array Addition I is now my bitch. Also the next 10 easy problems from <a href="http://coderbyte.com" target="_blank" rel="external">Coderbyte</a> are on my <a href="http://github.com/leaena/coderbyte" target="_blank" rel="external">GitHub</a>. 6 more to go (well 7 actually, I gave up on ArithGeo, but the solving of Array Addition gives me hope that I will figure it out tomorrow). <strong>Problem description:</strong> Using the JavaScript language, have the function ArrayAdditionI(<strong>arr</strong>) take the array of numbers stored in <strong>arr</strong> and return the string <strong>true</strong> if any combination of numbers in the array can be added up to equal the <strong>largest number</strong> in the array, otherwise return the string <strong>false</strong>. For example: if <strong>arr</strong> contains [4, 6, 23, 10, 1, 3] the output should return <strong>true</strong> because 4 + 6 + 10 + 3 = 23. The array will not be empty, will not contain all the same elements, and may contain negative numbers. <strong>And my solution:</strong> (basically grabs the largest value out of a provided array and it runs through all the possible sum combinations of all the other numbers to see if one of those sums equals the largest values)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+</pre></td><td class="code"><pre><span class="function"><span class="keyword">function</span> <span class="title">ArrayAdditionI</span><span class="params">(arr)</span> {</span>
+  arr.sort(<span class="function"><span class="keyword">function</span><span class="params">(a,b)</span>{</span><span class="keyword">return</span> a - b})
+  <span class="keyword">var</span> largest = arr.pop();
+  <span class="keyword">var</span> sum = <span class="number">0</span>;
+
+  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &amp;lt; arr.length; i++){
+    sum += arr[i];
+
+    <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &amp;lt; arr.length; j++){
+      <span class="keyword">if</span> (i != j) {
+        sum += arr[j];
+        <span class="keyword">if</span> (sum == largest) {
+          <span class="keyword">return</span> <span class="literal">true</span>;
+        }
+      }
+    }
+
+    <span class="keyword">for</span> (<span class="keyword">var</span> k = <span class="number">0</span>; k &amp;lt; arr.length; k++) {
+      <span class="keyword">if</span> (i != k) {
+        sum -= arr[k];
+        <span class="keyword">if</span> (sum == largest) {
+          <span class="keyword">return</span> <span class="literal">true</span>;
+        }
+      }
+    }
+
+    sum = <span class="number">0</span>;
+  }
+
+  <span class="keyword">return</span> <span class="literal">false</span>;
+}
+</pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../../categories/Programming">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../coderbyte">coderbyte</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../..">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-coderbyteandme" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/08/coderbyteandme/" class="article-date">
+  <time datetime="2013-08-12T04:37:46.000Z" itemprop="datePublished">Aug 11 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/08/coderbyteandme/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/08/coderbyteandme/">Coderbyte and Me</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>I’ve been practicing my JavaScript for the <a href="http://hackreactor.com" target="_blank" rel="external">HackReactor</a> interview on the 20th (wish me luck by the way). They sent around an email saying to be prepared so you didn’t have to reschedule (I’m suddenly glad I couldn’t get an appointment straightaway). They recommended being able to get through all the easy challenges on<a href="http://coderbyte.com" target="_blank" rel="external"> Coderbyte</a> in &lt; 5 minutes. Yikes? Surprisingly not. I’m having a lot of fun.</p>
+<p>There are a couple things I’ve obviously forgotten (I had to look up the regex to keep only alpha characters, I suck at regex), but I’m pretty fast. I’m also realizing just how not amazing I am at the trickier puzzles. There are one or two in there that I still don’t understand, even after I caved and looked up how others solved them (Array Addition I, I’m glaring at you).</p>
+<p>There are 26 easy challenges. I’ve decided to run through at least 10 a day, so I finished the first 10 today and uploaded them to my <a href="https://github.com/leaena/coderbyte" target="_blank" rel="external">GitHub</a>. My favorite one so far was the TimeConvert, which took a number (e.g. 126) and converted to the amount of hours and minutes (e.g. 2:6). I could have made it prettier by added a preceding 0 in the minutes, but the goal of these is speed and the instructions didn’t ask for that pretty extra. This was my favorite because I just have this weird love for modulus. The code to solve it:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="function"><span class="keyword">function</span> <span class="title">TimeConvert</span><span class="params">(num)</span> {</span>
+  <span class="keyword">var</span> minutes = num % <span class="number">60</span>;
+  <span class="keyword">var</span> hours = <span class="built_in">parseInt</span>(num/<span class="number">60</span>);
+
+  <span class="keyword">return</span> <span class="string">""</span> + hours + <span class="string">":"</span> + minutes;
+}
+</pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../../categories/Programming">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../coderbyte">coderbyte</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../hackreactor">hackreactor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../..">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="../..">&laquo; Prev</a><a class="page-number" href="../..">1</a><span class="page-number current">2</span>
+    </nav>
+  
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:leaena.github.io">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2014 Lindsey Smith<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'leaena';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="../../../../js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>

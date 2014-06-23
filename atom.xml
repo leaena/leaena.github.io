@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Leaena.com]]></title>
+  <subtitle><![CDATA[Coding, cats, California, feminism, and zombies. Your average girl blogger.]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://leaena.github.io/"/>
+  <updated>2014-06-23T00:57:13.889Z</updated>
+  <id>http://leaena.github.io/</id>
+  
+  <author>
+    <name><![CDATA[Lindsey Smith]]></name>
+    <email><![CDATA[lindsey@clevergirl.me]]></email>
+  </author>
+  
+  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Clojure Makes Me Feel Stupid]]></title>
+    <link href="http://leaena.github.io/2014/06/clojure-makes-me-feel-stupid/"/>
+    <id>http://leaena.github.io/2014/06/clojure-makes-me-feel-stupid/</id>
+    <published>2014-06-17T06:58:50.000Z</published>
+    <updated>2014-06-23T00:05:31.000Z</updated>
+    <content type="html"><![CDATA[<p>…but I’m kinda in love with it. Thanks to a friend/coworker I’m cautiously dipping my toe into the world of “functional programming”. I’m still not 100% certain I get the full gist of functional programming but, to my newb mind, I’d explain it as programming without consequences. Functions only depend on their inputs and external forces/state cannot muck with your function.</p>
+<p>Apparently this makes it easier to predict what’s going on, but I still have issues reading what I just wrote. Parenthesis all the way down dudes. Also prefix notation is technically useful, but warping my poor little brain.</p>
+<p>So 1 + 1 in Clojure is actually written as (+ 1 1). Makes sense, right? Sorta, except for the years and years of basic math classes that NEVER LOOKED LIKE THIS. Oh my brain. But it’s kinda cool that instead of 1 + 2 + 3 + 4 I only need to write (+ 1 2 3 4).</p>
+<p>But seriously. This is a function in Clojure:</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="list">(<span class="title"><span class="built_in">defn</span></span> adder
+  <span class="collection">[x y]</span>
+  <span class="list">(<span class="title"><span class="built_in">+</span></span> x y)</span>)</span>
+
+<span class="list">(<span class="title">adder</span><span class="number"> 3</span><span class="number"> 4</span>)</span> <span class="comment">;; 7&lt;/pre&gt;</span>
+</pre></td></tr></table></figure>
+
+<p>Wat? So the first line defines the function name. The second line is the parameters that you give to the function and then the last line adds those two parameters together. I then call the function on line 5 with the arguments 3 and 4 and then the semicolons denote comments and I use that do show what the output of the function is… 7.</p>
+<p>As a super ridiculous aside. <strong>Parameters</strong> vs <strong>arguments</strong>? <strong>Parameters</strong> are the things that you define with the function. So x and y on line 2 are <strong>parameters</strong>. <strong>Arguments</strong> are what you pass to the function when you what to actually use it. So 3 and 4 on line 5 are <strong>arguments</strong>. Now go forth and be awesome!</p>
+<p>So how do you be Clojure learners too? Currently I’m running through the <a href="https://github.com/ClojureBridge/curriculum" target="_blank" rel="external">clojurebridge curriculum</a> on my own.<a href="http://adambard.com/blog/clojure-in-15-minutes/" target="_blank" rel="external"> Clojure in 15 minutes</a> looks like a decent-y rundown of most of my syntax options. If you don’t want to put anything on your system yet, or just want to mess around with the syntax, there’s always <a href="http://tryclj.com/" target="_blank" rel="external">Try Clojure</a> which lets you program from your browser. And I’ve bookmarked <a href="http://www.braveclojure.com/" target="_blank" rel="external">Clojure for the Brave and True</a> mostly for the title, but I haven’t really read any of it yet.</p>
+]]></content>
+    
+    
+      <category term="clojure" scheme="http://leaena.github.io/tags/clojure/"/>
+    
+      <category term="functional programming" scheme="http://leaena.github.io/tags/functional-programming/"/>
+    
+      <category term="Tech Tips" scheme="http://leaena.github.io/categories/Tech-Tips/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Bored Again - Time to Create]]></title>
+    <link href="http://leaena.github.io/2014/06/bored-again-time-to-create/"/>
+    <id>http://leaena.github.io/2014/06/bored-again-time-to-create/</id>
+    <published>2014-06-14T04:31:34.000Z</published>
+    <updated>2014-06-23T00:06:19.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>On Repeat</strong></p>
+<iframe src="https://embed.spotify.com/?uri=spotify:track:3bJ73tmHnoeBfDZ4pLZqZ8" width="300" height="380" frameborder="0"></iframe>
+
+<p>Tomorrow is my three-month reunion for Hack Reactor. I’ve done some cool things since I graduated, but I’m still not doing everything I wanted to. I want to be the change I want to see in the world, or however that goes. I just became a mentor for Hackbright Academy so I feel a little less adrift without a social purpose, but I’m still itching to create things.</p>
+<p>I’ve started knitting again, but it’s not solving the itch. I have half-finished things on the needles again, but I’m still bored. I think there is no hope for me. I just need to be coding.</p>
+<p>About a year ago. I was sitting in a crappy gelato shop in downtown Burlingame with two of my best friends who already lived in California. I was still living and working in Oregon, but I knew I needed to be moving on soon. I was getting restless. That day we made a pact, all of us before this crazy thing called a dream turned us into a software engineer, a software engineer, and a novel writer. We were The Clever Girls and we were going to create something amazing together eventually. Part of that dream is how I ended up down here and now I’m realizing I need to start doing my share.</p>
+<p>So I’m going to dive back into programming completely solo, completely public, with my work, as shitty as a lot of it probably is, committed for all to see on Github. I hope soon the three of us can get back on the same page and actually make something amazing. For now I’ll just leave you with the copy I wrote for a fake starter page a year ago when The Clever Girls were still fresh in my mind:</p>
+<blockquote>
+<p>“Computing is too important to be left to men.”<br><small style="color: #999999;">Karen Spärck Jones</small></p>
+</blockquote>
+<p>Women are underrepresented in computing not because they aren’t good with computers but because they are never given the opportunity to fall in love with them. <em>The Code Girls</em>‘ goal is to create fun, educational games geared toward younger girls that will teach them the basics of how programs work. Using an easily readable language like Python, girls will code their way through the platform challenges and create fully functioning programs as they progress.</p>
+<p><strong>Code Girls present Octavia and the Clockwork Code</strong> is the first game in the series. It tells the tale of 12-year-old Octavia, a precocious tween who sets out to win a mechanical competition. Along the way she codes her way through puzzles and helps out friends and competition alike.</p>
+<p>The Code Girls is a fledgling startup created by three women who are passionate about women in computing.</p>
+<p><strong>Lindsey - The Creator</strong></p>
+<p>Founder, primary coder and herder of cats. Lindsey always wanted a game like this when she was growing up. Now that she’s technically grown up, she decided to take the idea into her own hands.</p>
+<p><strong>Ava - The Teacher</strong></p>
+<p>Our resident little girl expert. Ava has a Masters in Education and a passion for teaching children using methods that create a deeper understanding.</p>
+<p><strong>Alyssa - The Storyteller</strong></p>
+<p>World builder and character flaw creator. Alyssa creates and drives the stories we tell. She lives and breathes the Code Girl worlds.</p>
+]]></content>
+    
+    
+      <category term="clever girls" scheme="http://leaena.github.io/tags/clever-girls/"/>
+    
+      <category term="inspiration" scheme="http://leaena.github.io/tags/inspiration/"/>
+    
+      <category term="octavia" scheme="http://leaena.github.io/tags/octavia/"/>
+    
+      <category term="Programming" scheme="http://leaena.github.io/categories/Programming/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Home - For Now]]></title>
+    <link href="http://leaena.github.io/2014/06/home-for-now/"/>
+    <id>http://leaena.github.io/2014/06/home-for-now/</id>
+    <published>2014-06-08T07:29:25.000Z</published>
+    <updated>2014-06-22T23:57:21.000Z</updated>
+    <content type="html"><![CDATA[<p>The updates got away from me. Life has just been flowing one day to the next. A mix of sun and California and coding. Days will go by where I forget how I got here. It feels like I’ve always been here and then I see or hear something so stereotypically Bay Area-ish that I have to shake my head and realize I don’t know if I ever want to be completely sucked into this candy coated, rose-colored-glasses kinda world.</p>
+<p>Life is pretty amazing now. I’m happy and working and finally have my cats and my car. I could never live in San Francisco proper for the sheer joy I get in sitting in my car, driving on a long stretch of road with my music blaring. I drove from Portland home to Burlingame and the views were breathtaking and I felt so much at peace as I curved around the mountains of Northern California.</p>
+<p>Oh yeah, cats:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,h_800/v1402210118/2014-05-29_08_17_20_vlbrls.jpg" alt="" title="Issac"></p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,h_800/v1402210105/2014-05-31_14_57_34_v1owna.jpg" alt="" title="Jack"></p>
+<p>I was terrified they would hate it here and then I’d be the horrible person who drove them 14 hours away from Oregon. I haven’t lived with my cats for 7 months and it’s been excruciating. Thankfully they seem to be enjoying themselves. There are windows that I can actually keep open all the time and floors to stretch out on in the warm, warm sun. And of course I’m here to know Isaac really likes his head scratched and Jack likes to hold your hand with his paw. So yeah, I’m pretty happy. I do have more nerdery and tech blogging to do (I’m trying to learn Swift! and hopefully tech mentoring! and maybe even public speaking?!) and I plan to get to it, but I first had to get the reintroduction out of the way.</p>
+<p>Also, this post (and maybe many posts to come) has a theme song:</p>
+<iframe src="https://embed.spotify.com/?uri=spotify:track:6ZapsNk1ZpaebNXAIohP9R" width="300" height="380" frameborder="0"></iframe>]]></content>
+    
+    
+      <category term="cats" scheme="http://leaena.github.io/tags/cats/"/>
+    
+      <category term="Portland" scheme="http://leaena.github.io/tags/Portland/"/>
+    
+      <category term="San Francisco" scheme="http://leaena.github.io/tags/San-Francisco/"/>
+    
+      <category term="Life" scheme="http://leaena.github.io/categories/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Week 4/5: #FAIL]]></title>
+    <link href="http://leaena.github.io/2014/04/week-45-fail/"/>
+    <id>http://leaena.github.io/2014/04/week-45-fail/</id>
+    <published>2014-04-21T01:21:06.000Z</published>
+    <updated>2014-06-22T23:57:21.000Z</updated>
+    <content type="html"><![CDATA[<p>Life has been awesome, so awesome in fact that I have had no time to put words to “paper”. I’m finishing projects and starting new ones at work. I’m having fun with friends on weekends. I even signed up for online dating, but that’s a hilarious post all by itself.</p>
+<p>I also managed to do the age old terror inducing thing that most programmers do at least once in their lifetime. I broke our website. It was fast, over before most people noticed and totally my fault. The silver lining was that I was able to also fix my own mess without much assistance and in less than an hour. Still I felt like an idiot for the rest of the day.</p>
+<p>The next day though we were on to the next feature, the next quirk, and I was able to breathe again because I’m slowly realizing that none of this will ever be the end of the world. Just like I don’t believe any one thing can “disrupt” the way we do things (and I hate that most startups think that they will), I believe that we can all help to shape something. That we each contribute our own little parts and my contributions also don’t have to be perfect. We have code reviews and tech leads and lots and lots of awesome mentoring opportunities to fill in our lack of knowledge.</p>
+<p>Also, FYI, I’m including my Twitter feed to the right for now because I update it more than it might this blog.</p>
+]]></content>
+    
+    
+      <category term="Life" scheme="http://leaena.github.io/categories/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Week 3: Giving Back]]></title>
+    <link href="http://leaena.github.io/2014/04/week-3-giving-back/"/>
+    <id>http://leaena.github.io/2014/04/week-3-giving-back/</id>
+    <published>2014-04-09T15:03:08.000Z</published>
+    <updated>2014-06-23T00:07:58.000Z</updated>
+    <content type="html"><![CDATA[<p>Week 3 ended a few days back (sorry y’all I had a busy weekend) and it was awesome. I’m learning new intricacies of our systems and learning to be more confident in myself when I know I know it (or maybe even think I do! Being wrong isn’t the end of the world!). My favorite part of this week though was the weekend.</p>
+<p>On Saturday I got to volunteer at an all girl (10-17) JavaScript intro class with CoderDojo. I was a tech mentor, but I didn’t have to do a lot . I was super impressed with the girls! And I got to teach a couple of them that docs are super helpful! They were all so creative and awesome and I hope a lot of them decide that programming is as awesome as I think it is. For a short write-up (and to see what some of the girls made!) check out the write up for the event <a href="http://cs-blog.khanacademy.org/2014/04/coderdojo-js-workshop-for-girls-great.html" target="_blank" rel="external">here</a>.</p>
+<p>Also, as an aside, can I just take a moment to say that I think Pamela Fox is amazeballs? She spoke at Hack Reactor during my time there and I’ve been following her on Twitter for a while, but I fan-girled hard when I realized she was the instructor for the class. She is such a smart, funny presenter and she was amazing with the girls. I aspire to be more like her when I “grow up”.</p>
+<p>I could see myself filling my weekends with tech mentoring/hanging out at places like <a href="http://www.meetup.com/Women-Who-Code-SF/" target="_blank" rel="external">Women Who Code</a>, <a href="http://www.meetup.com/Girl-Develop-It-San-Francisco/" target="_blank" rel="external">Girl Develop It</a>, and <a href="http://www.meetup.com/PyLadiesSF/" target="_blank" rel="external">PyLadies</a>. It’s something that I’m super passionate about (it’s why I wanted to work at Udacity so badly). I think mainly because it’s something I wish I had when I was growing up. I wish I could have seen women being awesome programmers, making a career out of it, and how much fun it could be. I never thought I would be one of those people who didn’t just have a “job” they had a calling, but I’m positive I’ve found me.</p>
+]]></content>
+    
+    
+      <category term="CoderDojo" scheme="http://leaena.github.io/tags/CoderDojo/"/>
+    
+      <category term="javascript" scheme="http://leaena.github.io/tags/javascript/"/>
+    
+      <category term="mentoring" scheme="http://leaena.github.io/tags/mentoring/"/>
+    
+      <category term="Life" scheme="http://leaena.github.io/categories/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Week 2: Ticking All the Checkboxes]]></title>
+    <link href="http://leaena.github.io/2014/03/week-2-ticking-all-the-checkboxes/"/>
+    <id>http://leaena.github.io/2014/03/week-2-ticking-all-the-checkboxes/</id>
+    <published>2014-03-29T05:50:05.000Z</published>
+    <updated>2014-06-22T23:57:21.000Z</updated>
+    <content type="html"><![CDATA[<p>How is it possible that I’ve already been working for Udacity for two weeks?!</p>
+<p>I have done real tangible things since last week (I did real, tangible things my first week but nothing I could really point you to). This week, I integrated Github linking!! If you have an account on Udacity, you can now link your Github account to it <a href="https://www.udacity.com/account#!/linked-accounts" target="_blank" rel="external">here</a>. This doesn’t actually do much more at the moment, but it’s all a part of a master plan. If you don’t have a Udacity account (why not?!) or aren’t using Github, here’s an action shot from my account:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/v1396072152/github_on_udacity_dgpebo.png" alt="My first contribution to Udacity"></p>
+<p>I’m settling in to my place a little more (I also discovered the spider I threw outside was not Selma, but Selma is in fact outside now too). I have a new whiteboard that is currently just practical (groceries and upcoming things), but I’m sure it will end up with weird pictures of animals and penises.</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,w_612/v1396072062/2014-03-27_08_17_12_pbukzw.jpg" alt="The Whiteboard of Doom"></p>
+<p>My plans this weekend involve groceries and finally getting a San Mateo County library card, so I’m pretty excited!</p>
+]]></content>
+    
+    
+      <category term="Udacity" scheme="http://leaena.github.io/tags/Udacity/"/>
+    
+      <category term="work" scheme="http://leaena.github.io/tags/work/"/>
+    
+      <category term="Programming" scheme="http://leaena.github.io/categories/Programming/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[How to Git Ignore without .gitignore]]></title>
+    <link href="http://leaena.github.io/2014/03/how-to-git-ignore-without-gitignore/"/>
+    <id>http://leaena.github.io/2014/03/how-to-git-ignore-without-gitignore/</id>
+    <published>2014-03-24T00:12:48.000Z</published>
+    <updated>2014-06-23T00:08:28.000Z</updated>
+    <content type="html"><![CDATA[<p>So I had this problem at work. I’m running a <code>virtualenv</code> instance on our main git repo for all my python packages. The global <code>.gitignore</code> obviously doesn’t know about it the way it knows to filter out node modules and other fun bits of localization and I sure as heck don’t want to add my own one line fix to the global <code>.gitignore</code> file.</p>
+<p>So what’s a girl to do? Does she just ignore that one annoying untracked file line every time she does a <code>git status</code> from the terminal? Nope, she uses git exclude.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$GIT_DIR</span>/info/exclude
+</pre></td></tr></table></figure>
+
+<p>So for me this meant I had to create a <code>info</code> folder in my <code>.git</code> folder in the repo. Then I created a file called <code>exclude</code> (no file extension). The syntax in that file is exactly like the <code>.gitignore</code> file, it’s just very very local (to your computer and only for that repo).</p>
+]]></content>
+    
+    
+      <category term="git" scheme="http://leaena.github.io/tags/git/"/>
+    
+      <category term="Tech Tips" scheme="http://leaena.github.io/categories/Tech-Tips/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Week 1: I Feel Like I've Been Here Before]]></title>
+    <link href="http://leaena.github.io/2014/03/week-1-i-feel-like-ive-been-here-before/"/>
+    <id>http://leaena.github.io/2014/03/week-1-i-feel-like-ive-been-here-before/</id>
+    <published>2014-03-23T19:28:07.000Z</published>
+    <updated>2014-06-22T23:57:21.000Z</updated>
+    <content type="html"><![CDATA[<p>First week of work is over and it felt a lot like a less intense week of Hack Reactor. I still can’t believe this is what I’m actually doing with my life. I still definitely have lots and lots of impostor syndrome but I also deployed live things my first week! And learned a few of my coworkers names! And did a two minute all staff demonstration on how to knit!</p>
+<p>I also got exactly what I wanted. I’m working full stack in JavaScript and Python in non startup-y startup (e.g., we’re not out to make lots and lots of money or making a product we don’t believe in for the money) doing things that I feel are making a tangibly good contribution. We have a gong that gets rung when a person graduates a class. That small bit right there proved that I was exactly where I wanted to be.</p>
+<p>And yes, I’m still terrified some days that I’m too slow or too newb or just not cut out for this, but here’s a secret, I don’t think that will ever go away. Maybe it’s a good thing or maybe it’s just human nature, but I just need to learn to live in my own skin I think and take the impostor syndrome as a mark of being human, of caring about my work and wanting to always get better.</p>
+<p>And a minor update: Selma is no longer in the house, I got the balls to move her outside finally.</p>
+]]></content>
+    
+    
+      <category term="javascript" scheme="http://leaena.github.io/tags/javascript/"/>
+    
+      <category term="python" scheme="http://leaena.github.io/tags/python/"/>
+    
+      <category term="Udacity" scheme="http://leaena.github.io/tags/Udacity/"/>
+    
+      <category term="work" scheme="http://leaena.github.io/tags/work/"/>
+    
+      <category term="Life" scheme="http://leaena.github.io/categories/Life/"/>
+    
+      <category term="Programming" scheme="http://leaena.github.io/categories/Life/Programming/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Not Working is Worse]]></title>
+    <link href="http://leaena.github.io/2014/03/not-working-is-worse/"/>
+    <id>http://leaena.github.io/2014/03/not-working-is-worse/</id>
+    <published>2014-03-17T05:33:16.000Z</published>
+    <updated>2014-06-22T23:57:21.000Z</updated>
+    <content type="html"><![CDATA[<p>So first off, mad props to those of my cohort who have jobs now too! And major hearts to those still looking, because y’all are amazing. And a special shout out to my platonic soul mate Ava who starts at SurveyMonkey in a week!</p>
+<p>I have had two weeks of quiet reflection (read scrambling to get an apartment, utilities and furniture in my pad) and it sucked. While I definitely don’t want to go back to the terrifying job finding phase anytime soon, at least I felt like I was doing things (and I got to code once in a while). Now I’m just sitting around waiting for utility services to call me back or deliver my stuff or de-spidering my apartment (mostly dead, the one that’s alive I’m naming Selma, because I’m a giant crippling softie who can’t even kill bugs).</p>
+<p>I start work on Monday and I’m nervous-excited-terrified-ecstatic. I’m already on the email lists and I love the few random all-staff conversations I’ve read. I think the culture here will be awesome. My zen today though has been putting together IKEA:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,r_11,w_657/v1395016673/2014-03-16_15_40_38_dvfn67.jpg" alt="Made Bed"></p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,r_11,w_502/v1395033861/2014-03-16_22_14_58_dqypwl.jpg" alt="RED Couch"></p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,r_11,w_627/v1395033876/2014-03-16_22_14_50_iqpp0c.jpg" alt="Blurry Table"></p>
+<p>And a super special thank you to Ava for being awesome and watching TV with me and putting together my table:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,w_545/v1395033894/2014-03-16_21_16_53_pwlol2.jpg" alt="Ava Puts Together A Table"></p>
+]]></content>
+    
+    
+      <category term="Life" scheme="http://leaena.github.io/categories/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Confirm my eccentricities]]></title>
+    <link href="http://leaena.github.io/2014/03/confirm-my-eccentricities/"/>
+    <id>http://leaena.github.io/2014/03/confirm-my-eccentricities/</id>
+    <published>2014-03-03T17:12:16.000Z</published>
+    <updated>2014-06-22T23:57:21.000Z</updated>
+    <content type="html"><![CDATA[<p>I have discovered a new sense of zen since I got my job offer. I’ve also discovered amusing things about myself. The biggest and most noticeable change is in my music choices. When I was stressed and scared and about to go to an interview I would want nothing more than to listen to a couple of songs over and over again. <a href="http://youtube.com/watch?v=xV_xHBdLFSk" target="_blank" rel="external">Bravado</a> was one, <a href="http://youtube.com/watch?v=5ZrZI6OmezE" target="_blank" rel="external">Problem</a>, <a href="http://youtube.com/watch?v=My2FRPA3Gf8" target="_blank" rel="external">Wrecking Ball</a>, and <a href="http://youtube.com/watch?v=0KSOMA3QBU0" target="_blank" rel="external">Dark Horse</a> were my staples. I needed strong songs sung by women that I knew by heart. I listen to basically nothing else. Now I’m still listening to them, but I’ve added back in old favorites and non-female vocals like <a href="http://youtube.com/watch?v=No5NiaK97vE#" target="_blank" rel="external">We Fought Monsters</a>, <a href="http://youtube.com/watch?v=plDNCnCik6c#" target="_blank" rel="external">I Hear the Bells</a>, and <a href="http://youtube.com/watch?v=Ek0SgwWmF9w" target="_blank" rel="external">Madness</a>. It feels awesome emotionally and physically. Music is a huge factor in my moods and it’s awesome to be able to experience the full range of it again.</p>
+]]></content>
+    
+    
+      <category term="apartment" scheme="http://leaena.github.io/tags/apartment/"/>
+    
+      <category term="job" scheme="http://leaena.github.io/tags/job/"/>
+    
+      <category term="Life" scheme="http://leaena.github.io/categories/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[I Got a Job!]]></title>
+    <link href="http://leaena.github.io/2014/02/i-got-a-job/"/>
+    <id>http://leaena.github.io/2014/02/i-got-a-job/</id>
+    <published>2014-03-01T00:17:45.000Z</published>
+    <updated>2014-06-22T23:57:21.000Z</updated>
+    <content type="html"><![CDATA[<p>So, that was quick. Here I was whining and freaking out about the job search and instead I find myself settled in a week and a half.</p>
+<p>I’m a Full Stack Software Engineer at <a href="http://udacity.com" target="_blank" rel="external">Udacity</a>! I am so excited. Everyone there seems so awesome and I really believe in online/alternate education and have always wanted to get into that niche.</p>
+<p>So no sob stories to read about here for another few months. Instead you’ll get to read about my shenanigans trying to find an apartment, bringing my kitties down from Oregon, and buying everything in IKEA.</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/v1393632890/ikeajob_e6sta4.gif" alt="Applying for a job at IKEA"></p>
+]]></content>
+    
+    
+      <category term="IKEA" scheme="http://leaena.github.io/tags/IKEA/"/>
+    
+      <category term="job" scheme="http://leaena.github.io/tags/job/"/>
+    
+      <category term="Udacity" scheme="http://leaena.github.io/tags/Udacity/"/>
+    
+      <category term="Life" scheme="http://leaena.github.io/categories/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[...And So It Begins]]></title>
+    <link href="http://leaena.github.io/2014/02/and-so-it-begins/"/>
+    <id>http://leaena.github.io/2014/02/and-so-it-begins/</id>
+    <published>2014-02-25T04:13:39.000Z</published>
+    <updated>2014-06-22T23:57:21.000Z</updated>
+    <content type="html"><![CDATA[<p>I definitely plan to keep up with my Sunday/Monday posting schedule but I’m not sure what to call these anymore. When I was in Hack Reactor it was easy to call them “Week #: (insert witty title)” and now I think I just have to continue with my old standby of vaguely overwrought witty/melodramatic titles or it will take all the fun out of my posts.</p>
+<p>Any illusions I had of getting some sleep after Hack Reactor was over was complete wishful thinking. I have been moving and doing and emailing and talking and coding and my life is just as crazy as ever… and I love it. That terrified feeling from the last week of Hack Reactor is gone. I mean, obviously there are nerves and ups and downs to this whole process, but there are also the awesome moments. The fun of coding challenges and flexing my brain at a whiteboard. The awesome talks with some really cool engineers and just the constant feeling that I’m still learning and growing as an engineer even when I’m not technically “learning”.</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,h_1050/v1393301031/2014-02-22_10_20_50_pfzihb.jpg" alt="LAUNCH Hack Sign"></p>
+<p>And just to prove there ain’t no rest for the wicked, over the weekend I attended the Launch hackathon. We weren’t doing it to win any prizes but I attended with a couple of the Hack Reactor ladies and we had a lot of fun putting <a href="http://marmotcreek.herokuapp.com" target="_blank" rel="external">Marmot Creek</a> together. Also, for my zen like moment of the week, a picture from the wharf this morning:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,e_vibrance,r_16,w_768/v1393301453/2014-02-24_09_35_16_ys5fv6.jpg" alt="Staring at the Bay"></p>
+]]></content>
+    
+    
+      <category term="hackreactor" scheme="http://leaena.github.io/tags/hackreactor/"/>
+    
+      <category term="interviews" scheme="http://leaena.github.io/tags/interviews/"/>
+    
+      <category term="updates" scheme="http://leaena.github.io/tags/updates/"/>
+    
+      <category term="Life" scheme="http://leaena.github.io/categories/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[I Feel Legit!]]></title>
+    <link href="http://leaena.github.io/2014/02/i-feel-legit/"/>
+    <id>http://leaena.github.io/2014/02/i-feel-legit/</id>
+    <published>2014-02-17T02:49:22.000Z</published>
+    <updated>2014-06-22T23:57:21.000Z</updated>
+    <content type="html"><![CDATA[<p>One of my teammates just notified me that Helix had a paragraph (and video link!) in a <a href="http://t.co/dXUM8PCout" target="_blank" rel="external">Forbes tech article</a> yesterday!</p>
+]]></content>
+    
+    
+      <category term="forbes" scheme="http://leaena.github.io/tags/forbes/"/>
+    
+      <category term="Helix" scheme="http://leaena.github.io/tags/Helix/"/>
+    
+      <category term="Programming" scheme="http://leaena.github.io/categories/Programming/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Week 12: And So It Comes to an End]]></title>
+    <link href="http://leaena.github.io/2014/02/week-12-and-so-it-comes-to-an-end/"/>
+    <id>http://leaena.github.io/2014/02/week-12-and-so-it-comes-to-an-end/</id>
+    <published>2014-02-17T00:39:18.000Z</published>
+    <updated>2014-06-22T23:57:21.000Z</updated>
+    <content type="html"><![CDATA[<p>I don’t know where to start this week. So many things happened and they all seemed like we had been waiting for them forever and now they’re gone and I miss everything. Hiring Day was Tuesday. We demoed Helix and then I got to talk to 10 companies that were looking for Software Engineers. I was terrified but once I got down to business and started talking with the company representatives it got more fun.</p>
+<p>Wednesday was fun too. I had my first call with a recruiter (who basically just called to say the job had changed, but could he keep me in mind for future things?). We also got to demo Helix live at the Famo.us Launch Preview. <a href="http://sarabinns.com/" target="_blank" rel="external">Sara</a> did the narration and I drove the app.</p>
+<iframe title="YouTube video player" width="640" height="390" src="http://www.youtube.com/embed/hiyiT0xBaUA" frameborder="0" allowfullscreen></iframe>
+
+<p>The next day (Thursday) I stayed in my apartment because I was out really late for the party, but I had another talk with a recruiter, a talk with a tech lead, and a coding challenge for another company to do. I bombed the talk with the tech lead. Literally, I didn’t realize it was going to be a tech interview, it was my first one, and I just froze. Right after I got off the phone (“You failed. Good luck with other companies” were his parting words), I had the coding challenge waiting in my email from another company. I dusted myself off and finished the challenge in an hour, emailed it back and then cried. Thursday kinda sucked.</p>
+<p>Friday was a bit of a blur, I told everyone about my failure the day before (it was cathartic) and then talked to ANOTHER recruiter and then partied down at my graduation party.</p>
+<p>Saturday was calm. Lots of hugs and reflecting and a snazzy new Hack Reactor t-shirt I will wear with pride.<br><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,e_improve,w_674/v1392597331/2014-02-16_14_20_24_jcghgq.jpg" alt="Hack Reactor Tshirt"><br>I don’t really know how to feel about this crazy journey. I know it’s not over yet, I don’t think it will ever be over. I’ve made friends/family that will last forever and I will always be proud of our community and its people and what amazing things have been accomplished in their walls.</p>
+<p>I’m obviously a bit terrified of the coming weeks and months. It’s a whole new adventure to navigate through filled with tech interviews and the highs and lows of finding a job. But I’m not going anywhere without my fellow HackR’s or this blog, so I think I’ll be OK.</p>
+]]></content>
+    
+    
+      <category term="HackReactor" scheme="http://leaena.github.io/categories/HackReactor/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Week 11: Not Coding Makes Me Nervous]]></title>
+    <link href="http://leaena.github.io/2014/02/week-11-not-coding-makes-me-nervous/"/>
+    <id>http://leaena.github.io/2014/02/week-11-not-coding-makes-me-nervous/</id>
+    <published>2014-02-10T05:01:08.000Z</published>
+    <updated>2014-06-22T23:57:21.000Z</updated>
+    <content type="html"><![CDATA[<p>This entire week has been a wild and crazy adventure toward finding jobs. We spent lots of time making our resumes look awesome and making sure all of our online presences look like we knew our stuff. Shockingly, I think it’s working! I’ve actually had some interest from companies and recruiters on LinkedIn and AngelList! I have a couple of interviews scheduled for later next week, but because I haven’t been able to dive into coding, I’ve had a lot of time to sit with my decisions and I’m suddenly really, really nervous.</p>
+<p>Next week is the start of something new and I’ve done more new things in the past few months than I have in my entire life. I interviewed/got accepted to Hack Reactor, I quit my job, I moved out-of-state, I started a crazy intense engineering program and now it’s like I’m done with the program and get to start a new great unknown. Next Tuesday is Hiring Day, which means companies get to decided whether I’m awesome or not (and one of my top choices of jobs is going to be there) and Wednesday my team is demoing <a href="http://www.youtube.com/watch?v=CW8BBP-DxIw" target="_blank" rel="external">Helix</a>, onstage, for the <a href="http://famo.us" target="_blank" rel="external">Famo.us</a> Beta Launch Preview. And that’s not even the end of it, I have two phone interviews already scheduled for later in the week and hopefully more if things from Hiring Day pan out.</p>
+<p>Everyone around me is telling me I’m capable, but I don’t have that same confidence. It’s not even that I think I’m not a capable coder, I know I am. I’m just worried that I’m not going to show off my potential. I’m terrified of the rejection (because I know there has to be at least some) and I’m worried about making the best choices for me when the time comes.</p>
+<p>On the other hand, I really look forward to seeing how amazing everyone is going to do. I hope we all kill it. Most of all I hope we’re all happy. &lt;3</p>
+]]></content>
+    
+    
+      <category term="HackReactor" scheme="http://leaena.github.io/categories/HackReactor/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Advanced Filtering with Angular.js]]></title>
+    <link href="http://leaena.github.io/2014/02/advanced-filtering-with-angular-js/"/>
+    <id>http://leaena.github.io/2014/02/advanced-filtering-with-angular-js/</id>
+    <published>2014-02-07T00:49:28.000Z</published>
+    <updated>2014-06-23T00:04:05.000Z</updated>
+    <content type="html"><![CDATA[<p>Everyone (who’s used angular or seen an angular tutorial) has seen the awesome realtime angular search. This is used with a filter property, but there are more complex things you can use with filtering. On my Hack Reactor <a href="http://github.com/leaena/blogmark" target="_blank" rel="external">hackathon project</a> I used filtering for just about everything. From picking out individual objects to finding just the right combinations and I learned some awesome tricks and some pitfalls to avoid.</p>
+<p>One of the coolest things you can do is filter by lots of things together. The filter ends up looking a lot like a JavaScript object:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>filter:{TEXT: text, notes: noted, category: category}
+</pre></td></tr></table></figure>
+
+<p>They way this works the best is if you have a number of searches all on one page to pull together. Say a regular text search (<code>text</code> above) that needs to interact with a drop down menu filter (<code>category</code>). Just throw all the variables into one object and filter on that.</p>
+<p>Another neat thing you can do is filter by IDs. For example, if you want to have individual pages for each item, you can normally just call to it based on the $index of that item. But what if you have searched and filtered your list of data into a more manageable grouping? Index doesn’t work! It’s pulling the index of the new filtered list and not the actual index that data point has in the entire data structure.</p>
+<p>My fun work around for this was to send the object that you had selected to a function within my Angular controller for that page and find the data that way.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre>$scope.add = <span class="function"><span class="keyword">function</span><span class="params">(website)</span>{</span>
+    $rootScope.selected = $rootScope.selected || [];
+    <span class="keyword">if</span>($rootScope.selected.indexOf(website) === -<span class="number">1</span>){
+        $rootScope.selected.push(website);
+    }
+};
+</pre></td></tr></table></figure>
+
+<p>Of course this requires something in the <code>$rootScope</code>, but that also benefited me because I wanted to have access on a separate page to all of the data points a user chose. That way I could fill out a detailed report of the chosen bookmarks with user defined notes all on one screen.</p>
+]]></content>
+    
+    
+      <category term="angular" scheme="http://leaena.github.io/tags/angular/"/>
+    
+      <category term="Tech Tips" scheme="http://leaena.github.io/categories/Tech-Tips/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Week 10: Game Changing]]></title>
+    <link href="http://leaena.github.io/2014/02/week-10-game-changing/"/>
+    <id>http://leaena.github.io/2014/02/week-10-game-changing/</id>
+    <published>2014-02-02T19:31:21.000Z</published>
+    <updated>2014-06-22T23:57:21.000Z</updated>
+    <content type="html"><![CDATA[<p>This week has been a week like no other. I’ve already demoed Helix three times and there are so many more to go. We spent Monday/Tuesday/Wednesday frantically getting everything we wanted to happen with Helix working. I finally fully integrated the 23andme API and all of my algorithms are humming along to find genetic traits for users that login to their 23andme account. I have the setup to record a video walk-through of Helix that I plan on doing sometime next week. Because the framework we used is in private beta we can’t actually deploy it live so unless you come bug me in person, you’re stuck looking at a demo video for now.</p>
+<p>Thursday night we demoed for Famo.us. We also got to be a part of their weekly team meeting which was really interesting. I felt much more like an actual Software Engineer following conversations about their framework and business. Right before our demo, we found out that we will be demoing Helix onstage at the Famo.us Launch Preview Party. My team is so excited (and terrified). Helix has definitely been a labor of love and something I am so proud to have been involved in.</p>
+<p>Next week will be a new adventure - job searching. Starting next week I am an almost free agent. We have some hype up (and warning lectures) and then the next week we have hiring day (and Famo.us Party demo). The week after that I’m attending a developer conference and the Launch hackathon. I am so excited that this is my life now.</p>
+]]></content>
+    
+    
+      <category term="DeveloperWeek" scheme="http://leaena.github.io/tags/DeveloperWeek/"/>
+    
+      <category term="famo.us" scheme="http://leaena.github.io/tags/famous/"/>
+    
+      <category term="Helix" scheme="http://leaena.github.io/tags/Helix/"/>
+    
+      <category term="jobs" scheme="http://leaena.github.io/tags/jobs/"/>
+    
+      <category term="LAUNCH" scheme="http://leaena.github.io/tags/LAUNCH/"/>
+    
+      <category term="HackReactor" scheme="http://leaena.github.io/categories/HackReactor/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Custom APIs and Web Scraping for Science]]></title>
+    <link href="http://leaena.github.io/2014/01/web-scraping-science/"/>
+    <id>http://leaena.github.io/2014/01/web-scraping-science/</id>
+    <published>2014-01-31T23:16:49.000Z</published>
+    <updated>2014-06-22T23:57:21.000Z</updated>
+    <content type="html"><![CDATA[<p>So my team’s most recent application, Helix, involved genome visualization. We integrated it with the <a href="http://23andme.com" target="_blank" rel="external">23andme</a> API, but still needed a way to find out interesting information about specific RSIDs (used by researchers and databases to refer to specific base pairs of DNA). By far the most useful and open source repository of genetic information is <a href="http://snpedia.org" target="_blank" rel="external">SNPedia</a>, but I needed access to lots of information and to integrate calls to specific SNPs. Basically I needed an API. So being ever resourceful, I decided to make my own.</p>
+<p>Tools for the task were an easy choice. I needed a small fast server that I could implement a web scrapper on. I have always wanted a reason to use <a href="http://www.crummy.com/software/BeautifulSoup/" target="_blank" rel="external">BeautifulSoup</a>, but it’s a Python library so I knew it would be easier to build a Python server to run the API endpoints. I chose <a href="http://flask.pocoo.org/" target="_blank" rel="external">Flask</a> because of its lightweight nature and how much it reminds me of a Node/Express server at times.</p>
+<p>Thankfully there are some really good tutorials for both Flask and BeautifulSoup, my favorites (and the ones I referenced when I hit weirdness) were <a href="http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask" target="_blank" rel="external">Designing a RESTful API</a> and <a href="http://www.briancarpio.com/2012/12/02/website-scraping-with-python-and-beautiful-soup/" target="_blank" rel="external">Website Scraping with BeautifulSoup</a>. Both of these tutorials said a lot of things better than I could have myself.</p>
+<p>For access to my SNPedia API and information on how to use it, <a href="https://github.com/leaena/snp-api" target="_blank" rel="external">check out my project on GitHub</a>.</p>
+]]></content>
+    
+    
+      <category term="API" scheme="http://leaena.github.io/tags/API/"/>
+    
+      <category term="BeautifulSoup" scheme="http://leaena.github.io/tags/BeautifulSoup/"/>
+    
+      <category term="DNA" scheme="http://leaena.github.io/tags/DNA/"/>
+    
+      <category term="flask" scheme="http://leaena.github.io/tags/flask/"/>
+    
+      <category term="python" scheme="http://leaena.github.io/tags/python/"/>
+    
+      <category term="SNP" scheme="http://leaena.github.io/tags/SNP/"/>
+    
+      <category term="Tech Tips" scheme="http://leaena.github.io/categories/Tech-Tips/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Week 9: Highs and Lows and... WTF I only have three weeks left??]]></title>
+    <link href="http://leaena.github.io/2014/01/week-9-three-weeks-left/"/>
+    <id>http://leaena.github.io/2014/01/week-9-three-weeks-left/</id>
+    <published>2014-01-27T00:10:31.000Z</published>
+    <updated>2014-06-22T23:57:21.000Z</updated>
+    <content type="html"><![CDATA[<p>My week started out fairly average. We were all rolling along on our projects and then I noticed an event on the Hack Reactor Senior calendar. Tuesday, three weeks from this past Tuesday, is Hiring Day. Three weeks?? Not even now, more like two?? Oh, god. And yet, as much of a whirlwind as this has been and as often as I have impostor syndrome, I’m a little excited. I want to see what’s out there for me and find a job and learn and grow and do my instructors proud.</p>
+<p>One slight stumbling block for me this week: Hacker in Residence positions. I applied and think I would have been accepted, but I had to bow out. After I sat down and thought about it, I just couldn’t justify being out of work that much longer (even on a stipend). It would have been fun to learn how to teach and spend some more time hacking on personal ideas, but that’s what weekends are for, right?</p>
+<p>We also got to demo Helix for the first time. Helix is a gene visualization app that shows you your SNPs (base pairs) from <a href="http://23andme.com" target="_blank" rel="external">23andme</a> that have traits attached to them (according to <a href="http://snpedia.com" target="_blank" rel="external">SNPedia.com</a>). You can search traits or just browse your chromosomes for interesting info. It was built using a private beta framework (called <a href="http://famo.us" target="_blank" rel="external">Famo.us</a>) that my team was lucky enough to get to be involved with. We have <em>fingers crossed</em> two more opportunities to demo Helix, one more run through at Hack Reactor and if all goes well, a private party/meetup for Famous.</p>
+<p>Another fun thing that came out of Helix was that I got to dust off my Python knowledge. I had wanted to try BeautifulSoup (a Python web scraper) for a while now and I needed an easy way to pull rsid information from SNPedia so I created my own API wrapper! The code is available (including instructions on how to run it on your own) on my <a href="http://github.com/leaena/snp-api" target="_blank" rel="external">github account</a>. It’s a tiny Python/Flask server that only has a couple of endpoints (the ones I really needed) but I’m thinking about expanding eventually.</p>
+<p>And then I got sick. I came down with a cold on Friday and haven’t been to HackReactor since. I’ve been working from home, but mostly just trying to sleep, having weird dreams, and sounding pitiful. I’m getting better though and I will definitely be on-point on Monday to work out the last-minute details of Helix before all the demos come crashing around us.</p>
+<p>Three more weeks until I graduate! My gift to myself - I’m attending the <a href="http://hackathon.launch.co/" target="_blank" rel="external">LAUNCH hackathon</a> with two other women from HackReactor the weekend after it’s all over. I just don’t want to get lazy!</p>
+]]></content>
+    
+    
+      <category term="flask" scheme="http://leaena.github.io/tags/flask/"/>
+    
+      <category term="hackreactor" scheme="http://leaena.github.io/tags/hackreactor/"/>
+    
+      <category term="javascript" scheme="http://leaena.github.io/tags/javascript/"/>
+    
+      <category term="LAUNCH" scheme="http://leaena.github.io/tags/LAUNCH/"/>
+    
+      <category term="python" scheme="http://leaena.github.io/tags/python/"/>
+    
+      <category term="HackReactor" scheme="http://leaena.github.io/categories/HackReactor/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Week 8: New Surroundings, Same Routine]]></title>
+    <link href="http://leaena.github.io/2014/01/week-8-new-surroundings-same-routine/"/>
+    <id>http://leaena.github.io/2014/01/week-8-new-surroundings-same-routine/</id>
+    <published>2014-01-20T02:23:55.000Z</published>
+    <updated>2014-06-22T23:57:21.000Z</updated>
+    <content type="html"><![CDATA[<p>Sorry for the delay in this post. My roommate, Ava, was worried about my long hours all week so she wouldn’t let me touch my laptop on Sunday. Saturday night was card games with Hack Reactor peeps so I was out late. It was a jumble of a week and I’m writing this so late that this week is already upon me. So I think this one will be very short.</p>
+<p>We started working at Famo.us this past week. They have a beautiful office that was converted from an apartment. It’s weird to go back to Hack Reactor now with their darker rooms and only two bathrooms, but I still miss it something fierce when I’m away. Hack Reactor feels like home, but Famo.us is a nice vacation. Our project is slowly progressing. We have some really neat ideas about gene visualization and if all goes well we’ll get to demo the awesomeness in front of a bunch of people.</p>
+<p>Other fun things from this week included a talk on Thursday from the author of Cracking the Coding Interview and Saturday social night where I got my ass handed to me in Marvel vs. Capcom and then made people squirm in Cards Against Humanity.</p>
+<p>One final thing: Ava talked me into buying a FitBit! I’ve been meeting all my goals every day and it’s pink so life is pretty amazing. You can find me on Fitbit <a href="http://www.fitbit.com/user/2CM7FN" target="_blank" rel="external">here</a>.</p>
+<p>&nbsp;</p>
+]]></content>
+    
+    
+      <category term="famous" scheme="http://leaena.github.io/tags/famous/"/>
+    
+      <category term="hackreactor" scheme="http://leaena.github.io/tags/hackreactor/"/>
+    
+      <category term="javascript" scheme="http://leaena.github.io/tags/javascript/"/>
+    
+      <category term="HackReactor" scheme="http://leaena.github.io/categories/HackReactor/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,8 +1,182 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="Lindsey Smith"><meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a software engineering bootcamp. Now I blog a mixture of programming, women in tech, life, and cats."><title>Cloud Postgre Sql Servers With Heroku&nbsp;&mdash; Leaena.com</title><link href="/favicon.png" rel="icon"><link rel="alternate" href="/atom.xml" title="config.title" type="application/atom.xml"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet"><link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/stylesheets/app.css"></head><body><header id="page-header"><div id="masthead"><h1 id="site-title"><a href="/">Leaena.com</a></h1><p id="site-slogan">Coding, cats, California, feminism, and zombies. Your average girl blogger.</p></div></header><section id="content"><article class="post"><h2>Cloud Postgre Sql Servers With Heroku</h2><div class="meta">Dec 30 2013 in <a href="/categories/Tech-Tips/">Tech Tips</a>&ensp;</div><p>While it might be possible that I’m the only person out there who didn’t want to hassle with creating a <a href="http://www.postgresql.org/" target="_blank" rel="external">Postgres</a> database on my computer that needed to be passed around to my project-mates, I have a feeling there is one lost soul in the universe besides me who might find this useful. When I first tried to use <a href="https://www.heroku.com/postgres" target="_blank" rel="external">Heroku’s PostgreSQL database add-on</a> the only documentation I really found was for attaching it to existing Heroku apps. I just wanted a dev environment and currently don’t have plans to deploy the app with Heroku so I just wanted to “borrow” their free level of database storage.</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Cloud PostgreSQL Servers with Heroku | Leaena.com</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="While it might be possible that I’m the only person out there who didn’t want to hassle with creating a Postgres database on my computer that needed to be passed around to my project-mates, I have a f">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cloud PostgreSQL Servers with Heroku">
+<meta property="og:url" content="http://leaena.github.io/2013/12/cloud-postgresql-servers-with-heroku/">
+<meta property="og:site_name" content="Leaena.com">
+<meta property="og:description" content="While it might be possible that I’m the only person out there who didn’t want to hassle with creating a Postgres database on my computer that needed to be passed around to my project-mates, I have a f">
+<meta property="og:image" content="http://res.cloudinary.com/leaena/image/upload/v1391709364/Screen-Shot-2013-12-30-at-10_41_21-AM_vpd5hf.png">
+<meta property="og:image" content="http://res.cloudinary.com/leaena/image/upload/v1391709372/Screen-Shot-2013-12-30-at-10_41_33-AM-200x300_p4qzvm.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cloud PostgreSQL Servers with Heroku">
+<meta name="twitter:description" content="While it might be possible that I’m the only person out there who didn’t want to hassle with creating a Postgres database on my computer that needed to be passed around to my project-mates, I have a f">
+  
+    <link rel="alternative" href="/atom.xml" title="Leaena.com" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://leaena.github.io"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-cloud-postgresql-servers-with-heroku" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/12/cloud-postgresql-servers-with-heroku/" class="article-date">
+  <time datetime="2013-12-30T19:00:08.000Z" itemprop="datePublished">Dec 30 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/12/cloud-postgresql-servers-with-heroku/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      Cloud PostgreSQL Servers with Heroku
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>While it might be possible that I’m the only person out there who didn’t want to hassle with creating a <a href="http://www.postgresql.org/" target="_blank" rel="external">Postgres</a> database on my computer that needed to be passed around to my project-mates, I have a feeling there is one lost soul in the universe besides me who might find this useful. When I first tried to use <a href="https://www.heroku.com/postgres" target="_blank" rel="external">Heroku’s PostgreSQL database add-on</a> the only documentation I really found was for attaching it to existing Heroku apps. I just wanted a dev environment and currently don’t have plans to deploy the app with Heroku so I just wanted to “borrow” their free level of database storage.</p>
 <p>It is shockingly easy. All I needed to do was log in to my Heroku dashboard and click the databases tab. From there I created a new database (be sure to choose the almost hidden <code>Dev Plan (free)</code> option on the lower left). Once it was done spinning up if you click on it, you are taken to a page with all the login info you could ever need:</p>
-<p><a href="http://leaena.com/wp-content/uploads/2013/12/Screen-Shot-2013-12-30-at-10.41.21-AM.png" target="_blank" rel="external"><img src="/images/" alt=""></a></p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/v1391709364/Screen-Shot-2013-12-30-at-10_41_21-AM_vpd5hf.png" alt="Heroku Postgres Login Stuffs"></p>
 <p>I just plugged all of that info into Sequelize (<a href="http://leaena.com/2013/12/setting-up-a-database-node-module-on-a-nodeexpress-server-with-sequelize/" title="Setting Up a Database Node Module on a Node/Express Server with Sequelize" target="_blank" rel="external">see my previous post</a>), because I’m using Heroku Postgres, I had to make sure I used the pg.native options in both Node and Sequelize.</p>
 <p>A few caveats! For a Mac, if you just install the Postgres standalone app from <a href="http://postgresql.org/" target="_blank" rel="external">PostgreSQL</a>, life will not be pleasant (I learned this the hard way). The easiest way to make life happy is to use Homebrew to install Postgres. <a href="http://brew.sh/" target="_blank" rel="external">Please have Homebrew</a>, it makes life super easy. All you need to do then is <code>brew install postgresql</code>.</p>
 <p>The second awesome thing about Heroku Postgres is that although I’m only on the free version, I can still easily log in to my database from the command line and change things. On the page with the connection info, click the double arrows on the right and choose URL. Now, in Terminal type <code>psql DATABASE_URL_HERE</code> and voila! direct access to your database.</p>
-<p><a href="http://leaena.com/wp-content/uploads/2013/12/Screen-Shot-2013-12-30-at-10.41.33-AM.png" target="_blank" rel="external"><img src="/images/" alt=""></a></p>
-</article><nav id="article-pagination"><a href="/2014/01/d3-js-rollups/" title="Previous article: D3.Js Rollups" class="prev">&larr; Previous article</a><a href="/2013/12/setting-up-a-database-node-module-on-a-nodeexpress-server-with-sequelize/" title="Next article: Setting Up a Database Node Module on a Node/Express Server With Sequelize" class="next">Next article &rarr;</a></nav></section><footer id="page-footer"><section><nav id="footer-menu"><ul><li><a href="/about">About</a></li><li><a href="/archives">Archive</a></li><li><a href="http://github.com/leaena/leaena.github.io">Source</a></li><li><a href="/atom.xml">Feed</a></li></ul></nav></section></footer></body></html>
+<p><a href="http://leaena.com/wp-content/uploads/2013/12/Screen-Shot-2013-12-30-at-10.41.33-AM.png" target="_blank" rel="external"><img src="http://res.cloudinary.com/leaena/image/upload/v1391709372/Screen-Shot-2013-12-30-at-10_41_33-AM-200x300_p4qzvm.png" alt=""></a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../categories/Tech-Tips">Tech Tips</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/Heroku">Heroku</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/PostgreSQL">PostgreSQL</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2014/01/d3-js-rollups/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          D3.js Rollups
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/12/setting-up-a-database-node-module-on-a-nodeexpress-server-with-sequelize/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          Setting Up a Database Node Module on a Node/Express Server with Sequelize
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:leaena.github.io">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2014 Lindsey Smith<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'leaena';
+  
+  var disqus_url = 'http://leaena.github.io/2013/12/cloud-postgresql-servers-with-heroku/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="../../../js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>

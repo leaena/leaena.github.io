@@ -1,1 +1,712 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="Lindsey Smith"><meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a software engineering bootcamp. Now I blog a mixture of programming, women in tech, life, and cats."><title>Leaena.com</title><link href="/favicon.png" rel="icon"><link rel="alternate" href="/atom.xml" title="config.title" type="application/atom.xml"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet"><link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/stylesheets/app.css"></head><body><header id="page-header"><div id="masthead"><h1 id="site-title"><a href="/">Leaena.com</a></h1><p id="site-slogan">Coding, cats, California, feminism, and zombies. Your average girl blogger.</p></div></header><section id="content"><ul class="article-list"><li><article><h2><a href="/2014/06/hello-world/">Hello World</a></h2><div class="meta">Jun 22 2014</div></article></li><li><article><h2><a href="/2014/06/clojure-makes-me-feel-stupid/">Clojure Makes Me Feel Stupid</a></h2><div class="meta">Jun 16 2014 in <a href="/categories/Tech-Tips/">Tech Tips</a>&ensp;</div></article></li><li><article><h2><a href="/2014/06/bored-again-time-to-create/">Bored Again   Time to Create</a></h2><div class="meta">Jun 13 2014 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li><li><article><h2><a href="/2014/06/home-for-now/">Home   for Now</a></h2><div class="meta">Jun 8 2014 in <a href="/categories/Life/">Life</a>&ensp;</div></article></li><li><article><h2><a href="/2014/04/week-45-fail/">Week 4/5: #Fail</a></h2><div class="meta">Apr 20 2014 in <a href="/categories/Life/">Life</a>&ensp;</div></article></li><li><article><h2><a href="/2014/04/week-3-giving-back/">Week 3: Giving Back</a></h2><div class="meta">Apr 9 2014 in <a href="/categories/Life/">Life</a>&ensp;</div></article></li><li><article><h2><a href="/2014/04/week-3-giving-back-2/">Week 3: Giving Back</a></h2><div class="meta">Apr 9 2014 in <a href="/categories/Misc/">Misc</a>&ensp;</div></article></li><li><article><h2><a href="/2014/03/week-2-ticking-all-the-checkboxes/">Week 2: Ticking All the Checkboxes</a></h2><div class="meta">Mar 28 2014 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li><li><article><h2><a href="/2014/03/how-to-git-ignore-without-gitignore/">How to Git Ignore Without .Gitignore</a></h2><div class="meta">Mar 23 2014 in <a href="/categories/Tech-Tips/">Tech Tips</a>&ensp;</div></article></li><li><article><h2><a href="/2014/03/week-1-i-feel-like-ive-been-here-before/">Week 1: I Feel Like I've Been Here Before</a></h2><div class="meta">Mar 23 2014 in <a href="/categories/Life/">Life</a>&ensp;<a href="/categories/Life/Programming/">Programming</a>&ensp;</div></article></li></ul><nav id="article-list-pagination"><a href="/page/2/" title="Next articles">Next articles &rarr;</a></nav></section><footer id="page-footer"><section><nav id="footer-menu"><ul><li><a href="/about">About</a></li><li><a href="/archives">Archive</a></li><li><a href="http://github.com/leaena/leaena.github.io">Source</a></li><li><a href="/atom.xml">Feed</a></li></ul></nav></section></footer></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Leaena.com</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Leaena.com">
+<meta property="og:url" content="http://leaena.github.io/">
+<meta property="og:site_name" content="Leaena.com">
+<meta property="og:description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Leaena.com">
+<meta name="twitter:description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+  
+    <link rel="alternative" href="/atom.xml" title="Leaena.com" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://leaena.github.io"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="post-clojure-makes-me-feel-stupid" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/06/clojure-makes-me-feel-stupid/" class="article-date">
+  <time datetime="2014-06-17T06:58:50.000Z" itemprop="datePublished">Jun 16 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/06/clojure-makes-me-feel-stupid/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/06/clojure-makes-me-feel-stupid/">Clojure Makes Me Feel Stupid</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>…but I’m kinda in love with it. Thanks to a friend/coworker I’m cautiously dipping my toe into the world of “functional programming”. I’m still not 100% certain I get the full gist of functional programming but, to my newb mind, I’d explain it as programming without consequences. Functions only depend on their inputs and external forces/state cannot muck with your function.</p>
+<p>Apparently this makes it easier to predict what’s going on, but I still have issues reading what I just wrote. Parenthesis all the way down dudes. Also prefix notation is technically useful, but warping my poor little brain.</p>
+<p>So 1 + 1 in Clojure is actually written as (+ 1 1). Makes sense, right? Sorta, except for the years and years of basic math classes that NEVER LOOKED LIKE THIS. Oh my brain. But it’s kinda cool that instead of 1 + 2 + 3 + 4 I only need to write (+ 1 2 3 4).</p>
+<p>But seriously. This is a function in Clojure:</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="list">(<span class="title"><span class="built_in">defn</span></span> adder
+  <span class="collection">[x y]</span>
+  <span class="list">(<span class="title"><span class="built_in">+</span></span> x y)</span>)</span>
+
+<span class="list">(<span class="title">adder</span><span class="number"> 3</span><span class="number"> 4</span>)</span> <span class="comment">;; 7&lt;/pre&gt;</span>
+</pre></td></tr></table></figure>
+
+<p>Wat? So the first line defines the function name. The second line is the parameters that you give to the function and then the last line adds those two parameters together. I then call the function on line 5 with the arguments 3 and 4 and then the semicolons denote comments and I use that do show what the output of the function is… 7.</p>
+<p>As a super ridiculous aside. <strong>Parameters</strong> vs <strong>arguments</strong>? <strong>Parameters</strong> are the things that you define with the function. So x and y on line 2 are <strong>parameters</strong>. <strong>Arguments</strong> are what you pass to the function when you what to actually use it. So 3 and 4 on line 5 are <strong>arguments</strong>. Now go forth and be awesome!</p>
+<p>So how do you be Clojure learners too? Currently I’m running through the <a href="https://github.com/ClojureBridge/curriculum" target="_blank" rel="external">clojurebridge curriculum</a> on my own.<a href="http://adambard.com/blog/clojure-in-15-minutes/" target="_blank" rel="external"> Clojure in 15 minutes</a> looks like a decent-y rundown of most of my syntax options. If you don’t want to put anything on your system yet, or just want to mess around with the syntax, there’s always <a href="http://tryclj.com/" target="_blank" rel="external">Try Clojure</a> which lets you program from your browser. And I’ve bookmarked <a href="http://www.braveclojure.com/" target="_blank" rel="external">Clojure for the Brave and True</a> mostly for the title, but I haven’t really read any of it yet.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="categories/Tech-Tips">Tech Tips</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/clojure">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/functional-programming">functional programming</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-bored-again-time-to-create" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/06/bored-again-time-to-create/" class="article-date">
+  <time datetime="2014-06-14T04:31:34.000Z" itemprop="datePublished">Jun 13 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/06/bored-again-time-to-create/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/06/bored-again-time-to-create/">Bored Again - Time to Create</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><strong>On Repeat</strong></p>
+<iframe src="https://embed.spotify.com/?uri=spotify:track:3bJ73tmHnoeBfDZ4pLZqZ8" width="300" height="380" frameborder="0"></iframe>
+
+<p>Tomorrow is my three-month reunion for Hack Reactor. I’ve done some cool things since I graduated, but I’m still not doing everything I wanted to. I want to be the change I want to see in the world, or however that goes. I just became a mentor for Hackbright Academy so I feel a little less adrift without a social purpose, but I’m still itching to create things.</p>
+<p>I’ve started knitting again, but it’s not solving the itch. I have half-finished things on the needles again, but I’m still bored. I think there is no hope for me. I just need to be coding.</p>
+<p>About a year ago. I was sitting in a crappy gelato shop in downtown Burlingame with two of my best friends who already lived in California. I was still living and working in Oregon, but I knew I needed to be moving on soon. I was getting restless. That day we made a pact, all of us before this crazy thing called a dream turned us into a software engineer, a software engineer, and a novel writer. We were The Clever Girls and we were going to create something amazing together eventually. Part of that dream is how I ended up down here and now I’m realizing I need to start doing my share.</p>
+<p>So I’m going to dive back into programming completely solo, completely public, with my work, as shitty as a lot of it probably is, committed for all to see on Github. I hope soon the three of us can get back on the same page and actually make something amazing. For now I’ll just leave you with the copy I wrote for a fake starter page a year ago when The Clever Girls were still fresh in my mind:</p>
+<blockquote>
+<p>“Computing is too important to be left to men.”<br><small style="color: #999999;">Karen Spärck Jones</small></p>
+</blockquote>
+<p>Women are underrepresented in computing not because they aren’t good with computers but because they are never given the opportunity to fall in love with them. <em>The Code Girls</em>‘ goal is to create fun, educational games geared toward younger girls that will teach them the basics of how programs work. Using an easily readable language like Python, girls will code their way through the platform challenges and create fully functioning programs as they progress.</p>
+<p><strong>Code Girls present Octavia and the Clockwork Code</strong> is the first game in the series. It tells the tale of 12-year-old Octavia, a precocious tween who sets out to win a mechanical competition. Along the way she codes her way through puzzles and helps out friends and competition alike.</p>
+<p>The Code Girls is a fledgling startup created by three women who are passionate about women in computing.</p>
+<p><strong>Lindsey - The Creator</strong></p>
+<p>Founder, primary coder and herder of cats. Lindsey always wanted a game like this when she was growing up. Now that she’s technically grown up, she decided to take the idea into her own hands.</p>
+<p><strong>Ava - The Teacher</strong></p>
+<p>Our resident little girl expert. Ava has a Masters in Education and a passion for teaching children using methods that create a deeper understanding.</p>
+<p><strong>Alyssa - The Storyteller</strong></p>
+<p>World builder and character flaw creator. Alyssa creates and drives the stories we tell. She lives and breathes the Code Girl worlds.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="categories/Programming">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/clever-girls">clever girls</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/inspiration">inspiration</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/octavia">octavia</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-home-for-now" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/06/home-for-now/" class="article-date">
+  <time datetime="2014-06-08T07:29:25.000Z" itemprop="datePublished">Jun 8 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/06/home-for-now/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/06/home-for-now/">Home - For Now</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>The updates got away from me. Life has just been flowing one day to the next. A mix of sun and California and coding. Days will go by where I forget how I got here. It feels like I’ve always been here and then I see or hear something so stereotypically Bay Area-ish that I have to shake my head and realize I don’t know if I ever want to be completely sucked into this candy coated, rose-colored-glasses kinda world.</p>
+<p>Life is pretty amazing now. I’m happy and working and finally have my cats and my car. I could never live in San Francisco proper for the sheer joy I get in sitting in my car, driving on a long stretch of road with my music blaring. I drove from Portland home to Burlingame and the views were breathtaking and I felt so much at peace as I curved around the mountains of Northern California.</p>
+<p>Oh yeah, cats:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,h_800/v1402210118/2014-05-29_08_17_20_vlbrls.jpg" alt="" title="Issac"></p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,h_800/v1402210105/2014-05-31_14_57_34_v1owna.jpg" alt="" title="Jack"></p>
+<p>I was terrified they would hate it here and then I’d be the horrible person who drove them 14 hours away from Oregon. I haven’t lived with my cats for 7 months and it’s been excruciating. Thankfully they seem to be enjoying themselves. There are windows that I can actually keep open all the time and floors to stretch out on in the warm, warm sun. And of course I’m here to know Isaac really likes his head scratched and Jack likes to hold your hand with his paw. So yeah, I’m pretty happy. I do have more nerdery and tech blogging to do (I’m trying to learn Swift! and hopefully tech mentoring! and maybe even public speaking?!) and I plan to get to it, but I first had to get the reintroduction out of the way.</p>
+<p>Also, this post (and maybe many posts to come) has a theme song:</p>
+<iframe src="https://embed.spotify.com/?uri=spotify:track:6ZapsNk1ZpaebNXAIohP9R" width="300" height="380" frameborder="0"></iframe>
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="categories/Life">Life</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/Portland">Portland</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/San-Francisco">San Francisco</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/cats">cats</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-45-fail" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/04/week-45-fail/" class="article-date">
+  <time datetime="2014-04-21T01:21:06.000Z" itemprop="datePublished">Apr 20 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/04/week-45-fail/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/04/week-45-fail/">Week 4/5: #FAIL</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Life has been awesome, so awesome in fact that I have had no time to put words to “paper”. I’m finishing projects and starting new ones at work. I’m having fun with friends on weekends. I even signed up for online dating, but that’s a hilarious post all by itself.</p>
+<p>I also managed to do the age old terror inducing thing that most programmers do at least once in their lifetime. I broke our website. It was fast, over before most people noticed and totally my fault. The silver lining was that I was able to also fix my own mess without much assistance and in less than an hour. Still I felt like an idiot for the rest of the day.</p>
+<p>The next day though we were on to the next feature, the next quirk, and I was able to breathe again because I’m slowly realizing that none of this will ever be the end of the world. Just like I don’t believe any one thing can “disrupt” the way we do things (and I hate that most startups think that they will), I believe that we can all help to shape something. That we each contribute our own little parts and my contributions also don’t have to be perfect. We have code reviews and tech leads and lots and lots of awesome mentoring opportunities to fill in our lack of knowledge.</p>
+<p>Also, FYI, I’m including my Twitter feed to the right for now because I update it more than it might this blog.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="categories/Life">Life</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-3-giving-back" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/04/week-3-giving-back/" class="article-date">
+  <time datetime="2014-04-09T15:03:08.000Z" itemprop="datePublished">Apr 9 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/04/week-3-giving-back/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/04/week-3-giving-back/">Week 3: Giving Back</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Week 3 ended a few days back (sorry y’all I had a busy weekend) and it was awesome. I’m learning new intricacies of our systems and learning to be more confident in myself when I know I know it (or maybe even think I do! Being wrong isn’t the end of the world!). My favorite part of this week though was the weekend.</p>
+<p>On Saturday I got to volunteer at an all girl (10-17) JavaScript intro class with CoderDojo. I was a tech mentor, but I didn’t have to do a lot . I was super impressed with the girls! And I got to teach a couple of them that docs are super helpful! They were all so creative and awesome and I hope a lot of them decide that programming is as awesome as I think it is. For a short write-up (and to see what some of the girls made!) check out the write up for the event <a href="http://cs-blog.khanacademy.org/2014/04/coderdojo-js-workshop-for-girls-great.html" target="_blank" rel="external">here</a>.</p>
+<p>Also, as an aside, can I just take a moment to say that I think Pamela Fox is amazeballs? She spoke at Hack Reactor during my time there and I’ve been following her on Twitter for a while, but I fan-girled hard when I realized she was the instructor for the class. She is such a smart, funny presenter and she was amazing with the girls. I aspire to be more like her when I “grow up”.</p>
+<p>I could see myself filling my weekends with tech mentoring/hanging out at places like <a href="http://www.meetup.com/Women-Who-Code-SF/" target="_blank" rel="external">Women Who Code</a>, <a href="http://www.meetup.com/Girl-Develop-It-San-Francisco/" target="_blank" rel="external">Girl Develop It</a>, and <a href="http://www.meetup.com/PyLadiesSF/" target="_blank" rel="external">PyLadies</a>. It’s something that I’m super passionate about (it’s why I wanted to work at Udacity so badly). I think mainly because it’s something I wish I had when I was growing up. I wish I could have seen women being awesome programmers, making a career out of it, and how much fun it could be. I never thought I would be one of those people who didn’t just have a “job” they had a calling, but I’m positive I’ve found me.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="categories/Life">Life</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/CoderDojo">CoderDojo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/javascript">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/mentoring">mentoring</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-2-ticking-all-the-checkboxes" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/03/week-2-ticking-all-the-checkboxes/" class="article-date">
+  <time datetime="2014-03-29T05:50:05.000Z" itemprop="datePublished">Mar 28 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/03/week-2-ticking-all-the-checkboxes/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/03/week-2-ticking-all-the-checkboxes/">Week 2: Ticking All the Checkboxes</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>How is it possible that I’ve already been working for Udacity for two weeks?!</p>
+<p>I have done real tangible things since last week (I did real, tangible things my first week but nothing I could really point you to). This week, I integrated Github linking!! If you have an account on Udacity, you can now link your Github account to it <a href="https://www.udacity.com/account#!/linked-accounts" target="_blank" rel="external">here</a>. This doesn’t actually do much more at the moment, but it’s all a part of a master plan. If you don’t have a Udacity account (why not?!) or aren’t using Github, here’s an action shot from my account:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/v1396072152/github_on_udacity_dgpebo.png" alt="My first contribution to Udacity"></p>
+<p>I’m settling in to my place a little more (I also discovered the spider I threw outside was not Selma, but Selma is in fact outside now too). I have a new whiteboard that is currently just practical (groceries and upcoming things), but I’m sure it will end up with weird pictures of animals and penises.</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,w_612/v1396072062/2014-03-27_08_17_12_pbukzw.jpg" alt="The Whiteboard of Doom"></p>
+<p>My plans this weekend involve groceries and finally getting a San Mateo County library card, so I’m pretty excited!</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="categories/Programming">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/Udacity">Udacity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/work">work</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-how-to-git-ignore-without-gitignore" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/03/how-to-git-ignore-without-gitignore/" class="article-date">
+  <time datetime="2014-03-24T00:12:48.000Z" itemprop="datePublished">Mar 23 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/03/how-to-git-ignore-without-gitignore/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/03/how-to-git-ignore-without-gitignore/">How to Git Ignore without .gitignore</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>So I had this problem at work. I’m running a <code>virtualenv</code> instance on our main git repo for all my python packages. The global <code>.gitignore</code> obviously doesn’t know about it the way it knows to filter out node modules and other fun bits of localization and I sure as heck don’t want to add my own one line fix to the global <code>.gitignore</code> file.</p>
+<p>So what’s a girl to do? Does she just ignore that one annoying untracked file line every time she does a <code>git status</code> from the terminal? Nope, she uses git exclude.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$GIT_DIR</span>/info/exclude
+</pre></td></tr></table></figure>
+
+<p>So for me this meant I had to create a <code>info</code> folder in my <code>.git</code> folder in the repo. Then I created a file called <code>exclude</code> (no file extension). The syntax in that file is exactly like the <code>.gitignore</code> file, it’s just very very local (to your computer and only for that repo).</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="categories/Tech-Tips">Tech Tips</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/git">git</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-1-i-feel-like-ive-been-here-before" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/03/week-1-i-feel-like-ive-been-here-before/" class="article-date">
+  <time datetime="2014-03-23T19:28:07.000Z" itemprop="datePublished">Mar 23 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/03/week-1-i-feel-like-ive-been-here-before/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/03/week-1-i-feel-like-ive-been-here-before/">Week 1: I Feel Like I&#39;ve Been Here Before</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>First week of work is over and it felt a lot like a less intense week of Hack Reactor. I still can’t believe this is what I’m actually doing with my life. I still definitely have lots and lots of impostor syndrome but I also deployed live things my first week! And learned a few of my coworkers names! And did a two minute all staff demonstration on how to knit!</p>
+<p>I also got exactly what I wanted. I’m working full stack in JavaScript and Python in non startup-y startup (e.g., we’re not out to make lots and lots of money or making a product we don’t believe in for the money) doing things that I feel are making a tangibly good contribution. We have a gong that gets rung when a person graduates a class. That small bit right there proved that I was exactly where I wanted to be.</p>
+<p>And yes, I’m still terrified some days that I’m too slow or too newb or just not cut out for this, but here’s a secret, I don’t think that will ever go away. Maybe it’s a good thing or maybe it’s just human nature, but I just need to learn to live in my own skin I think and take the impostor syndrome as a mark of being human, of caring about my work and wanting to always get better.</p>
+<p>And a minor update: Selma is no longer in the house, I got the balls to move her outside finally.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="categories/Life">Life</a>»<a class="article-category-link" href="categories/Life/Programming">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/Udacity">Udacity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/javascript">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/python">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/work">work</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-not-working-is-worse" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/03/not-working-is-worse/" class="article-date">
+  <time datetime="2014-03-17T05:33:16.000Z" itemprop="datePublished">Mar 16 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/03/not-working-is-worse/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/03/not-working-is-worse/">Not Working is Worse</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>So first off, mad props to those of my cohort who have jobs now too! And major hearts to those still looking, because y’all are amazing. And a special shout out to my platonic soul mate Ava who starts at SurveyMonkey in a week!</p>
+<p>I have had two weeks of quiet reflection (read scrambling to get an apartment, utilities and furniture in my pad) and it sucked. While I definitely don’t want to go back to the terrifying job finding phase anytime soon, at least I felt like I was doing things (and I got to code once in a while). Now I’m just sitting around waiting for utility services to call me back or deliver my stuff or de-spidering my apartment (mostly dead, the one that’s alive I’m naming Selma, because I’m a giant crippling softie who can’t even kill bugs).</p>
+<p>I start work on Monday and I’m nervous-excited-terrified-ecstatic. I’m already on the email lists and I love the few random all-staff conversations I’ve read. I think the culture here will be awesome. My zen today though has been putting together IKEA:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,r_11,w_657/v1395016673/2014-03-16_15_40_38_dvfn67.jpg" alt="Made Bed"></p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,r_11,w_502/v1395033861/2014-03-16_22_14_58_dqypwl.jpg" alt="RED Couch"></p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,r_11,w_627/v1395033876/2014-03-16_22_14_50_iqpp0c.jpg" alt="Blurry Table"></p>
+<p>And a super special thank you to Ava for being awesome and watching TV with me and putting together my table:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,w_545/v1395033894/2014-03-16_21_16_53_pwlol2.jpg" alt="Ava Puts Together A Table"></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="categories/Life">Life</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-confirm-my-eccentricities" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/03/confirm-my-eccentricities/" class="article-date">
+  <time datetime="2014-03-03T17:12:16.000Z" itemprop="datePublished">Mar 3 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/03/confirm-my-eccentricities/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/03/confirm-my-eccentricities/">Confirm my eccentricities</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>I have discovered a new sense of zen since I got my job offer. I’ve also discovered amusing things about myself. The biggest and most noticeable change is in my music choices. When I was stressed and scared and about to go to an interview I would want nothing more than to listen to a couple of songs over and over again. <a href="http://youtube.com/watch?v=xV_xHBdLFSk" target="_blank" rel="external">Bravado</a> was one, <a href="http://youtube.com/watch?v=5ZrZI6OmezE" target="_blank" rel="external">Problem</a>, <a href="http://youtube.com/watch?v=My2FRPA3Gf8" target="_blank" rel="external">Wrecking Ball</a>, and <a href="http://youtube.com/watch?v=0KSOMA3QBU0" target="_blank" rel="external">Dark Horse</a> were my staples. I needed strong songs sung by women that I knew by heart. I listen to basically nothing else. Now I’m still listening to them, but I’ve added back in old favorites and non-female vocals like <a href="http://youtube.com/watch?v=No5NiaK97vE#" target="_blank" rel="external">We Fought Monsters</a>, <a href="http://youtube.com/watch?v=plDNCnCik6c#" target="_blank" rel="external">I Hear the Bells</a>, and <a href="http://youtube.com/watch?v=Ek0SgwWmF9w" target="_blank" rel="external">Madness</a>. It feels awesome emotionally and physically. Music is a huge factor in my moods and it’s awesome to be able to experience the full range of it again.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="categories/Life">Life</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/apartment">apartment</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/job">job</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="page/2">2</a><a class="page-number" href="page/3">3</a><span class="space">&hellip;</span><a class="page-number" href="page/8">8</a><a class="extend next" rel="next" href="page/2">Next &raquo;</a>
+    </nav>
+  
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:leaena.github.io">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2014 Lindsey Smith<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'leaena';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>

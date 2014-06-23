@@ -1,35 +1,229 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="Lindsey Smith"><meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a software engineering bootcamp. Now I blog a mixture of programming, women in tech, life, and cats."><title>Time Complexity in Algorithms&nbsp;&mdash; Leaena.com</title><link href="/favicon.png" rel="icon"><link rel="alternate" href="/atom.xml" title="config.title" type="application/atom.xml"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet"><link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/stylesheets/app.css"></head><body><header id="page-header"><div id="masthead"><h1 id="site-title"><a href="/">Leaena.com</a></h1><p id="site-slogan">Coding, cats, California, feminism, and zombies. Your average girl blogger.</p></div></header><section id="content"><article class="post"><h2>Time Complexity in Algorithms</h2><div class="meta">Nov 29 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div><p>Time complexity is a useful concept in programming. It’s essential for job interviews, but beyond that to really be a good programmer you need to know how cumbersome your algorithm is going to be. For 10 items, something that takes 2 seconds per item is only 20 seconds, but what if you have a million items?</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Time Complexity in Algorithms | Leaena.com</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Time complexity is a useful concept in programming. It’s essential for job interviews, but beyond that to really be a good programmer you need to know how cumbersome your algorithm is going to be. For">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Time Complexity in Algorithms">
+<meta property="og:url" content="http://leaena.github.io/2013/11/time-complexity-in-algorithms/">
+<meta property="og:site_name" content="Leaena.com">
+<meta property="og:description" content="Time complexity is a useful concept in programming. It’s essential for job interviews, but beyond that to really be a good programmer you need to know how cumbersome your algorithm is going to be. For">
+<meta property="og:image" content="http://res.cloudinary.com/leaena/image/upload/v1391709344/bigo_rqzv9e.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Time Complexity in Algorithms">
+<meta name="twitter:description" content="Time complexity is a useful concept in programming. It’s essential for job interviews, but beyond that to really be a good programmer you need to know how cumbersome your algorithm is going to be. For">
+  
+    <link rel="alternative" href="/atom.xml" title="Leaena.com" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://leaena.github.io"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-time-complexity-in-algorithms" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/11/time-complexity-in-algorithms/" class="article-date">
+  <time datetime="2013-11-30T01:09:20.000Z" itemprop="datePublished">Nov 29 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/11/time-complexity-in-algorithms/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      Time Complexity in Algorithms
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Time complexity is a useful concept in programming. It’s essential for job interviews, but beyond that to really be a good programmer you need to know how cumbersome your algorithm is going to be. For 10 items, something that takes 2 seconds per item is only 20 seconds, but what if you have a million items?</p>
 <p>In general, time complexity is measured by how long it takes a number of items (n) to be processed. It is the relationship between the number of things you have to do and the work to be done. Something that takes the same amount of time no matter have much of it you have to do, would be constant time. If I had 10 items or 1 million it would only take me 2 seconds to process. On another extreme is something called the handshake problem. If you only have two people in a room they only have to shake one another’s hands (one handshake). If you have 10 people, they each shake 9 other hands (55 handshakes total, we’ll get to the math in a moment). This is quadratic time.</p>
 <p>Here’s a visual of the common programming time complexities:</p>
-<p><img src="/images/" alt="bigo"></p>
-<p>&nbsp;</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/v1391709344/bigo_rqzv9e.png" alt="Time complexities!"></p>
 <p>Lets start with <strong>constant time</strong> again. In programming, constant time is like deciding whether a number is even or odd:</p>
-<pre><code> n % <span class="number">2</span> = ? `&lt;/pre&gt;
-This <span class="keyword">is</span> just one expression. You <span class="command">run</span> <span class="keyword">and</span> you're done. It's always going <span class="keyword">to</span> take a certain amount <span class="keyword">of</span> <span class="property">time</span>, no matter what n you give <span class="keyword">it</span>. &lt;span style=<span class="string">"text-decoration: underline;"</span>&gt;In big O notation we would <span class="command">write</span> this <span class="keyword">as</span> O(<span class="number">1</span>).&lt;/span&gt;
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>n % <span class="number">2</span> = ?
+</pre></td></tr></table></figure>
 
-Next, <span class="keyword">my</span> favorite, <span class="keyword">as</span> far <span class="keyword">as</span> understanding goes. **Linear <span class="property">time</span>.** In programming, linear <span class="property">time</span>, <span class="keyword">is</span> like <span class="property">running</span> <span class="keyword">through</span> a loop <span class="keyword">of</span> n numbers <span class="keyword">and</span> doing something.
-&lt;pre&gt;` <span class="keyword">for</span>( var i = <span class="number">0</span>; i &amp;lt; n; i++ ){
-   do something..
- }`&lt;/pre&gt;
-The more things ('n's) you have, <span class="keyword">the</span> longer <span class="keyword">the</span> algorithm <span class="keyword">is</span> going <span class="keyword">to</span> take. It's a <span class="number">1</span>:<span class="number">1</span> ratio. If <span class="number">1</span> thing takes <span class="number">1</span> <span class="keyword">second</span>, <span class="number">2</span> things are going <span class="keyword">to</span> take <span class="number">2</span> seconds. &lt;span style=<span class="string">"text-decoration: underline;"</span>&gt;This <span class="keyword">is</span> O(n).&lt;/span&gt;
-
-**Quadratic <span class="property">time</span>** <span class="keyword">is</span> worse than linear <span class="property">time</span>. It's like <span class="keyword">the</span> handshake problem <span class="keyword">or</span> <span class="keyword">in</span> programming terms a <span class="keyword">for</span> loop within a <span class="keyword">for</span> loop. For each n we need <span class="keyword">to</span> <span class="command">run</span> <span class="keyword">through</span> all <span class="keyword">the</span> numbers <span class="number">1</span> <span class="keyword">through</span> n.
-&lt;pre&gt;` <span class="keyword">for</span>( var i = <span class="number">0</span>; i &amp;lt; n; i++ ){
-   <span class="keyword">for</span>( var j = <span class="number">0</span>; j &amp;lt; n; j++ ){
-     do something..
-   }
- }`&lt;/pre&gt;
-Each n thing <span class="keyword">is</span> done n <span class="keyword">times</span>. &lt;span style=<span class="string">"text-decoration: underline;"</span>&gt;This <span class="keyword">is</span> n * n <span class="keyword">or</span> <span class="keyword">in</span> big O terms O(n&lt;sup&gt;<span class="number">2</span>&lt;/sup&gt;).&lt;/span&gt;
-
-**Logarithmic <span class="property">time</span>** <span class="keyword">is</span> all kinds <span class="keyword">of</span> magic. It tapers off <span class="keyword">to</span> a near <span class="type">constant</span> <span class="keyword">for</span> larger 'n's. This <span class="keyword">is</span> possible because <span class="keyword">of</span> <span class="keyword">the</span> magic <span class="keyword">of</span> halves. In a binary search tree there are only two options <span class="keyword">to</span> descend, left (options lower than <span class="keyword">the</span> current value) <span class="keyword">or</span> right (options higher than <span class="keyword">the</span> current value). Either choice will cut off roughly half <span class="keyword">of</span> all <span class="keyword">the</span> possible values. On <span class="keyword">the</span> next level, you have <span class="keyword">the</span> same choice, either you've found your value, <span class="keyword">or</span> you go left <span class="keyword">or</span> right, halving your options again.
-&lt;pre&gt;` <span class="keyword">while</span> ( low &amp;lt;= high ) {
-   var mid = ( low + high ) / <span class="number">2</span>;
-   <span class="keyword">if</span> ( target &amp;lt; <span class="type">list</span>[mid] ){
-     var high = mid - <span class="number">1</span>;    
-   } <span class="keyword">else</span> <span class="keyword">if</span> ( target &amp;gt; <span class="type">list</span>[mid] ){
-     var low = mid + <span class="number">1</span>;
-   } <span class="keyword">else</span> { break; }
+<p>This is just one expression. You run and you’re done. It’s always going to take a certain amount of time, no matter what n you give it. <span style="text-decoration: underline;">In big O notation we would write this as O(1).</span></p>
+<p>Next, my favorite, as far as understanding goes. <strong>Linear time.</strong> In programming, linear time, is like running through a loop of n numbers and doing something.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>; i &lt; n; i++ ){
+   <span class="keyword">do</span> something..
  }
-</code></pre><p>If you’re constantly halving the amount of things you have to check, eventually you hit a roughly constant time for an n search. <span style="text-decoration: underline;">This is O(log n).</span></p>
+</pre></td></tr></table></figure>
+
+<p>The more things (‘n’s) you have, the longer the algorithm is going to take. It’s a 1:1 ratio. If 1 thing takes 1 second, 2 things are going to take 2 seconds. <span style="text-decoration: underline;">This is O(n).</span></p>
+<p><strong>Quadratic time</strong> is worse than linear time. It’s like the handshake problem or in programming terms a for loop within a for loop. For each n we need to run through all the numbers 1 through n.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>; i &lt; n; i++ ){
+   <span class="keyword">for</span>( <span class="keyword">var</span> j = <span class="number">0</span>; j &lt; n; j++ ){
+     <span class="keyword">do</span> something..
+   }
+ }
+</pre></td></tr></table></figure>
+
+<p>Each n thing is done n times. <span style="text-decoration: underline;">This is n * n or in big O terms O(n<sup>2</sup>).</span></p>
+<p><strong>Logarithmic time</strong> is all kinds of magic. It tapers off to a near constant for larger ‘n’s. This is possible because of the magic of halves. In a binary search tree there are only two options to descend, left (options lower than the current value) or right (options higher than the current value). Either choice will cut off roughly half of all the possible values. On the next level, you have the same choice, either you’ve found your value, or you go left or right, halving your options again.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="keyword">while</span> ( low &lt;= high ) {
+   <span class="keyword">var</span> mid = ( low + high ) / <span class="number">2</span>;
+   <span class="keyword">if</span> ( target &lt; list[mid] ){
+     <span class="keyword">var</span> high = mid - <span class="number">1</span>;
+   } <span class="keyword">else</span> <span class="keyword">if</span> ( target &gt; list[mid] ){
+     <span class="keyword">var</span> low = mid + <span class="number">1</span>;
+   } <span class="keyword">else</span> { <span class="keyword">break</span>; }
+ }
+</pre></td></tr></table></figure>
+
+<p>If you’re constantly halving the amount of things you have to check, eventually you hit a roughly constant time for an n search. <span style="text-decoration: underline;">This is O(log n).</span></p>
 <p><em>This post has been brought to you by <a href="http://www.daniweb.com/software-development/computer-science/threads/13488/time-complexity-of-algorithm" target="_blank" rel="external">a forum post on time complexity</a>, bits and pieces of <a href="http://en.wikipedia.org/wiki/Time_complexity" target="_blank" rel="external">the wiki article on time complexity</a>, and <a href="https://www.youtube.com/watch?v=sh4O6DRs26M" target="_blank" rel="external">this inspirational code class ad featuring my lead instructor from his Twitter days</a>.</em></p>
-</article><nav id="article-pagination"><a href="/2013/11/inside-my-head-learning-javascript/" title="Previous article: Inside My Head: Learning Java Script" class="prev">&larr; Previous article</a><a href="/2013/11/week-3-less-work-more-work/" title="Next article: Week 3   Less Work, More... Work?" class="next">Next article &rarr;</a></nav></section><footer id="page-footer"><section><nav id="footer-menu"><ul><li><a href="/about">About</a></li><li><a href="/archives">Archive</a></li><li><a href="http://github.com/leaena/leaena.github.io">Source</a></li><li><a href="/atom.xml">Feed</a></li></ul></nav></section></footer></body></html>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../categories/Programming">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/Interview">Interview</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/big-o">big o</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/knowledge">knowledge</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2013/11/inside-my-head-learning-javascript/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Inside My Head: Learning JavaScript
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/11/week-3-less-work-more-work/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          Week 3 - Less Work, More... Work?
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:leaena.github.io">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2014 Lindsey Smith<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'leaena';
+  
+  var disqus_url = 'http://leaena.github.io/2013/11/time-complexity-in-algorithms/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="../../../js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>

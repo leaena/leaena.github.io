@@ -1,4 +1,77 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="Lindsey Smith"><meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a software engineering bootcamp. Now I blog a mixture of programming, women in tech, life, and cats."><title>Clojure Makes Me Feel Stupid&nbsp;&mdash; Leaena.com</title><link href="/favicon.png" rel="icon"><link rel="alternate" href="/atom.xml" title="config.title" type="application/atom.xml"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet"><link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/stylesheets/app.css"></head><body><header id="page-header"><div id="masthead"><h1 id="site-title"><a href="/">Leaena.com</a></h1><p id="site-slogan">Coding, cats, California, feminism, and zombies. Your average girl blogger.</p></div></header><section id="content"><article class="post"><h2>Clojure Makes Me Feel Stupid</h2><div class="meta">Jun 16 2014 in <a href="/categories/Tech-Tips/">Tech Tips</a>&ensp;</div><p>…but I’m kinda in love with it. Thanks to a friend/coworker I’m cautiously dipping my toe into the world of “functional programming”. I’m still not 100% certain I get the full gist of functional programming but, to my newb mind, I’d explain it as programming without consequences. Functions only depend on their inputs and external forces/state cannot muck with your function.</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Clojure Makes Me Feel Stupid | Leaena.com</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="…but I’m kinda in love with it. Thanks to a friend/coworker I’m cautiously dipping my toe into the world of “functional programming”. I’m still not 100% certain I get the full gist of functional progr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Clojure Makes Me Feel Stupid">
+<meta property="og:url" content="http://leaena.github.io/2014/06/clojure-makes-me-feel-stupid/">
+<meta property="og:site_name" content="Leaena.com">
+<meta property="og:description" content="…but I’m kinda in love with it. Thanks to a friend/coworker I’m cautiously dipping my toe into the world of “functional programming”. I’m still not 100% certain I get the full gist of functional progr">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Clojure Makes Me Feel Stupid">
+<meta name="twitter:description" content="…but I’m kinda in love with it. Thanks to a friend/coworker I’m cautiously dipping my toe into the world of “functional programming”. I’m still not 100% certain I get the full gist of functional progr">
+  
+    <link rel="alternative" href="/atom.xml" title="Leaena.com" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://leaena.github.io"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-clojure-makes-me-feel-stupid" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/06/clojure-makes-me-feel-stupid/" class="article-date">
+  <time datetime="2014-06-17T06:58:50.000Z" itemprop="datePublished">Jun 16 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/06/clojure-makes-me-feel-stupid/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      Clojure Makes Me Feel Stupid
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>…but I’m kinda in love with it. Thanks to a friend/coworker I’m cautiously dipping my toe into the world of “functional programming”. I’m still not 100% certain I get the full gist of functional programming but, to my newb mind, I’d explain it as programming without consequences. Functions only depend on their inputs and external forces/state cannot muck with your function.</p>
 <p>Apparently this makes it easier to predict what’s going on, but I still have issues reading what I just wrote. Parenthesis all the way down dudes. Also prefix notation is technically useful, but warping my poor little brain.</p>
 <p>So 1 + 1 in Clojure is actually written as (+ 1 1). Makes sense, right? Sorta, except for the years and years of basic math classes that NEVER LOOKED LIKE THIS. Oh my brain. But it’s kinda cool that instead of 1 + 2 + 3 + 4 I only need to write (+ 1 2 3 4).</p>
 <p>But seriously. This is a function in Clojure:</p>
@@ -11,10 +84,100 @@
   <span class="collection">[x y]</span>
   <span class="list">(<span class="title"><span class="built_in">+</span></span> x y)</span>)</span>
 
-<span class="list">(<span class="title">adder</span><span class="number"> 3</span><span class="number"> 4</span>)</span> <span class="comment">;; 7</span>
+<span class="list">(<span class="title">adder</span><span class="number"> 3</span><span class="number"> 4</span>)</span> <span class="comment">;; 7&lt;/pre&gt;</span>
 </pre></td></tr></table></figure>
 
 <p>Wat? So the first line defines the function name. The second line is the parameters that you give to the function and then the last line adds those two parameters together. I then call the function on line 5 with the arguments 3 and 4 and then the semicolons denote comments and I use that do show what the output of the function is… 7.</p>
-<p>As a super ridiculous aside. <strong>Parameters</strong> vs<strong> arguments</strong>? <strong>Parameters</strong> are the things that you define with the function. So x and y on line 2 are <strong>parameters</strong>. <strong>Arguments</strong> are what you pass to the function when you what to actually use it. So 3 and 4 on line 5 are <strong>arguments</strong>. Now go forth and be awesome!</p>
+<p>As a super ridiculous aside. <strong>Parameters</strong> vs <strong>arguments</strong>? <strong>Parameters</strong> are the things that you define with the function. So x and y on line 2 are <strong>parameters</strong>. <strong>Arguments</strong> are what you pass to the function when you what to actually use it. So 3 and 4 on line 5 are <strong>arguments</strong>. Now go forth and be awesome!</p>
 <p>So how do you be Clojure learners too? Currently I’m running through the <a href="https://github.com/ClojureBridge/curriculum" target="_blank" rel="external">clojurebridge curriculum</a> on my own.<a href="http://adambard.com/blog/clojure-in-15-minutes/" target="_blank" rel="external"> Clojure in 15 minutes</a> looks like a decent-y rundown of most of my syntax options. If you don’t want to put anything on your system yet, or just want to mess around with the syntax, there’s always <a href="http://tryclj.com/" target="_blank" rel="external">Try Clojure</a> which lets you program from your browser. And I’ve bookmarked <a href="http://www.braveclojure.com/" target="_blank" rel="external">Clojure for the Brave and True</a> mostly for the title, but I haven’t really read any of it yet.</p>
-</article><nav id="article-pagination"><a href="/2014/06/hello-world/" title="Previous article: Hello World" class="prev">&larr; Previous article</a><a href="/2014/06/bored-again-time-to-create/" title="Next article: Bored Again   Time to Create" class="next">Next article &rarr;</a></nav></section><footer id="page-footer"><section><nav id="footer-menu"><ul><li><a href="/about">About</a></li><li><a href="/archives">Archive</a></li><li><a href="http://github.com/leaena/leaena.github.io">Source</a></li><li><a href="/atom.xml">Feed</a></li></ul></nav></section></footer></body></html>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../../categories/Tech-Tips">Tech Tips</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/clojure">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/functional-programming">functional programming</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2014/06/bored-again-time-to-create/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          Bored Again - Time to Create
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:leaena.github.io">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2014 Lindsey Smith<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'leaena';
+  
+  var disqus_url = 'http://leaena.github.io/2014/06/clojure-makes-me-feel-stupid/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="../../../js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>

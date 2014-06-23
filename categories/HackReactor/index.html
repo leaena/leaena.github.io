@@ -1,1 +1,697 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="Lindsey Smith"><meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a software engineering bootcamp. Now I blog a mixture of programming, women in tech, life, and cats."><title>HackReactor&mdash;Leaena.com</title><link href="/favicon.png" rel="icon"><link rel="alternate" href="/atom.xml" title="config.title" type="application/atom.xml"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet"><link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/stylesheets/app.css"></head><body><header id="page-header"><div id="masthead"><h1 id="site-title"><a href="/">Leaena.com</a></h1><p id="site-slogan">Coding, cats, California, feminism, and zombies. Your average girl blogger.</p></div></header><section id="content"><header><h2>HackReactor</h2></header><ul class="article-list"><li><article><h3><a href="/2014/02/week-12-and-so-it-comes-to-an-end/">Week 12: and So It Comes to an End</a></h3><div class="meta">Feb 16 2014 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2014/02/week-11-not-coding-makes-me-nervous/">Week 11: Not Coding Makes Me Nervous</a></h3><div class="meta">Feb 9 2014 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2014/02/week-10-game-changing/">Week 10: Game Changing</a></h3><div class="meta">Feb 2 2014 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2014/01/week-9-three-weeks-left/">Week 9: Highs and Lows and... Wtf I Only Have Three Weeks Left??</a></h3><div class="meta">Jan 26 2014 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2014/01/week-8-new-surroundings-same-routine/">Week 8: New Surroundings, Same Routine</a></h3><div class="meta">Jan 19 2014 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2014/01/week-7-is-this-what-confidence-feels-like/">Week 7: Is This What Confidence Feels Like?</a></h3><div class="meta">Jan 11 2014 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2013/12/week-6-whole-new-ballgame/">Week 6: Whole New Ballgame</a></h3><div class="meta">Dec 22 2013 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2013/12/week-5-serving-up-a-new-outlook/">Week 5: Serving Up a New Outlook</a></h3><div class="meta">Dec 12 2013 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2013/12/week-4-losing-power/">Week 4: Losing Power</a></h3><div class="meta">Dec 7 2013 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2013/11/week-3-less-work-more-work/">Week 3   Less Work, More... Work?</a></h3><div class="meta">Nov 28 2013 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li></ul></section><footer id="page-footer"><section><nav id="footer-menu"><ul><li><a href="/about">About</a></li><li><a href="/archives">Archive</a></li><li><a href="http://github.com/leaena/leaena.github.io">Source</a></li><li><a href="/atom.xml">Feed</a></li></ul></nav></section></footer></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Category: HackReactor | Leaena.com</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Leaena.com">
+<meta property="og:url" content="http://leaena.github.io/categories/HackReactor/">
+<meta property="og:site_name" content="Leaena.com">
+<meta property="og:description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Leaena.com">
+<meta name="twitter:description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+  
+    <link rel="alternative" href="/atom.xml" title="Leaena.com" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="../../css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://leaena.github.io"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="post-week-12-and-so-it-comes-to-an-end" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/02/week-12-and-so-it-comes-to-an-end/" class="article-date">
+  <time datetime="2014-02-17T00:39:18.000Z" itemprop="datePublished">Feb 16 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/02/week-12-and-so-it-comes-to-an-end/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/02/week-12-and-so-it-comes-to-an-end/">Week 12: And So It Comes to an End</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>I don’t know where to start this week. So many things happened and they all seemed like we had been waiting for them forever and now they’re gone and I miss everything. Hiring Day was Tuesday. We demoed Helix and then I got to talk to 10 companies that were looking for Software Engineers. I was terrified but once I got down to business and started talking with the company representatives it got more fun.</p>
+<p>Wednesday was fun too. I had my first call with a recruiter (who basically just called to say the job had changed, but could he keep me in mind for future things?). We also got to demo Helix live at the Famo.us Launch Preview. <a href="http://sarabinns.com/" target="_blank" rel="external">Sara</a> did the narration and I drove the app.</p>
+<iframe title="YouTube video player" width="640" height="390" src="http://www.youtube.com/embed/hiyiT0xBaUA" frameborder="0" allowfullscreen></iframe>
+
+<p>The next day (Thursday) I stayed in my apartment because I was out really late for the party, but I had another talk with a recruiter, a talk with a tech lead, and a coding challenge for another company to do. I bombed the talk with the tech lead. Literally, I didn’t realize it was going to be a tech interview, it was my first one, and I just froze. Right after I got off the phone (“You failed. Good luck with other companies” were his parting words), I had the coding challenge waiting in my email from another company. I dusted myself off and finished the challenge in an hour, emailed it back and then cried. Thursday kinda sucked.</p>
+<p>Friday was a bit of a blur, I told everyone about my failure the day before (it was cathartic) and then talked to ANOTHER recruiter and then partied down at my graduation party.</p>
+<p>Saturday was calm. Lots of hugs and reflecting and a snazzy new Hack Reactor t-shirt I will wear with pride.<br><img src="http://res.cloudinary.com/leaena/image/upload/c_scale,e_improve,w_674/v1392597331/2014-02-16_14_20_24_jcghgq.jpg" alt="Hack Reactor Tshirt"><br>I don’t really know how to feel about this crazy journey. I know it’s not over yet, I don’t think it will ever be over. I’ve made friends/family that will last forever and I will always be proud of our community and its people and what amazing things have been accomplished in their walls.</p>
+<p>I’m obviously a bit terrified of the coming weeks and months. It’s a whole new adventure to navigate through filled with tech interviews and the highs and lows of finding a job. But I’m not going anywhere without my fellow HackR’s or this blog, so I think I’ll be OK.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-11-not-coding-makes-me-nervous" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/02/week-11-not-coding-makes-me-nervous/" class="article-date">
+  <time datetime="2014-02-10T05:01:08.000Z" itemprop="datePublished">Feb 9 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/02/week-11-not-coding-makes-me-nervous/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/02/week-11-not-coding-makes-me-nervous/">Week 11: Not Coding Makes Me Nervous</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>This entire week has been a wild and crazy adventure toward finding jobs. We spent lots of time making our resumes look awesome and making sure all of our online presences look like we knew our stuff. Shockingly, I think it’s working! I’ve actually had some interest from companies and recruiters on LinkedIn and AngelList! I have a couple of interviews scheduled for later next week, but because I haven’t been able to dive into coding, I’ve had a lot of time to sit with my decisions and I’m suddenly really, really nervous.</p>
+<p>Next week is the start of something new and I’ve done more new things in the past few months than I have in my entire life. I interviewed/got accepted to Hack Reactor, I quit my job, I moved out-of-state, I started a crazy intense engineering program and now it’s like I’m done with the program and get to start a new great unknown. Next Tuesday is Hiring Day, which means companies get to decided whether I’m awesome or not (and one of my top choices of jobs is going to be there) and Wednesday my team is demoing <a href="http://www.youtube.com/watch?v=CW8BBP-DxIw" target="_blank" rel="external">Helix</a>, onstage, for the <a href="http://famo.us" target="_blank" rel="external">Famo.us</a> Beta Launch Preview. And that’s not even the end of it, I have two phone interviews already scheduled for later in the week and hopefully more if things from Hiring Day pan out.</p>
+<p>Everyone around me is telling me I’m capable, but I don’t have that same confidence. It’s not even that I think I’m not a capable coder, I know I am. I’m just worried that I’m not going to show off my potential. I’m terrified of the rejection (because I know there has to be at least some) and I’m worried about making the best choices for me when the time comes.</p>
+<p>On the other hand, I really look forward to seeing how amazing everyone is going to do. I hope we all kill it. Most of all I hope we’re all happy. &lt;3</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-10-game-changing" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/02/week-10-game-changing/" class="article-date">
+  <time datetime="2014-02-02T19:31:21.000Z" itemprop="datePublished">Feb 2 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/02/week-10-game-changing/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/02/week-10-game-changing/">Week 10: Game Changing</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>This week has been a week like no other. I’ve already demoed Helix three times and there are so many more to go. We spent Monday/Tuesday/Wednesday frantically getting everything we wanted to happen with Helix working. I finally fully integrated the 23andme API and all of my algorithms are humming along to find genetic traits for users that login to their 23andme account. I have the setup to record a video walk-through of Helix that I plan on doing sometime next week. Because the framework we used is in private beta we can’t actually deploy it live so unless you come bug me in person, you’re stuck looking at a demo video for now.</p>
+<p>Thursday night we demoed for Famo.us. We also got to be a part of their weekly team meeting which was really interesting. I felt much more like an actual Software Engineer following conversations about their framework and business. Right before our demo, we found out that we will be demoing Helix onstage at the Famo.us Launch Preview Party. My team is so excited (and terrified). Helix has definitely been a labor of love and something I am so proud to have been involved in.</p>
+<p>Next week will be a new adventure - job searching. Starting next week I am an almost free agent. We have some hype up (and warning lectures) and then the next week we have hiring day (and Famo.us Party demo). The week after that I’m attending a developer conference and the Launch hackathon. I am so excited that this is my life now.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/DeveloperWeek">DeveloperWeek</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Helix">Helix</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/LAUNCH">LAUNCH</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/famous">famo.us</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/jobs">jobs</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-9-three-weeks-left" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/01/week-9-three-weeks-left/" class="article-date">
+  <time datetime="2014-01-27T00:10:31.000Z" itemprop="datePublished">Jan 26 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/01/week-9-three-weeks-left/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/01/week-9-three-weeks-left/">Week 9: Highs and Lows and... WTF I only have three weeks left??</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>My week started out fairly average. We were all rolling along on our projects and then I noticed an event on the Hack Reactor Senior calendar. Tuesday, three weeks from this past Tuesday, is Hiring Day. Three weeks?? Not even now, more like two?? Oh, god. And yet, as much of a whirlwind as this has been and as often as I have impostor syndrome, I’m a little excited. I want to see what’s out there for me and find a job and learn and grow and do my instructors proud.</p>
+<p>One slight stumbling block for me this week: Hacker in Residence positions. I applied and think I would have been accepted, but I had to bow out. After I sat down and thought about it, I just couldn’t justify being out of work that much longer (even on a stipend). It would have been fun to learn how to teach and spend some more time hacking on personal ideas, but that’s what weekends are for, right?</p>
+<p>We also got to demo Helix for the first time. Helix is a gene visualization app that shows you your SNPs (base pairs) from <a href="http://23andme.com" target="_blank" rel="external">23andme</a> that have traits attached to them (according to <a href="http://snpedia.com" target="_blank" rel="external">SNPedia.com</a>). You can search traits or just browse your chromosomes for interesting info. It was built using a private beta framework (called <a href="http://famo.us" target="_blank" rel="external">Famo.us</a>) that my team was lucky enough to get to be involved with. We have <em>fingers crossed</em> two more opportunities to demo Helix, one more run through at Hack Reactor and if all goes well, a private party/meetup for Famous.</p>
+<p>Another fun thing that came out of Helix was that I got to dust off my Python knowledge. I had wanted to try BeautifulSoup (a Python web scraper) for a while now and I needed an easy way to pull rsid information from SNPedia so I created my own API wrapper! The code is available (including instructions on how to run it on your own) on my <a href="http://github.com/leaena/snp-api" target="_blank" rel="external">github account</a>. It’s a tiny Python/Flask server that only has a couple of endpoints (the ones I really needed) but I’m thinking about expanding eventually.</p>
+<p>And then I got sick. I came down with a cold on Friday and haven’t been to HackReactor since. I’ve been working from home, but mostly just trying to sleep, having weird dreams, and sounding pitiful. I’m getting better though and I will definitely be on-point on Monday to work out the last-minute details of Helix before all the demos come crashing around us.</p>
+<p>Three more weeks until I graduate! My gift to myself - I’m attending the <a href="http://hackathon.launch.co/" target="_blank" rel="external">LAUNCH hackathon</a> with two other women from HackReactor the weekend after it’s all over. I just don’t want to get lazy!</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/LAUNCH">LAUNCH</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/flask">flask</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/hackreactor">hackreactor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/javascript">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/python">python</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-8-new-surroundings-same-routine" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/01/week-8-new-surroundings-same-routine/" class="article-date">
+  <time datetime="2014-01-20T02:23:55.000Z" itemprop="datePublished">Jan 19 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/01/week-8-new-surroundings-same-routine/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/01/week-8-new-surroundings-same-routine/">Week 8: New Surroundings, Same Routine</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Sorry for the delay in this post. My roommate, Ava, was worried about my long hours all week so she wouldn’t let me touch my laptop on Sunday. Saturday night was card games with Hack Reactor peeps so I was out late. It was a jumble of a week and I’m writing this so late that this week is already upon me. So I think this one will be very short.</p>
+<p>We started working at Famo.us this past week. They have a beautiful office that was converted from an apartment. It’s weird to go back to Hack Reactor now with their darker rooms and only two bathrooms, but I still miss it something fierce when I’m away. Hack Reactor feels like home, but Famo.us is a nice vacation. Our project is slowly progressing. We have some really neat ideas about gene visualization and if all goes well we’ll get to demo the awesomeness in front of a bunch of people.</p>
+<p>Other fun things from this week included a talk on Thursday from the author of Cracking the Coding Interview and Saturday social night where I got my ass handed to me in Marvel vs. Capcom and then made people squirm in Cards Against Humanity.</p>
+<p>One final thing: Ava talked me into buying a FitBit! I’ve been meeting all my goals every day and it’s pink so life is pretty amazing. You can find me on Fitbit <a href="http://www.fitbit.com/user/2CM7FN" target="_blank" rel="external">here</a>.</p>
+<p>&nbsp;</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/famous">famous</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/hackreactor">hackreactor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/javascript">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-7-is-this-what-confidence-feels-like" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/01/week-7-is-this-what-confidence-feels-like/" class="article-date">
+  <time datetime="2014-01-12T07:16:08.000Z" itemprop="datePublished">Jan 11 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/01/week-7-is-this-what-confidence-feels-like/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/01/week-7-is-this-what-confidence-feels-like/">Week 7: Is This What Confidence Feels Like?</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Coming back from break was wonderful. I really missed this place and these people and I’m at a point now where I’m excited to walk in the front door of this space. I am really, truly a Software Engineer. I have been for a long time, but it took this place and these people to pull that knowledge out of myself. I started the week with giant hugfests of awesome. It was great to see everyone after two weeks. There was some unexpected lack of (and new growth of) facial hair and general fun stories about hijinks had during our time away. We all quickly felt the glory of being seniors and then were promptly blown away by how awesome the new batch of juniors are.</p>
+<p>There wasn’t much time to chat though, juniors were starting their hell week and we were about to embark on a different sort of hell - Hiring Day Assessments. I was terrified. I’ve decided my brain just needs to have something to focus on being terrified about to function at all - I’m starting to wonder if losing my fear would also diminish my awesomeness. We had all day to finish our assessments and as I dove in my confidence built. I knew this stuff. I knew it from the times it had been drilled into my head and the moments when I was working on something alone and would need to Google a concept and those times at the lunch table with my peers discussing wild and crazy new concepts. It rocked to realize how awesome we all are now. Everyone can tell us we are awesome until their blue in the face, but it’s moments like that when it clicks for me.</p>
+<p>The other moments it clicks for me is the new, terribly unfunny programming jokes we’ve all started making. It’s getting ridiculous.</p>
+<p>After Monday’s stress, we quickly got our hands dirty in our code. Our first round of group projects wrapped this week. I worked with <a href="http://sarabinns.com/" target="_blank" rel="external">Sara</a> and <a href="http://www.joaostein.com.br/" target="_blank" rel="external">João</a> to make a custom html5 video player plugin to vote on moments in videos and visualize the user data. Our project is called <a href="http://heatvote.com/" target="_blank" rel="external">HeatVote</a>. We’re still hacking on it in our “free time”, but its production cycle is officially over. There are a few previous posts on things I worked on for this project and I feel like I have a book more to write about the experience, but time is, as my faithful readers know, very short lately so I’m going to close this book for now.</p>
+<p>Our next project period starts on Tuesday. I was fortunate enough to get a client project working with an awesome team to create mobile web apps at <a href="http://famo.us/" target="_blank" rel="external">famo.us</a>! I am very excited to dive into unfamiliar territory, learn, and help out a team of super talented people.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/famous">famo.us</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/hackreactor">hackreactor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/heatvote">heatvote</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/javascript">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-6-whole-new-ballgame" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/12/week-6-whole-new-ballgame/" class="article-date">
+  <time datetime="2013-12-22T19:50:30.000Z" itemprop="datePublished">Dec 22 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/12/week-6-whole-new-ballgame/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/12/week-6-whole-new-ballgame/">Week 6: Whole New Ballgame</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://imgur.com/pJkhiZn" target="_blank" rel="external"><img src="http://i.imgur.com/pJkhiZn.png" alt="" title="Hosted by imgur.com"></a></p>
+<p>The tiny bit of Hack Reactor/git humor above is going to be lost on most of my audience but it made me happy. This week felt a bit like the first week of the program. A bit of uncertainty, a lot of excitement.</p>
+<p>We were turned loose this week. No more structured lessons, it’s the start of the projects phase. The first two days were devoted to a “hackathon” where I learned <a href="http://angularjs.org/" target="_blank" rel="external">angular</a> and <a href="https://www.firebase.com/" target="_blank" rel="external">firebase</a> and created a bookmarking app that included full-text search and a companion <a href="http://developer.chrome.com/extensions/getstarted.html" target="_blank" rel="external">Chrome extension</a>. That was super exciting. It was awesome to build something with my own two hands and realize all that I’ve learned in the past six weeks. Even if something didn’t work right off the bat, I now have the confidence to read through the documentation and understand what individual pieces weren’t functioning the way I expected them to. One of my best strengths has definitely been my super-human ability to craft a google search query.</p>
+<p>The rest of the week has been a move into group projects and learning a whole new skill-set. I’m a get-along kind of person by nature and it was hard at first for me to feel like I wasn’t stepping on toes when I wanted to work on a specific part of our project. After a day or so of planning and modeling what we wanted to do though, it became easier to split up tasks. I learned <a href="http://asana.com/" target="_blank" rel="external">Asana</a> (a project tracking app) and got really good at dividing up tasks.</p>
+<p>My favorite part of our new app is that I got to deep dive into <a href="http://d3js.org/" target="_blank" rel="external">d3</a> (a JavaScript library for data visualizations) functionality and create a homegrown heat-map. Some of my notes are up on <a href="https://github.com/leaena/love-hate-heatmap" target="_blank" rel="external">GitHub</a>, but I plan on refactoring and creating a whole post on the heat-map process (spoiler:<a href="https://github.com/mbostock/d3/wiki/Arrays#wiki-nest_rollup" target="_blank" rel="external"> d3.rollup</a> is my savior).</p>
+<p>I am very content this week. I’m getting a taste of what the real world is going to look like for me as a software engineer (an unfortunate side effect is that I’m getting a real taste for coffee to keep up with the long <a href="http://www.hackreactor.com/" target="_blank" rel="external">Hack Reactor</a> hours). Now though, I’m sitting in SFO waiting for my plane to PDX and home for Christmas. I’ll miss the beautiful (and non-rainy) sites of San Francisco, but I’m excited to visit family and show them how much I’ve changed.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/d3">d3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/hackreactor">hackreactor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/home">home</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/javascript">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-5-serving-up-a-new-outlook" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/12/week-5-serving-up-a-new-outlook/" class="article-date">
+  <time datetime="2013-12-13T01:25:30.000Z" itemprop="datePublished">Dec 12 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/12/week-5-serving-up-a-new-outlook/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/12/week-5-serving-up-a-new-outlook/">Week 5: Serving Up a New Outlook</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>If I didn’t know me better I’d say I was a little manic this week compared to last. This week I was cold, tired and hungry most of the time. I had my ups, down and whiny moments. My credit card was blocked because apparently the soda machine in the mall is shady to my bank. It was a quick fix, until my Clipper Card (the way I pay for my train - which I take every day, twice a day) ended up being blocked because it had tried to autoload cash during the 3 hour window of downtime on my credit card. It takes up to a week to reprocess so I’m forced to buy crappy little paper tickets and not use the $30 I already had stored on my train card. I ended up buying a coat and neon pink gloves just to make me happy (and warmer). Allow me to be a woman for a moment and do a bit of style blogging:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/v1391709357/Screen-Shot-2013-12-14-at-11_08_37-PM_c6t4au.png" alt="Style blogging grey jacket"></p>
+<p>I obviously didn’t spend all my time buying cheap, warm clothing though. I spent most of my time in class having moments of excitement followed by moments of wanting to crawl under a desk and take a nap. I’m not sure what I’d do without the upcoming Christmas break, but it wouldn’t be pretty. What I will say instead is that I may have found my niche in programming.</p>
+<p>This week was all about ‘backend’ which means pretty much what it sounds like. It’s a lot of the behind the scenes decisions that have to happen to decide what page you’re looking for and what data to put there. We did more <a href="http://www.nodejs.org/" target="_blank" rel="external">Node.js</a> servering and powered through different types of databases and how to hook them in and beat them into a format we can use well enough with our front-end JavaScripting (the answer is JSON, for the viewers at home). Finally, when I thought I couldn’t take any more (and I was half right), we started on <a href="http://angularjs.org/" target="_blank" rel="external">Angular</a>, another MV* framework like <a href="http://backbonejs.org/" target="_blank" rel="external">Backbone.js</a>, but with some magic and some sleight of hand that allows you to do most of the work directly on the HTML.</p>
+<p>I lurve the backend. I really find page routing and JSON calls and database building/retrieving from to be super interesting. It almost feels like a tangible thing where the app over the top is just a pretty cover for the awesomeness that makes it all happen.</p>
+<p>We start our lives as Software Engineers next week - a short two-day solo project sprint followed by the start of our first group project. I’m super excited to have a bit more freedom. I’m also terrified of working on my own and having it crash and burn. I really hope excitement wins out.</p>
+<p>After the solo project I hope I can write-up a bit about my experiences and show off my (crappy?) solo app.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/angular">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/clipperfail">clipperfail</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/database">database</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/girl-power">girl power</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/nodejs">nodejs</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-4-losing-power" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/12/week-4-losing-power/" class="article-date">
+  <time datetime="2013-12-08T06:41:23.000Z" itemprop="datePublished">Dec 7 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/12/week-4-losing-power/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/12/week-4-losing-power/">Week 4: Losing Power</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Another roller coaster week. Worst points: Someone took my laptop charger while I was in lecture, my week 3 assessment was not my finest point, and I miss my cats something desperately. Best points: I worked with my two favorite pair-partners again because I couldn’t handle this week otherwise, I had an awesome girl’s lunch today with 4/5ths of the junior class women (there are 5 of us total), and I made a <a href="http://nodejs.org/" target="_blank" rel="external">node.js</a> server!</p>
+<p>So I definitely felt my first crazy/not enough sleep/irrational emotions. When my power cord was jacked a couple of days ago I was <em>devastated</em>. In retrospect, I think I’m a little tired and cranky and, like I said previously, I am in desperate need of some kitty cuddle time. I’ve  been in California now for over a month and I still love it, but it’s definitely getting more difficult. There are times I wish I could just zen out and I only really get that on the trains or at midnight in the dark when I should be sleeping so I can wake up and do it all again the next morning at 6am to catch my train.</p>
+<p>I have never been more excited/motivated to get up in the morning in my life and I can’t get to sleep at night because code and other things are running through my head and along the way something had to give. I’ve discovered that when something has to give it’s my emotional stability. My actual sprints were amazeballs, especially since I had awesome pairs (Sara and Andy, respectively) for my Backbone and Node.js sprints. But in my quiet moments or while I was working solo the doubt and sadness came back.</p>
+<p>So I did what I always do when I’m sad - I talked to my parents, <strong>a lot</strong>. I called them while waiting for the train, I called them sitting on the couch in the Hack Reactor lobby during lunch, and I called them while I drove home at 9pm every night. My dad especially is awesome at making me feel better. He’s always so proud of me and he’s always  interested in what I’m doing. It’s hard sometimes here, but I have an amazing support system both in Oregon and here. My platonic life partner Ava and her husband John have been my rocks in more ways than one. My new awesome friends at Hack Reactor, especially the ladies of the Nov ‘13 cohort have been awesome to get to know. And I know all my family, friend, and former coworkers back in Oregon love me and miss me as much or more than I love and miss them.</p>
+<p>Thinking about it and even writing about it has helped as well. Getting it off my chest makes it so I can breathe again. So I guess I just want to say, I love you all. Thank you for dealing with me! I really am happy even if I didn’t sound it sometimes this week. If I don’t just sleep all of tomorrow/spend my day in San Jose with other awesome people I love to pieces, I’m going to try to post a non-emotional/tired/whiny post, but honestly, I want to keep this blog real. For me as well as for you and this what has dominated my brain this week.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/backbonejs">backbonejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/confessions">confessions</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/javascript">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/nodejs">nodejs</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-3-less-work-more-work" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/11/week-3-less-work-more-work/" class="article-date">
+  <time datetime="2013-11-28T22:16:49.000Z" itemprop="datePublished">Nov 28 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/11/week-3-less-work-more-work/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/11/week-3-less-work-more-work/">Week 3 - Less Work, More... Work?</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>School-wise, this week was very, very short. Today is Thanksgiving and I’m almost a little shocked that we got it off (although many of my peers are spending their day at the school if the emails about keys and door opening flying back and forth are a good reference). Because of the shortness I was thrown a bit off guard on Monday when I realized that it was time for our 3rd assessment already! This is week three! It feels simultaneously like I’ve been here for days and for years. The assessment went well and I actually remembered all my things from the previous week without too much panic. I did have a hilarious nightmare afterward that involved me being forced to code a <a href="http://en.wikipedia.org/wiki/Merge_sort" target="_blank" rel="external">merge sort</a> algorithm using a pencil and a very limited amount of paper and my lead instructor yelling at me for my terrible handwriting (this is why I love computers! I have terrible penmanship).</p>
+<p>Because of the short week we basically just went straight into <a href="http://backbonejs.org/" target="_blank" rel="external">Backbone.js</a> this week, which for my non-coding followers is a JavaScript library that allows you to structure your app cleanly by dividing the work that must be done into the actual data “models” and the way you represent that data to individuals “views”. This concept is what’s called an <a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" target="_blank" rel="external">MVC</a>, which is one of those trendy/useful buzzwords you hear a lot in coding. Anyway, it’s what we did in class this week and I plan on working on it a bunch over my long weekend.</p>
+<p>Unfortunately because this is the longest break I have besides solo project time during Christmas break I think I’ve put more on my to-do list than is physically possible (especially since I promised my platonic life partner <a href="http://avagoestohackbright.blogspot.com/" target="_blank" rel="external">Ava</a> I would help her with her Hackbright project too). Lets run down what I have on my list:</p>
+<ul>
+<li>Review algorithm time complexity (<a href="http://en.wikipedia.org/wiki/Big_O_notation" target="_blank" rel="external">Big O notation</a>)</li>
+<li>Practice recursive problems</li>
+<li><p>Make business cards:<br><img src="http://res.cloudinary.com/leaena/image/upload/v1391709350/Screen-Shot-2013-11-28-at-1_33_31-PM_apsxso.png" alt="Personal business cards of awesome"></p>
+</li>
+<li><p>Work on my Backbone project (we are working on it through next Tuesday, but I want to tackle some of the extra credit)</p>
+</li>
+<li>Redo/refactor some of my Coderbytes code - I’ve learned a bunch, I can probably do better</li>
+<li>Research getting involved in some open source stuff/get some pull requests in to bigger projects</li>
+<li>Maybe try learning Ruby on Rails (we might lose out on the Ruby on Rails sprint because of the timeline of holidays)</li>
+</ul>
+<p>So yeah, I’m probably a crazy person. Today I will eat and hang out with friends and be merry though. Tonight I will allow the code to creep its way to the front of my brain again. I also plan on writing a more technical article on time complexity sometime this weekend if I can wrap my brain more fully around it so I can pass along the tips I find.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/backbonejs">backbonejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/hackreactor">hackreactor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/javascript">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="page/2">2</a><a class="extend next" rel="next" href="page/2">Next &raquo;</a>
+    </nav>
+  
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:leaena.github.io">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2014 Lindsey Smith<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'leaena';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="../../js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>

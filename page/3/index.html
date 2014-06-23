@@ -1,1 +1,980 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="Lindsey Smith"><meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a software engineering bootcamp. Now I blog a mixture of programming, women in tech, life, and cats."><title>Leaena.com</title><link href="/favicon.png" rel="icon"><link rel="alternate" href="/atom.xml" title="config.title" type="application/atom.xml"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet"><link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/stylesheets/app.css"></head><body><header id="page-header"><div id="masthead"><h1 id="site-title"><a href="/">Leaena.com</a></h1><p id="site-slogan">Coding, cats, California, feminism, and zombies. Your average girl blogger.</p></div></header><section id="content"><ul class="article-list"><li><article><h2><a href="/2014/01/week-9-three-weeks-left/">Week 9: Highs and Lows and... Wtf I Only Have Three Weeks Left??</a></h2><div class="meta">Jan 26 2014 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h2><a href="/2014/01/week-8-new-surroundings-same-routine/">Week 8: New Surroundings, Same Routine</a></h2><div class="meta">Jan 19 2014 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h2><a href="/2014/01/week-7-is-this-what-confidence-feels-like/">Week 7: Is This What Confidence Feels Like?</a></h2><div class="meta">Jan 11 2014 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h2><a href="/2014/01/d3-js-rollups/">D3.Js Rollups</a></h2><div class="meta">Jan 4 2014 in <a href="/categories/Tech-Tips/">Tech Tips</a>&ensp;</div></article></li><li><article><h2><a href="/2013/12/cloud-postgresql-servers-with-heroku/">Cloud Postgre Sql Servers With Heroku</a></h2><div class="meta">Dec 30 2013 in <a href="/categories/Tech-Tips/">Tech Tips</a>&ensp;</div></article></li><li><article><h2><a href="/2013/12/setting-up-a-database-node-module-on-a-nodeexpress-server-with-sequelize/">Setting Up a Database Node Module on a Node/Express Server With Sequelize</a></h2><div class="meta">Dec 29 2013 in <a href="/categories/Tech-Tips/">Tech Tips</a>&ensp;</div></article></li><li><article><h2><a href="/2013/12/week-6-whole-new-ballgame/">Week 6: Whole New Ballgame</a></h2><div class="meta">Dec 22 2013 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h2><a href="/2013/12/week-5-serving-up-a-new-outlook/">Week 5: Serving Up a New Outlook</a></h2><div class="meta">Dec 12 2013 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h2><a href="/2013/12/week-4-losing-power/">Week 4: Losing Power</a></h2><div class="meta">Dec 7 2013 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h2><a href="/2013/11/inside-my-head-learning-javascript/">Inside My Head: Learning Java Script</a></h2><div class="meta">Nov 30 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li></ul><nav id="article-list-pagination"><a href="/page/2/" title="Previous articles">&larr; Previous articles</a>&emsp;<a href="/page/4/" title="Next articles">Next articles &rarr;</a></nav></section><footer id="page-footer"><section><nav id="footer-menu"><ul><li><a href="/about">About</a></li><li><a href="/archives">Archive</a></li><li><a href="http://github.com/leaena/leaena.github.io">Source</a></li><li><a href="/atom.xml">Feed</a></li></ul></nav></section></footer></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Leaena.com</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Leaena.com">
+<meta property="og:url" content="http://leaena.github.io/page/3/">
+<meta property="og:site_name" content="Leaena.com">
+<meta property="og:description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Leaena.com">
+<meta name="twitter:description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+  
+    <link rel="alternative" href="/atom.xml" title="Leaena.com" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="../../css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://leaena.github.io"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="post-week-7-is-this-what-confidence-feels-like" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/01/week-7-is-this-what-confidence-feels-like/" class="article-date">
+  <time datetime="2014-01-12T07:16:08.000Z" itemprop="datePublished">Jan 11 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/01/week-7-is-this-what-confidence-feels-like/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/01/week-7-is-this-what-confidence-feels-like/">Week 7: Is This What Confidence Feels Like?</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Coming back from break was wonderful. I really missed this place and these people and I’m at a point now where I’m excited to walk in the front door of this space. I am really, truly a Software Engineer. I have been for a long time, but it took this place and these people to pull that knowledge out of myself. I started the week with giant hugfests of awesome. It was great to see everyone after two weeks. There was some unexpected lack of (and new growth of) facial hair and general fun stories about hijinks had during our time away. We all quickly felt the glory of being seniors and then were promptly blown away by how awesome the new batch of juniors are.</p>
+<p>There wasn’t much time to chat though, juniors were starting their hell week and we were about to embark on a different sort of hell - Hiring Day Assessments. I was terrified. I’ve decided my brain just needs to have something to focus on being terrified about to function at all - I’m starting to wonder if losing my fear would also diminish my awesomeness. We had all day to finish our assessments and as I dove in my confidence built. I knew this stuff. I knew it from the times it had been drilled into my head and the moments when I was working on something alone and would need to Google a concept and those times at the lunch table with my peers discussing wild and crazy new concepts. It rocked to realize how awesome we all are now. Everyone can tell us we are awesome until their blue in the face, but it’s moments like that when it clicks for me.</p>
+<p>The other moments it clicks for me is the new, terribly unfunny programming jokes we’ve all started making. It’s getting ridiculous.</p>
+<p>After Monday’s stress, we quickly got our hands dirty in our code. Our first round of group projects wrapped this week. I worked with <a href="http://sarabinns.com/" target="_blank" rel="external">Sara</a> and <a href="http://www.joaostein.com.br/" target="_blank" rel="external">João</a> to make a custom html5 video player plugin to vote on moments in videos and visualize the user data. Our project is called <a href="http://heatvote.com/" target="_blank" rel="external">HeatVote</a>. We’re still hacking on it in our “free time”, but its production cycle is officially over. There are a few previous posts on things I worked on for this project and I feel like I have a book more to write about the experience, but time is, as my faithful readers know, very short lately so I’m going to close this book for now.</p>
+<p>Our next project period starts on Tuesday. I was fortunate enough to get a client project working with an awesome team to create mobile web apps at <a href="http://famo.us/" target="_blank" rel="external">famo.us</a>! I am very excited to dive into unfamiliar territory, learn, and help out a team of super talented people.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../categories/HackReactor">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/famous">famo.us</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/hackreactor">hackreactor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/heatvote">heatvote</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/javascript">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-d3-js-rollups" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/01/d3-js-rollups/" class="article-date">
+  <time datetime="2014-01-05T02:28:17.000Z" itemprop="datePublished">Jan 4 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/01/d3-js-rollups/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/01/d3-js-rollups/">D3.js Rollups</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Do you have all the data and none of the visuals? Do you just want a pretty, fast way to compare lots of data that centers around maybe just a handful of moments?</p>
+<p><a href="http://d3js.org/" target="_blank" rel="external">D3.js</a> can help you tame all of your data and <code>d3.rollup</code> is especially useful if you have lots of data that you need to combine into just a couple of data points. All it takes is a couple of (pretty long) lines of code and you will have an awesome visual that’s very customizable.</p>
+<p>Lets start with a really straightforward example of a rollup. In all of these examples, I’m using code straight from my HeatVote project, which requires me to pull voting data from our server API that I receive as a <a href="http://jsonblob.com/" target="_blank" rel="external">JSON blob</a>. Here’s an example entry:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre>{ video_id: <span class="string">'T-D1KVIuvjA'</span>,
+  timestamp: <span class="number">2</span>,
+  vote: <span class="number">1</span>,
+  id: <span class="number">1</span>,
+  createdAt: Sat Dec <span class="number">21</span> <span class="number">2013</span> <span class="number">14</span>:<span class="number">55</span>:<span class="number">42</span> GMT-<span class="number">0800</span> (PST),
+  updatedAt: Sat Dec <span class="number">21</span> <span class="number">2013</span> <span class="number">14</span>:<span class="number">55</span>:<span class="number">42</span> GMT-<span class="number">0800</span> (PST) }
+</pre></td></tr></table></figure>
+
+<p>Now obviously there are a bunch of these, and technically there are easier ways to do this, but to show off the structure of a rollup, lets count how many entries we had in our database using a d3 rollup!</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="keyword">var</span> total = d3.nest()
+  .rollup(<span class="function"><span class="keyword">function</span><span class="params">(d)</span>{</span>
+    <span class="keyword">return</span> d.length;
+  })
+  .entries(data);
+</pre></td></tr></table></figure><br>Remember, <code>data</code> here is my array of JSON entries, so in our rollup function the <code>d</code> is just shorthand for all of the data. This isn’t a very interesting example though, lets take a look at something that really shows off the beauty of a d3 rollup.<br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre><span class="keyword">var</span> averages = d3.nest()
+  .key(<span class="function"><span class="keyword">function</span><span class="params">(d)</span> {</span>
+    <span class="keyword">return</span> d.timestamp;
+  })
+  .sortKeys(d3.ascending)
+  .rollup(<span class="function"><span class="keyword">function</span><span class="params">(d)</span>{</span>
+    <span class="keyword">return</span> d3.mean(d, <span class="function"><span class="keyword">function</span><span class="params">(g)</span> {</span>
+      <span class="keyword">return</span> +g.vote;
+    });
+   })
+   .entries(data);
+</pre></td></tr></table></figure>
+
+<p>Now there is a <strong>lot</strong> going on in this very compact few lines, so well go through them one by one, but the result is that <code>averages</code> is equal to an array of objects with the properties <code>key</code> (that is equal to each unique timestamp) and <code>value</code> (that is equal to the mean of all votes at that timestamp).</p>
+<p>So lets break it down:</p>
+<ul>
+<li><code>.key(...)</code> is just used to tell the function what our keys are, only grabbing unique values of that property.</li>
+<li><code>.sortKeys</code> is just a prettiness thing, it sorts my keys into an order (when they’re pulled off the server the only order is by the time they were created on the database).</li>
+<li>and finally our lovely <code>.rollup(...)</code>. Now instead of d being an array of the whole data, it’s now an array of only the data for each individual key (so all of the data with the same timestamp). The inner function <code>d3.mean</code> takes a specific property from all of the data for each key and averages them up.<br>And that, is d3 rollup in a nutshell, it’s really lovely at coercing relationships out of your raw data and you can obviously do a lot more with it that just averaging things. The <a href="https://github.com/mbostock/d3/wiki/Arrays#wiki-d3_nest" target="_blank" rel="external">d3 nest docs</a> are probably the next best place to look to get your hands dirty (.rollup is a property of nest).</li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../categories/Tech-Tips">Tech Tips</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/d3">d3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/data-sci">data sci</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/javascript">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-cloud-postgresql-servers-with-heroku" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/12/cloud-postgresql-servers-with-heroku/" class="article-date">
+  <time datetime="2013-12-30T19:00:08.000Z" itemprop="datePublished">Dec 30 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/12/cloud-postgresql-servers-with-heroku/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/12/cloud-postgresql-servers-with-heroku/">Cloud PostgreSQL Servers with Heroku</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>While it might be possible that I’m the only person out there who didn’t want to hassle with creating a <a href="http://www.postgresql.org/" target="_blank" rel="external">Postgres</a> database on my computer that needed to be passed around to my project-mates, I have a feeling there is one lost soul in the universe besides me who might find this useful. When I first tried to use <a href="https://www.heroku.com/postgres" target="_blank" rel="external">Heroku’s PostgreSQL database add-on</a> the only documentation I really found was for attaching it to existing Heroku apps. I just wanted a dev environment and currently don’t have plans to deploy the app with Heroku so I just wanted to “borrow” their free level of database storage.</p>
+<p>It is shockingly easy. All I needed to do was log in to my Heroku dashboard and click the databases tab. From there I created a new database (be sure to choose the almost hidden <code>Dev Plan (free)</code> option on the lower left). Once it was done spinning up if you click on it, you are taken to a page with all the login info you could ever need:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/v1391709364/Screen-Shot-2013-12-30-at-10_41_21-AM_vpd5hf.png" alt="Heroku Postgres Login Stuffs"></p>
+<p>I just plugged all of that info into Sequelize (<a href="http://leaena.com/2013/12/setting-up-a-database-node-module-on-a-nodeexpress-server-with-sequelize/" title="Setting Up a Database Node Module on a Node/Express Server with Sequelize" target="_blank" rel="external">see my previous post</a>), because I’m using Heroku Postgres, I had to make sure I used the pg.native options in both Node and Sequelize.</p>
+<p>A few caveats! For a Mac, if you just install the Postgres standalone app from <a href="http://postgresql.org/" target="_blank" rel="external">PostgreSQL</a>, life will not be pleasant (I learned this the hard way). The easiest way to make life happy is to use Homebrew to install Postgres. <a href="http://brew.sh/" target="_blank" rel="external">Please have Homebrew</a>, it makes life super easy. All you need to do then is <code>brew install postgresql</code>.</p>
+<p>The second awesome thing about Heroku Postgres is that although I’m only on the free version, I can still easily log in to my database from the command line and change things. On the page with the connection info, click the double arrows on the right and choose URL. Now, in Terminal type <code>psql DATABASE_URL_HERE</code> and voila! direct access to your database.</p>
+<p><a href="http://leaena.com/wp-content/uploads/2013/12/Screen-Shot-2013-12-30-at-10.41.33-AM.png" target="_blank" rel="external"><img src="http://res.cloudinary.com/leaena/image/upload/v1391709372/Screen-Shot-2013-12-30-at-10_41_33-AM-200x300_p4qzvm.png" alt=""></a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../categories/Tech-Tips">Tech Tips</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Heroku">Heroku</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/PostgreSQL">PostgreSQL</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-setting-up-a-database-node-module-on-a-nodeexpress-server-with-sequelize" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/12/setting-up-a-database-node-module-on-a-nodeexpress-server-with-sequelize/" class="article-date">
+  <time datetime="2013-12-30T01:17:28.000Z" itemprop="datePublished">Dec 29 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/12/setting-up-a-database-node-module-on-a-nodeexpress-server-with-sequelize/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/12/setting-up-a-database-node-module-on-a-nodeexpress-server-with-sequelize/">Setting Up a Database Node Module on a Node/Express Server with Sequelize</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>If you just need to get a node server up and running with very few lines of code then you hopefully already know about <a href="http://nodejs.org/" target="_blank" rel="external">Node</a>/<a href="http://expressjs.com/" target="_blank" rel="external">Express</a> (if you don’t, the Express website has <a href="http://expressjs.com/guide.html" target="_blank" rel="external">a pretty good intro tutorial</a> and has <a href="http://expressjs.com/api.html#app.use" target="_blank" rel="external">good documentation to get started serving up static assets</a>). If you need all of that and to be able to route queries to a database quickly and easily then you might not know about the awesome power of <a href="http://sequelizejs.com/" target="_blank" rel="external">Sequelize</a>.</p>
+<p>If you haven’t messed around with a ORM (<a href="http://en.wikipedia.org/wiki/Object-relational_mapping" target="_blank" rel="external">Object Relational Mapper</a>, a program that maps your code to a database) before, Sequelize is a really straight forward one to start with.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="keyword">var</span> voteTable = sequelize.define(<span class="string">'vote'</span>, {
+  video_id: Sequelize.STRING,
+  timestamp: Sequelize.INTEGER,
+  vote: Sequelize.INTEGER
+});
+
+voteTable.sync();
+</pre></td></tr></table></figure>
+
+<p>Once I had my server set up (and installed the sequelize dependencies). This was the line of code I needed to use to create a new table for my current group project. Sequelize automatically includes extra columns like unique id and created at/updated at timestamps (there are ways to tell it not to too).</p>
+<p>The rest of the initial set up is easy too, but it’s well documented over in the Sequelize docs. The fun part comes when you can start to make your database more modular. The first thing I did was to take out the actual username/password information from my database connection. I stored them as an object in a separate JavaScript file (so I could add it to <a href="https://help.github.com/articles/ignoring-files" target="_blank" rel="external">.gitignore</a> and not share my passwords with the world).</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre><span class="comment">//module.exports allows us to use this code in other places as a node module,</span>
+<span class="comment">//we'll see it again when I make the database calls modular</span>
+module.exports = {
+  database: <span class="string">'database_name'</span>,
+  username: <span class="string">'username'</span>,
+  password: <span class="string">'secret_password'</span>,
+  host: <span class="string">'host_url'</span>,
+  port: <span class="number">5432</span>,
+  dialect: <span class="string">'postgres'</span>, <span class="comment">//obviously you don't have to use PostgreSQL</span>
+  native: <span class="literal">true</span> <span class="comment">//required for Heroku Postgres (I'll cover that in another post)</span>
+};
+</pre></td></tr></table></figure>
+
+<p>I saved that snipped to a file called <code>db_config.js</code> at the root directory and then created my main database module in the subfolder <code>/controller/</code> called <code>database.js</code>. So to have access to the private config object, all I need to do is set up my dependencies, import the <code>db_config</code> file, and I can start using my config variables to connect to my database:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre><span class="keyword">var</span> Sequelize = <span class="built_in">require</span>(<span class="string">'sequelize'</span>);
+<span class="keyword">var</span> pg = <span class="built_in">require</span>(<span class="string">'pg'</span>).native; <span class="comment">//again this line is specific to using a Postgres database</span>
+<span class="keyword">var</span> config = <span class="built_in">require</span>(<span class="string">'../db_config'</span>);
+
+<span class="keyword">var</span> sequelize = <span class="keyword">new</span> Sequelize(config.database, config.username, config.password, {
+  host: config.host,
+  port: config.port,
+  dialect: config.dialect,
+  native: config.native <span class="comment">//Heroku Postgress again</span>
+});
+</pre></td></tr></table></figure><br>Now between that code and my creating a table I have full access to a database, but now I need to get this all into my main <code>app.js</code> simple server I created with Node/Express. This is a super easy leap. First I create my functions to send and retrieve data in <code>/controller/database.js</code>:<br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre>module.exports.createVote = <span class="function"><span class="keyword">function</span><span class="params">(req, res)</span>{</span>
+  <span class="comment">//code to bundle up the created object and save it do the database</span>
+};
+
+module.exports.getVotes = <span class="function"><span class="keyword">function</span><span class="params">(req, res)</span>{</span>
+  <span class="comment">//code to find votes based on specific requests from the user</span>
+};
+</pre></td></tr></table></figure>
+
+<p>Now to have access to these functions (which are a part of the <code>database.js</code> node module, thanks to the module.exports object which is <a href="http://nodejs.org/api/modules.html#modules_the_module_object" target="_blank" rel="external">a feature of Node</a>) I only need to require <code>database.js</code> in my main server app and call the functions where I need them:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="keyword">var</span> database = <span class="built_in">require</span>(<span class="string">'./controllers/database'</span>);
+
+<span class="comment">//many lines later</span>
+app.post(<span class="string">'/votes'</span>, database.createVote);
+app.get(<span class="string">'/votes/:vidID'</span>, database.getVotes);
+</pre></td></tr></table></figure>
+
+<p>The <code>/votes/:vidID</code> is a <a href="http://expressjs.com/api.html#app.param" target="_blank" rel="external">handy trick of Express</a> to pass information to the server. The value gets attached to the <code>req.param.vidID</code> property so I can use it when I request specific information from the server. For example if I wanted to query for results from a video ID of 123 I would send a post request to <code>/votes/123</code> and then my <code>req.param.vidID === 123</code>.</p>
+<p>One last trick, in Sequelize when you query the database you get back quite a few more rows than you might expect. When I query my <code>voteTable</code> (the one I only explicitly created three columns for?) I get back something that looks like this monster:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="code"><pre>{ dataValues:
+     { video_id: <span class="string">'7QBgK0_RbkE'</span>, timestamp: <span class="number">2</span>, vote: <span class="number">1</span>, id: <span class="number">192</span>,
+       createdAt: Sun Dec <span class="number">22</span> <span class="number">2013</span> <span class="number">22</span>:<span class="number">19</span>:<span class="number">33</span> GMT-<span class="number">0800</span> (PST),
+       updatedAt: Sun Dec <span class="number">22</span> <span class="number">2013</span> <span class="number">22</span>:<span class="number">19</span>:<span class="number">33</span> GMT-<span class="number">0800</span> (PST) },
+    __options:
+     { timestamps: <span class="literal">true</span>, createdAt: <span class="string">'createdAt'</span>, updatedAt: <span class="string">'updatedAt'</span>,
+       deletedAt: <span class="string">'deletedAt'</span>, touchedAt: <span class="string">'touchedAt'</span>, instanceMethods: {}, classMethods: {},
+       validate: {}, freezeTableName: <span class="literal">false</span>, underscored: <span class="literal">false</span>, syncOnAssociation: <span class="literal">true</span>,
+       paranoid: <span class="literal">false</span>, whereCollection: [<span class="built_in">Object</span>], schema: <span class="literal">null</span>, schemaDelimiter: <span class="string">''</span>,
+       language: <span class="string">'en'</span>, defaultScope: <span class="literal">null</span>, scopes: <span class="literal">null</span>, hooks: [<span class="built_in">Object</span>], omitNull: <span class="literal">false</span>,
+       hasPrimaryKeys: <span class="literal">false</span> },
+    hasPrimaryKeys: <span class="literal">false</span>,
+    selectedValues:
+     { video_id: <span class="string">'7QBgK0_RbkE'</span>, timestamp: <span class="number">2</span>, vote: <span class="number">1</span>, id: <span class="number">192</span>,
+       createdAt: Sun Dec <span class="number">22</span> <span class="number">2013</span> <span class="number">22</span>:<span class="number">19</span>:<span class="number">33</span> GMT-<span class="number">0800</span> (PST),
+       updatedAt: Sun Dec <span class="number">22</span> <span class="number">2013</span> <span class="number">22</span>:<span class="number">19</span>:<span class="number">33</span> GMT-<span class="number">0800</span> (PST) },
+    __eagerlyLoadedAssociations: [],
+    isDirty: <span class="literal">false</span>,
+    isNewRecord: <span class="literal">false</span>,
+    daoFactoryName: <span class="string">'votes'</span>,
+    daoFactory:
+     { options: [<span class="built_in">Object</span>], name: <span class="string">'votes'</span>, tableName: <span class="string">'votes'</span>, rawAttributes: [<span class="built_in">Object</span>],
+       daoFactoryManager: [<span class="built_in">Object</span>], associations: {}, scopeObj: {}, primaryKeys: {},
+       primaryKeyCount: <span class="number">0</span>, hasPrimaryKeys: <span class="literal">false</span>, autoIncrementField: <span class="string">'id'</span>, DAO: [<span class="built_in">Object</span>] }
+ }
+</pre></td></tr></table></figure>
+
+<p>And that’s just <strong>ONE</strong> entry in the database! To fix that add an option to your sequelize query: <code>{raw: true}</code> so the query would look like:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>voteTable.findAll(query, {raw: <span class="literal">true</span>})
+</pre></td></tr></table></figure>
+
+<p>And one entry of output would be:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre>{ video_id: <span class="string">'T-D1KVIuvjA'</span>,
+  timestamp: <span class="number">2</span>,
+  vote: <span class="number">1</span>,
+  id: <span class="number">1</span>,
+  createdAt: Sat Dec <span class="number">21</span> <span class="number">2013</span> <span class="number">14</span>:<span class="number">55</span>:<span class="number">42</span> GMT-<span class="number">0800</span> (PST),
+  updatedAt: Sat Dec <span class="number">21</span> <span class="number">2013</span> <span class="number">14</span>:<span class="number">55</span>:<span class="number">42</span> GMT-<span class="number">0800</span> (PST) }
+</pre></td></tr></table></figure>
+
+<p>That is enough database tricks for today. If you want to just stare at my code for a while to create &amp; retrieve votes from our database you can find <a href="https://gist.github.com/leaena/8174127" target="_blank" rel="external">my gist here</a> (with sanitized login info for the db_config). The real (still being modded by the team) code is <a href="https://github.com/leaena/videoheatmap" target="_blank" rel="external">forked on my GitHub</a>. I have a few more of these in the works from my adventures slinging code and I hope to post a few more before Hack Reactor starts back up and I lose all free time again.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../categories/Tech-Tips">Tech Tips</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/express">express</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/javascript">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/nodejs">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/sequelize">sequelize</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-6-whole-new-ballgame" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/12/week-6-whole-new-ballgame/" class="article-date">
+  <time datetime="2013-12-22T19:50:30.000Z" itemprop="datePublished">Dec 22 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/12/week-6-whole-new-ballgame/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/12/week-6-whole-new-ballgame/">Week 6: Whole New Ballgame</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://imgur.com/pJkhiZn" target="_blank" rel="external"><img src="http://i.imgur.com/pJkhiZn.png" alt="" title="Hosted by imgur.com"></a></p>
+<p>The tiny bit of Hack Reactor/git humor above is going to be lost on most of my audience but it made me happy. This week felt a bit like the first week of the program. A bit of uncertainty, a lot of excitement.</p>
+<p>We were turned loose this week. No more structured lessons, it’s the start of the projects phase. The first two days were devoted to a “hackathon” where I learned <a href="http://angularjs.org/" target="_blank" rel="external">angular</a> and <a href="https://www.firebase.com/" target="_blank" rel="external">firebase</a> and created a bookmarking app that included full-text search and a companion <a href="http://developer.chrome.com/extensions/getstarted.html" target="_blank" rel="external">Chrome extension</a>. That was super exciting. It was awesome to build something with my own two hands and realize all that I’ve learned in the past six weeks. Even if something didn’t work right off the bat, I now have the confidence to read through the documentation and understand what individual pieces weren’t functioning the way I expected them to. One of my best strengths has definitely been my super-human ability to craft a google search query.</p>
+<p>The rest of the week has been a move into group projects and learning a whole new skill-set. I’m a get-along kind of person by nature and it was hard at first for me to feel like I wasn’t stepping on toes when I wanted to work on a specific part of our project. After a day or so of planning and modeling what we wanted to do though, it became easier to split up tasks. I learned <a href="http://asana.com/" target="_blank" rel="external">Asana</a> (a project tracking app) and got really good at dividing up tasks.</p>
+<p>My favorite part of our new app is that I got to deep dive into <a href="http://d3js.org/" target="_blank" rel="external">d3</a> (a JavaScript library for data visualizations) functionality and create a homegrown heat-map. Some of my notes are up on <a href="https://github.com/leaena/love-hate-heatmap" target="_blank" rel="external">GitHub</a>, but I plan on refactoring and creating a whole post on the heat-map process (spoiler:<a href="https://github.com/mbostock/d3/wiki/Arrays#wiki-nest_rollup" target="_blank" rel="external"> d3.rollup</a> is my savior).</p>
+<p>I am very content this week. I’m getting a taste of what the real world is going to look like for me as a software engineer (an unfortunate side effect is that I’m getting a real taste for coffee to keep up with the long <a href="http://www.hackreactor.com/" target="_blank" rel="external">Hack Reactor</a> hours). Now though, I’m sitting in SFO waiting for my plane to PDX and home for Christmas. I’ll miss the beautiful (and non-rainy) sites of San Francisco, but I’m excited to visit family and show them how much I’ve changed.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../categories/HackReactor">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/d3">d3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/hackreactor">hackreactor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/home">home</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/javascript">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-5-serving-up-a-new-outlook" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/12/week-5-serving-up-a-new-outlook/" class="article-date">
+  <time datetime="2013-12-13T01:25:30.000Z" itemprop="datePublished">Dec 12 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/12/week-5-serving-up-a-new-outlook/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/12/week-5-serving-up-a-new-outlook/">Week 5: Serving Up a New Outlook</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>If I didn’t know me better I’d say I was a little manic this week compared to last. This week I was cold, tired and hungry most of the time. I had my ups, down and whiny moments. My credit card was blocked because apparently the soda machine in the mall is shady to my bank. It was a quick fix, until my Clipper Card (the way I pay for my train - which I take every day, twice a day) ended up being blocked because it had tried to autoload cash during the 3 hour window of downtime on my credit card. It takes up to a week to reprocess so I’m forced to buy crappy little paper tickets and not use the $30 I already had stored on my train card. I ended up buying a coat and neon pink gloves just to make me happy (and warmer). Allow me to be a woman for a moment and do a bit of style blogging:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/v1391709357/Screen-Shot-2013-12-14-at-11_08_37-PM_c6t4au.png" alt="Style blogging grey jacket"></p>
+<p>I obviously didn’t spend all my time buying cheap, warm clothing though. I spent most of my time in class having moments of excitement followed by moments of wanting to crawl under a desk and take a nap. I’m not sure what I’d do without the upcoming Christmas break, but it wouldn’t be pretty. What I will say instead is that I may have found my niche in programming.</p>
+<p>This week was all about ‘backend’ which means pretty much what it sounds like. It’s a lot of the behind the scenes decisions that have to happen to decide what page you’re looking for and what data to put there. We did more <a href="http://www.nodejs.org/" target="_blank" rel="external">Node.js</a> servering and powered through different types of databases and how to hook them in and beat them into a format we can use well enough with our front-end JavaScripting (the answer is JSON, for the viewers at home). Finally, when I thought I couldn’t take any more (and I was half right), we started on <a href="http://angularjs.org/" target="_blank" rel="external">Angular</a>, another MV* framework like <a href="http://backbonejs.org/" target="_blank" rel="external">Backbone.js</a>, but with some magic and some sleight of hand that allows you to do most of the work directly on the HTML.</p>
+<p>I lurve the backend. I really find page routing and JSON calls and database building/retrieving from to be super interesting. It almost feels like a tangible thing where the app over the top is just a pretty cover for the awesomeness that makes it all happen.</p>
+<p>We start our lives as Software Engineers next week - a short two-day solo project sprint followed by the start of our first group project. I’m super excited to have a bit more freedom. I’m also terrified of working on my own and having it crash and burn. I really hope excitement wins out.</p>
+<p>After the solo project I hope I can write-up a bit about my experiences and show off my (crappy?) solo app.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../categories/HackReactor">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/angular">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/clipperfail">clipperfail</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/database">database</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/girl-power">girl power</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/nodejs">nodejs</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-4-losing-power" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/12/week-4-losing-power/" class="article-date">
+  <time datetime="2013-12-08T06:41:23.000Z" itemprop="datePublished">Dec 7 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/12/week-4-losing-power/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/12/week-4-losing-power/">Week 4: Losing Power</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Another roller coaster week. Worst points: Someone took my laptop charger while I was in lecture, my week 3 assessment was not my finest point, and I miss my cats something desperately. Best points: I worked with my two favorite pair-partners again because I couldn’t handle this week otherwise, I had an awesome girl’s lunch today with 4/5ths of the junior class women (there are 5 of us total), and I made a <a href="http://nodejs.org/" target="_blank" rel="external">node.js</a> server!</p>
+<p>So I definitely felt my first crazy/not enough sleep/irrational emotions. When my power cord was jacked a couple of days ago I was <em>devastated</em>. In retrospect, I think I’m a little tired and cranky and, like I said previously, I am in desperate need of some kitty cuddle time. I’ve  been in California now for over a month and I still love it, but it’s definitely getting more difficult. There are times I wish I could just zen out and I only really get that on the trains or at midnight in the dark when I should be sleeping so I can wake up and do it all again the next morning at 6am to catch my train.</p>
+<p>I have never been more excited/motivated to get up in the morning in my life and I can’t get to sleep at night because code and other things are running through my head and along the way something had to give. I’ve discovered that when something has to give it’s my emotional stability. My actual sprints were amazeballs, especially since I had awesome pairs (Sara and Andy, respectively) for my Backbone and Node.js sprints. But in my quiet moments or while I was working solo the doubt and sadness came back.</p>
+<p>So I did what I always do when I’m sad - I talked to my parents, <strong>a lot</strong>. I called them while waiting for the train, I called them sitting on the couch in the Hack Reactor lobby during lunch, and I called them while I drove home at 9pm every night. My dad especially is awesome at making me feel better. He’s always so proud of me and he’s always  interested in what I’m doing. It’s hard sometimes here, but I have an amazing support system both in Oregon and here. My platonic life partner Ava and her husband John have been my rocks in more ways than one. My new awesome friends at Hack Reactor, especially the ladies of the Nov ‘13 cohort have been awesome to get to know. And I know all my family, friend, and former coworkers back in Oregon love me and miss me as much or more than I love and miss them.</p>
+<p>Thinking about it and even writing about it has helped as well. Getting it off my chest makes it so I can breathe again. So I guess I just want to say, I love you all. Thank you for dealing with me! I really am happy even if I didn’t sound it sometimes this week. If I don’t just sleep all of tomorrow/spend my day in San Jose with other awesome people I love to pieces, I’m going to try to post a non-emotional/tired/whiny post, but honestly, I want to keep this blog real. For me as well as for you and this what has dominated my brain this week.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../categories/HackReactor">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/backbonejs">backbonejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/confessions">confessions</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/javascript">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/nodejs">nodejs</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-inside-my-head-learning-javascript" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/11/inside-my-head-learning-javascript/" class="article-date">
+  <time datetime="2013-11-30T21:06:16.000Z" itemprop="datePublished">Nov 30 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/11/inside-my-head-learning-javascript/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/11/inside-my-head-learning-javascript/">Inside My Head: Learning JavaScript</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>I have had a very productive weekend so far (and it’s only Saturday!). I am spending some of my day today going back through my easy <a href="http://coderbyte.com/" target="_blank" rel="external">Coderbyte</a> solutions and cleaning most of them up. I will also be adding in comments for most of the lines explaining my logic. So a lot of the files will look like this:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="function"><span class="keyword">function</span> <span class="title">FirstReverse</span><span class="params">(str)</span> {</span>
+  <span class="keyword">return</span> str.split(<span class="string">""</span>)  <span class="comment">//splits the string into an array of characters</span>
+            .reverse()  <span class="comment">//reverses the array</span>
+            .join(<span class="string">""</span>);  <span class="comment">//joins the array back into a string, with no space between the characters</span>
+}
+</pre></td></tr></table></figure>
+
+<p>This is actually a lot of fun for me. Now that we’re getting into more abstract concepts like MVCs and servers it’s nice to just go back and power through some JavaScript code and understand exactly what it’s doing.</p>
+<p>As always, you can find my <a href="https://github.com/leaena/coderbyte" target="_blank" rel="external">coderbyte solutions on GitHub</a> (I will be posting updates to it throughout the day), but I feel like I need to start adding a caveat, because of the amount of people who have said they found my blog looking for coderbyte solutions. Just staring at my code isn’t going to make you understand JavaScript. You need to do it for yourself. If you’re brand new to JavaScript, just seeing the cool tricks is not going to make you a programmer. I really recommend things like <a href="https://www.udacity.com/" target="_blank" rel="external">Udacity</a>, <a href="http://www.codecademy.com/" target="_blank" rel="external">Codecademy</a> and other sites that talk about the fundamentals of comp sci/programming.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../categories/Programming">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/coderbyte">coderbyte</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/javascript">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-time-complexity-in-algorithms" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/11/time-complexity-in-algorithms/" class="article-date">
+  <time datetime="2013-11-30T01:09:20.000Z" itemprop="datePublished">Nov 29 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/11/time-complexity-in-algorithms/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/11/time-complexity-in-algorithms/">Time Complexity in Algorithms</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Time complexity is a useful concept in programming. It’s essential for job interviews, but beyond that to really be a good programmer you need to know how cumbersome your algorithm is going to be. For 10 items, something that takes 2 seconds per item is only 20 seconds, but what if you have a million items?</p>
+<p>In general, time complexity is measured by how long it takes a number of items (n) to be processed. It is the relationship between the number of things you have to do and the work to be done. Something that takes the same amount of time no matter have much of it you have to do, would be constant time. If I had 10 items or 1 million it would only take me 2 seconds to process. On another extreme is something called the handshake problem. If you only have two people in a room they only have to shake one another’s hands (one handshake). If you have 10 people, they each shake 9 other hands (55 handshakes total, we’ll get to the math in a moment). This is quadratic time.</p>
+<p>Here’s a visual of the common programming time complexities:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/v1391709344/bigo_rqzv9e.png" alt="Time complexities!"></p>
+<p>Lets start with <strong>constant time</strong> again. In programming, constant time is like deciding whether a number is even or odd:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>n % <span class="number">2</span> = ?
+</pre></td></tr></table></figure>
+
+<p>This is just one expression. You run and you’re done. It’s always going to take a certain amount of time, no matter what n you give it. <span style="text-decoration: underline;">In big O notation we would write this as O(1).</span></p>
+<p>Next, my favorite, as far as understanding goes. <strong>Linear time.</strong> In programming, linear time, is like running through a loop of n numbers and doing something.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>; i &lt; n; i++ ){
+   <span class="keyword">do</span> something..
+ }
+</pre></td></tr></table></figure>
+
+<p>The more things (‘n’s) you have, the longer the algorithm is going to take. It’s a 1:1 ratio. If 1 thing takes 1 second, 2 things are going to take 2 seconds. <span style="text-decoration: underline;">This is O(n).</span></p>
+<p><strong>Quadratic time</strong> is worse than linear time. It’s like the handshake problem or in programming terms a for loop within a for loop. For each n we need to run through all the numbers 1 through n.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>; i &lt; n; i++ ){
+   <span class="keyword">for</span>( <span class="keyword">var</span> j = <span class="number">0</span>; j &lt; n; j++ ){
+     <span class="keyword">do</span> something..
+   }
+ }
+</pre></td></tr></table></figure>
+
+<p>Each n thing is done n times. <span style="text-decoration: underline;">This is n * n or in big O terms O(n<sup>2</sup>).</span></p>
+<p><strong>Logarithmic time</strong> is all kinds of magic. It tapers off to a near constant for larger ‘n’s. This is possible because of the magic of halves. In a binary search tree there are only two options to descend, left (options lower than the current value) or right (options higher than the current value). Either choice will cut off roughly half of all the possible values. On the next level, you have the same choice, either you’ve found your value, or you go left or right, halving your options again.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="keyword">while</span> ( low &lt;= high ) {
+   <span class="keyword">var</span> mid = ( low + high ) / <span class="number">2</span>;
+   <span class="keyword">if</span> ( target &lt; list[mid] ){
+     <span class="keyword">var</span> high = mid - <span class="number">1</span>;
+   } <span class="keyword">else</span> <span class="keyword">if</span> ( target &gt; list[mid] ){
+     <span class="keyword">var</span> low = mid + <span class="number">1</span>;
+   } <span class="keyword">else</span> { <span class="keyword">break</span>; }
+ }
+</pre></td></tr></table></figure>
+
+<p>If you’re constantly halving the amount of things you have to check, eventually you hit a roughly constant time for an n search. <span style="text-decoration: underline;">This is O(log n).</span></p>
+<p><em>This post has been brought to you by <a href="http://www.daniweb.com/software-development/computer-science/threads/13488/time-complexity-of-algorithm" target="_blank" rel="external">a forum post on time complexity</a>, bits and pieces of <a href="http://en.wikipedia.org/wiki/Time_complexity" target="_blank" rel="external">the wiki article on time complexity</a>, and <a href="https://www.youtube.com/watch?v=sh4O6DRs26M" target="_blank" rel="external">this inspirational code class ad featuring my lead instructor from his Twitter days</a>.</em></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../categories/Programming">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Interview">Interview</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/big-o">big o</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/knowledge">knowledge</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-3-less-work-more-work" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/11/week-3-less-work-more-work/" class="article-date">
+  <time datetime="2013-11-28T22:16:49.000Z" itemprop="datePublished">Nov 28 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/11/week-3-less-work-more-work/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/11/week-3-less-work-more-work/">Week 3 - Less Work, More... Work?</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>School-wise, this week was very, very short. Today is Thanksgiving and I’m almost a little shocked that we got it off (although many of my peers are spending their day at the school if the emails about keys and door opening flying back and forth are a good reference). Because of the shortness I was thrown a bit off guard on Monday when I realized that it was time for our 3rd assessment already! This is week three! It feels simultaneously like I’ve been here for days and for years. The assessment went well and I actually remembered all my things from the previous week without too much panic. I did have a hilarious nightmare afterward that involved me being forced to code a <a href="http://en.wikipedia.org/wiki/Merge_sort" target="_blank" rel="external">merge sort</a> algorithm using a pencil and a very limited amount of paper and my lead instructor yelling at me for my terrible handwriting (this is why I love computers! I have terrible penmanship).</p>
+<p>Because of the short week we basically just went straight into <a href="http://backbonejs.org/" target="_blank" rel="external">Backbone.js</a> this week, which for my non-coding followers is a JavaScript library that allows you to structure your app cleanly by dividing the work that must be done into the actual data “models” and the way you represent that data to individuals “views”. This concept is what’s called an <a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" target="_blank" rel="external">MVC</a>, which is one of those trendy/useful buzzwords you hear a lot in coding. Anyway, it’s what we did in class this week and I plan on working on it a bunch over my long weekend.</p>
+<p>Unfortunately because this is the longest break I have besides solo project time during Christmas break I think I’ve put more on my to-do list than is physically possible (especially since I promised my platonic life partner <a href="http://avagoestohackbright.blogspot.com/" target="_blank" rel="external">Ava</a> I would help her with her Hackbright project too). Lets run down what I have on my list:</p>
+<ul>
+<li>Review algorithm time complexity (<a href="http://en.wikipedia.org/wiki/Big_O_notation" target="_blank" rel="external">Big O notation</a>)</li>
+<li>Practice recursive problems</li>
+<li><p>Make business cards:<br><img src="http://res.cloudinary.com/leaena/image/upload/v1391709350/Screen-Shot-2013-11-28-at-1_33_31-PM_apsxso.png" alt="Personal business cards of awesome"></p>
+</li>
+<li><p>Work on my Backbone project (we are working on it through next Tuesday, but I want to tackle some of the extra credit)</p>
+</li>
+<li>Redo/refactor some of my Coderbytes code - I’ve learned a bunch, I can probably do better</li>
+<li>Research getting involved in some open source stuff/get some pull requests in to bigger projects</li>
+<li>Maybe try learning Ruby on Rails (we might lose out on the Ruby on Rails sprint because of the timeline of holidays)</li>
+</ul>
+<p>So yeah, I’m probably a crazy person. Today I will eat and hang out with friends and be merry though. Tonight I will allow the code to creep its way to the front of my brain again. I also plan on writing a more technical article on time complexity sometime this weekend if I can wrap my brain more fully around it so I can pass along the tips I find.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../categories/HackReactor">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/backbonejs">backbonejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/hackreactor">hackreactor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/javascript">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="../2">&laquo; Prev</a><a class="page-number" href="../..">1</a><a class="page-number" href="../2">2</a><span class="page-number current">3</span><a class="page-number" href="../4">4</a><a class="page-number" href="../5">5</a><span class="space">&hellip;</span><a class="page-number" href="../8">8</a><a class="extend next" rel="next" href="../4">Next &raquo;</a>
+    </nav>
+  
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:leaena.github.io">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2014 Lindsey Smith<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'leaena';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="../../js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>

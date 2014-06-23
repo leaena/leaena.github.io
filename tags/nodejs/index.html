@@ -1,1 +1,436 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="Lindsey Smith"><meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a software engineering bootcamp. Now I blog a mixture of programming, women in tech, life, and cats."><title>Archive&mdash;Leaena.com</title><link href="/favicon.png" rel="icon"><link rel="alternate" href="/atom.xml" title="config.title" type="application/atom.xml"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet"><link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/stylesheets/app.css"></head><body><header id="page-header"><div id="masthead"><h1 id="site-title"><a href="/">Leaena.com</a></h1><p id="site-slogan">Coding, cats, California, feminism, and zombies. Your average girl blogger.</p></div></header><section id="content"><header><h2>Archive</h2></header><ul class="article-list"><li><article><h3><a href="/2013/12/setting-up-a-database-node-module-on-a-nodeexpress-server-with-sequelize/">Setting Up a Database Node Module on a Node/Express Server With Sequelize</a></h3><div class="meta">Dec 29 2013 in <a href="/categories/Tech-Tips/">Tech Tips</a>&ensp;</div></article></li><li><article><h3><a href="/2013/12/week-5-serving-up-a-new-outlook/">Week 5: Serving Up a New Outlook</a></h3><div class="meta">Dec 12 2013 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li><li><article><h3><a href="/2013/12/week-4-losing-power/">Week 4: Losing Power</a></h3><div class="meta">Dec 7 2013 in <a href="/categories/HackReactor/">HackReactor</a>&ensp;</div></article></li></ul></section><footer id="page-footer"><section><nav id="footer-menu"><ul><li><a href="/about">About</a></li><li><a href="/archives">Archive</a></li><li><a href="http://github.com/leaena/leaena.github.io">Source</a></li><li><a href="/atom.xml">Feed</a></li></ul></nav></section></footer></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Tag: nodejs | Leaena.com</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Leaena.com">
+<meta property="og:url" content="http://leaena.github.io/tags/nodejs/">
+<meta property="og:site_name" content="Leaena.com">
+<meta property="og:description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Leaena.com">
+<meta name="twitter:description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+  
+    <link rel="alternative" href="/atom.xml" title="Leaena.com" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="../../css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://leaena.github.io"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="post-setting-up-a-database-node-module-on-a-nodeexpress-server-with-sequelize" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/12/setting-up-a-database-node-module-on-a-nodeexpress-server-with-sequelize/" class="article-date">
+  <time datetime="2013-12-30T01:17:28.000Z" itemprop="datePublished">Dec 29 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/12/setting-up-a-database-node-module-on-a-nodeexpress-server-with-sequelize/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/12/setting-up-a-database-node-module-on-a-nodeexpress-server-with-sequelize/">Setting Up a Database Node Module on a Node/Express Server with Sequelize</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>If you just need to get a node server up and running with very few lines of code then you hopefully already know about <a href="http://nodejs.org/" target="_blank" rel="external">Node</a>/<a href="http://expressjs.com/" target="_blank" rel="external">Express</a> (if you don’t, the Express website has <a href="http://expressjs.com/guide.html" target="_blank" rel="external">a pretty good intro tutorial</a> and has <a href="http://expressjs.com/api.html#app.use" target="_blank" rel="external">good documentation to get started serving up static assets</a>). If you need all of that and to be able to route queries to a database quickly and easily then you might not know about the awesome power of <a href="http://sequelizejs.com/" target="_blank" rel="external">Sequelize</a>.</p>
+<p>If you haven’t messed around with a ORM (<a href="http://en.wikipedia.org/wiki/Object-relational_mapping" target="_blank" rel="external">Object Relational Mapper</a>, a program that maps your code to a database) before, Sequelize is a really straight forward one to start with.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="keyword">var</span> voteTable = sequelize.define(<span class="string">'vote'</span>, {
+  video_id: Sequelize.STRING,
+  timestamp: Sequelize.INTEGER,
+  vote: Sequelize.INTEGER
+});
+
+voteTable.sync();
+</pre></td></tr></table></figure>
+
+<p>Once I had my server set up (and installed the sequelize dependencies). This was the line of code I needed to use to create a new table for my current group project. Sequelize automatically includes extra columns like unique id and created at/updated at timestamps (there are ways to tell it not to too).</p>
+<p>The rest of the initial set up is easy too, but it’s well documented over in the Sequelize docs. The fun part comes when you can start to make your database more modular. The first thing I did was to take out the actual username/password information from my database connection. I stored them as an object in a separate JavaScript file (so I could add it to <a href="https://help.github.com/articles/ignoring-files" target="_blank" rel="external">.gitignore</a> and not share my passwords with the world).</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre><span class="comment">//module.exports allows us to use this code in other places as a node module,</span>
+<span class="comment">//we'll see it again when I make the database calls modular</span>
+module.exports = {
+  database: <span class="string">'database_name'</span>,
+  username: <span class="string">'username'</span>,
+  password: <span class="string">'secret_password'</span>,
+  host: <span class="string">'host_url'</span>,
+  port: <span class="number">5432</span>,
+  dialect: <span class="string">'postgres'</span>, <span class="comment">//obviously you don't have to use PostgreSQL</span>
+  native: <span class="literal">true</span> <span class="comment">//required for Heroku Postgres (I'll cover that in another post)</span>
+};
+</pre></td></tr></table></figure>
+
+<p>I saved that snipped to a file called <code>db_config.js</code> at the root directory and then created my main database module in the subfolder <code>/controller/</code> called <code>database.js</code>. So to have access to the private config object, all I need to do is set up my dependencies, import the <code>db_config</code> file, and I can start using my config variables to connect to my database:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre><span class="keyword">var</span> Sequelize = <span class="built_in">require</span>(<span class="string">'sequelize'</span>);
+<span class="keyword">var</span> pg = <span class="built_in">require</span>(<span class="string">'pg'</span>).native; <span class="comment">//again this line is specific to using a Postgres database</span>
+<span class="keyword">var</span> config = <span class="built_in">require</span>(<span class="string">'../db_config'</span>);
+
+<span class="keyword">var</span> sequelize = <span class="keyword">new</span> Sequelize(config.database, config.username, config.password, {
+  host: config.host,
+  port: config.port,
+  dialect: config.dialect,
+  native: config.native <span class="comment">//Heroku Postgress again</span>
+});
+</pre></td></tr></table></figure><br>Now between that code and my creating a table I have full access to a database, but now I need to get this all into my main <code>app.js</code> simple server I created with Node/Express. This is a super easy leap. First I create my functions to send and retrieve data in <code>/controller/database.js</code>:<br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre>module.exports.createVote = <span class="function"><span class="keyword">function</span><span class="params">(req, res)</span>{</span>
+  <span class="comment">//code to bundle up the created object and save it do the database</span>
+};
+
+module.exports.getVotes = <span class="function"><span class="keyword">function</span><span class="params">(req, res)</span>{</span>
+  <span class="comment">//code to find votes based on specific requests from the user</span>
+};
+</pre></td></tr></table></figure>
+
+<p>Now to have access to these functions (which are a part of the <code>database.js</code> node module, thanks to the module.exports object which is <a href="http://nodejs.org/api/modules.html#modules_the_module_object" target="_blank" rel="external">a feature of Node</a>) I only need to require <code>database.js</code> in my main server app and call the functions where I need them:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="keyword">var</span> database = <span class="built_in">require</span>(<span class="string">'./controllers/database'</span>);
+
+<span class="comment">//many lines later</span>
+app.post(<span class="string">'/votes'</span>, database.createVote);
+app.get(<span class="string">'/votes/:vidID'</span>, database.getVotes);
+</pre></td></tr></table></figure>
+
+<p>The <code>/votes/:vidID</code> is a <a href="http://expressjs.com/api.html#app.param" target="_blank" rel="external">handy trick of Express</a> to pass information to the server. The value gets attached to the <code>req.param.vidID</code> property so I can use it when I request specific information from the server. For example if I wanted to query for results from a video ID of 123 I would send a post request to <code>/votes/123</code> and then my <code>req.param.vidID === 123</code>.</p>
+<p>One last trick, in Sequelize when you query the database you get back quite a few more rows than you might expect. When I query my <code>voteTable</code> (the one I only explicitly created three columns for?) I get back something that looks like this monster:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="code"><pre>{ dataValues:
+     { video_id: <span class="string">'7QBgK0_RbkE'</span>, timestamp: <span class="number">2</span>, vote: <span class="number">1</span>, id: <span class="number">192</span>,
+       createdAt: Sun Dec <span class="number">22</span> <span class="number">2013</span> <span class="number">22</span>:<span class="number">19</span>:<span class="number">33</span> GMT-<span class="number">0800</span> (PST),
+       updatedAt: Sun Dec <span class="number">22</span> <span class="number">2013</span> <span class="number">22</span>:<span class="number">19</span>:<span class="number">33</span> GMT-<span class="number">0800</span> (PST) },
+    __options:
+     { timestamps: <span class="literal">true</span>, createdAt: <span class="string">'createdAt'</span>, updatedAt: <span class="string">'updatedAt'</span>,
+       deletedAt: <span class="string">'deletedAt'</span>, touchedAt: <span class="string">'touchedAt'</span>, instanceMethods: {}, classMethods: {},
+       validate: {}, freezeTableName: <span class="literal">false</span>, underscored: <span class="literal">false</span>, syncOnAssociation: <span class="literal">true</span>,
+       paranoid: <span class="literal">false</span>, whereCollection: [<span class="built_in">Object</span>], schema: <span class="literal">null</span>, schemaDelimiter: <span class="string">''</span>,
+       language: <span class="string">'en'</span>, defaultScope: <span class="literal">null</span>, scopes: <span class="literal">null</span>, hooks: [<span class="built_in">Object</span>], omitNull: <span class="literal">false</span>,
+       hasPrimaryKeys: <span class="literal">false</span> },
+    hasPrimaryKeys: <span class="literal">false</span>,
+    selectedValues:
+     { video_id: <span class="string">'7QBgK0_RbkE'</span>, timestamp: <span class="number">2</span>, vote: <span class="number">1</span>, id: <span class="number">192</span>,
+       createdAt: Sun Dec <span class="number">22</span> <span class="number">2013</span> <span class="number">22</span>:<span class="number">19</span>:<span class="number">33</span> GMT-<span class="number">0800</span> (PST),
+       updatedAt: Sun Dec <span class="number">22</span> <span class="number">2013</span> <span class="number">22</span>:<span class="number">19</span>:<span class="number">33</span> GMT-<span class="number">0800</span> (PST) },
+    __eagerlyLoadedAssociations: [],
+    isDirty: <span class="literal">false</span>,
+    isNewRecord: <span class="literal">false</span>,
+    daoFactoryName: <span class="string">'votes'</span>,
+    daoFactory:
+     { options: [<span class="built_in">Object</span>], name: <span class="string">'votes'</span>, tableName: <span class="string">'votes'</span>, rawAttributes: [<span class="built_in">Object</span>],
+       daoFactoryManager: [<span class="built_in">Object</span>], associations: {}, scopeObj: {}, primaryKeys: {},
+       primaryKeyCount: <span class="number">0</span>, hasPrimaryKeys: <span class="literal">false</span>, autoIncrementField: <span class="string">'id'</span>, DAO: [<span class="built_in">Object</span>] }
+ }
+</pre></td></tr></table></figure>
+
+<p>And that’s just <strong>ONE</strong> entry in the database! To fix that add an option to your sequelize query: <code>{raw: true}</code> so the query would look like:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>voteTable.findAll(query, {raw: <span class="literal">true</span>})
+</pre></td></tr></table></figure>
+
+<p>And one entry of output would be:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre>{ video_id: <span class="string">'T-D1KVIuvjA'</span>,
+  timestamp: <span class="number">2</span>,
+  vote: <span class="number">1</span>,
+  id: <span class="number">1</span>,
+  createdAt: Sat Dec <span class="number">21</span> <span class="number">2013</span> <span class="number">14</span>:<span class="number">55</span>:<span class="number">42</span> GMT-<span class="number">0800</span> (PST),
+  updatedAt: Sat Dec <span class="number">21</span> <span class="number">2013</span> <span class="number">14</span>:<span class="number">55</span>:<span class="number">42</span> GMT-<span class="number">0800</span> (PST) }
+</pre></td></tr></table></figure>
+
+<p>That is enough database tricks for today. If you want to just stare at my code for a while to create &amp; retrieve votes from our database you can find <a href="https://gist.github.com/leaena/8174127" target="_blank" rel="external">my gist here</a> (with sanitized login info for the db_config). The real (still being modded by the team) code is <a href="https://github.com/leaena/videoheatmap" target="_blank" rel="external">forked on my GitHub</a>. I have a few more of these in the works from my adventures slinging code and I hope to post a few more before Hack Reactor starts back up and I lose all free time again.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../categories/Tech-Tips">Tech Tips</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../express">express</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../javascript">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../sequelize">sequelize</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-5-serving-up-a-new-outlook" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/12/week-5-serving-up-a-new-outlook/" class="article-date">
+  <time datetime="2013-12-13T01:25:30.000Z" itemprop="datePublished">Dec 12 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/12/week-5-serving-up-a-new-outlook/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/12/week-5-serving-up-a-new-outlook/">Week 5: Serving Up a New Outlook</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>If I didn’t know me better I’d say I was a little manic this week compared to last. This week I was cold, tired and hungry most of the time. I had my ups, down and whiny moments. My credit card was blocked because apparently the soda machine in the mall is shady to my bank. It was a quick fix, until my Clipper Card (the way I pay for my train - which I take every day, twice a day) ended up being blocked because it had tried to autoload cash during the 3 hour window of downtime on my credit card. It takes up to a week to reprocess so I’m forced to buy crappy little paper tickets and not use the $30 I already had stored on my train card. I ended up buying a coat and neon pink gloves just to make me happy (and warmer). Allow me to be a woman for a moment and do a bit of style blogging:</p>
+<p><img src="http://res.cloudinary.com/leaena/image/upload/v1391709357/Screen-Shot-2013-12-14-at-11_08_37-PM_c6t4au.png" alt="Style blogging grey jacket"></p>
+<p>I obviously didn’t spend all my time buying cheap, warm clothing though. I spent most of my time in class having moments of excitement followed by moments of wanting to crawl under a desk and take a nap. I’m not sure what I’d do without the upcoming Christmas break, but it wouldn’t be pretty. What I will say instead is that I may have found my niche in programming.</p>
+<p>This week was all about ‘backend’ which means pretty much what it sounds like. It’s a lot of the behind the scenes decisions that have to happen to decide what page you’re looking for and what data to put there. We did more <a href="http://www.nodejs.org/" target="_blank" rel="external">Node.js</a> servering and powered through different types of databases and how to hook them in and beat them into a format we can use well enough with our front-end JavaScripting (the answer is JSON, for the viewers at home). Finally, when I thought I couldn’t take any more (and I was half right), we started on <a href="http://angularjs.org/" target="_blank" rel="external">Angular</a>, another MV* framework like <a href="http://backbonejs.org/" target="_blank" rel="external">Backbone.js</a>, but with some magic and some sleight of hand that allows you to do most of the work directly on the HTML.</p>
+<p>I lurve the backend. I really find page routing and JSON calls and database building/retrieving from to be super interesting. It almost feels like a tangible thing where the app over the top is just a pretty cover for the awesomeness that makes it all happen.</p>
+<p>We start our lives as Software Engineers next week - a short two-day solo project sprint followed by the start of our first group project. I’m super excited to have a bit more freedom. I’m also terrified of working on my own and having it crash and burn. I really hope excitement wins out.</p>
+<p>After the solo project I hope I can write-up a bit about my experiences and show off my (crappy?) solo app.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../categories/HackReactor">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../angular">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../clipperfail">clipperfail</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../database">database</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../girl-power">girl power</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="">nodejs</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-week-4-losing-power" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/12/week-4-losing-power/" class="article-date">
+  <time datetime="2013-12-08T06:41:23.000Z" itemprop="datePublished">Dec 7 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/12/week-4-losing-power/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/12/week-4-losing-power/">Week 4: Losing Power</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Another roller coaster week. Worst points: Someone took my laptop charger while I was in lecture, my week 3 assessment was not my finest point, and I miss my cats something desperately. Best points: I worked with my two favorite pair-partners again because I couldn’t handle this week otherwise, I had an awesome girl’s lunch today with 4/5ths of the junior class women (there are 5 of us total), and I made a <a href="http://nodejs.org/" target="_blank" rel="external">node.js</a> server!</p>
+<p>So I definitely felt my first crazy/not enough sleep/irrational emotions. When my power cord was jacked a couple of days ago I was <em>devastated</em>. In retrospect, I think I’m a little tired and cranky and, like I said previously, I am in desperate need of some kitty cuddle time. I’ve  been in California now for over a month and I still love it, but it’s definitely getting more difficult. There are times I wish I could just zen out and I only really get that on the trains or at midnight in the dark when I should be sleeping so I can wake up and do it all again the next morning at 6am to catch my train.</p>
+<p>I have never been more excited/motivated to get up in the morning in my life and I can’t get to sleep at night because code and other things are running through my head and along the way something had to give. I’ve discovered that when something has to give it’s my emotional stability. My actual sprints were amazeballs, especially since I had awesome pairs (Sara and Andy, respectively) for my Backbone and Node.js sprints. But in my quiet moments or while I was working solo the doubt and sadness came back.</p>
+<p>So I did what I always do when I’m sad - I talked to my parents, <strong>a lot</strong>. I called them while waiting for the train, I called them sitting on the couch in the Hack Reactor lobby during lunch, and I called them while I drove home at 9pm every night. My dad especially is awesome at making me feel better. He’s always so proud of me and he’s always  interested in what I’m doing. It’s hard sometimes here, but I have an amazing support system both in Oregon and here. My platonic life partner Ava and her husband John have been my rocks in more ways than one. My new awesome friends at Hack Reactor, especially the ladies of the Nov ‘13 cohort have been awesome to get to know. And I know all my family, friend, and former coworkers back in Oregon love me and miss me as much or more than I love and miss them.</p>
+<p>Thinking about it and even writing about it has helped as well. Getting it off my chest makes it so I can breathe again. So I guess I just want to say, I love you all. Thank you for dealing with me! I really am happy even if I didn’t sound it sometimes this week. If I don’t just sleep all of tomorrow/spend my day in San Jose with other awesome people I love to pieces, I’m going to try to post a non-emotional/tired/whiny post, but honestly, I want to keep this blog real. For me as well as for you and this what has dominated my brain this week.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../categories/HackReactor">HackReactor</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../backbonejs">backbonejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../confessions">confessions</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../javascript">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="">nodejs</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:leaena.github.io">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2014 Lindsey Smith<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'leaena';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="../../js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>

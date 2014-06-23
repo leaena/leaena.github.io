@@ -1,1 +1,210 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="author" content="Lindsey Smith"><meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a software engineering bootcamp. Now I blog a mixture of programming, women in tech, life, and cats."><title>Archive&mdash;Leaena.com</title><link href="/favicon.png" rel="icon"><link rel="alternate" href="/atom.xml" title="config.title" type="application/atom.xml"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet"><link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/stylesheets/app.css"></head><body><header id="page-header"><div id="masthead"><h1 id="site-title"><a href="/">Leaena.com</a></h1><p id="site-slogan">Coding, cats, California, feminism, and zombies. Your average girl blogger.</p></div></header><section id="content"><header><h2>Archive</h2></header><ul class="article-list"><li><article><h3><a href="/2014/01/web-scraping-science/">Custom Ap Is and Web Scraping for Science</a></h3><div class="meta">Jan 31 2014 in <a href="/categories/Tech-Tips/">Tech Tips</a>&ensp;</div></article></li><li><article><h3><a href="/2013/10/lindsey-learns-apis/">Lindsey Learns Ap Is</a></h3><div class="meta">Oct 23 2013 in <a href="/categories/Programming/">Programming</a>&ensp;</div></article></li></ul></section><footer id="page-footer"><section><nav id="footer-menu"><ul><li><a href="/about">About</a></li><li><a href="/archives">Archive</a></li><li><a href="http://github.com/leaena/leaena.github.io">Source</a></li><li><a href="/atom.xml">Feed</a></li></ul></nav></section></footer></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Tag: API | Leaena.com</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Leaena.com">
+<meta property="og:url" content="http://leaena.github.io/tags/API/">
+<meta property="og:site_name" content="Leaena.com">
+<meta property="og:description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Leaena.com">
+<meta name="twitter:description" content="My name is Lindsey and I work as a full stack software engineer, currently getting my hands dirty with Python and JavaScript at Udacity. I wrote pretty frequently about my time at Hack Reactor, a soft">
+  
+    <link rel="alternative" href="/atom.xml" title="Leaena.com" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="../../css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://leaena.github.io"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="post-web-scraping-science" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/01/web-scraping-science/" class="article-date">
+  <time datetime="2014-01-31T23:16:49.000Z" itemprop="datePublished">Jan 31 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2014/01/web-scraping-science/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/01/web-scraping-science/">Custom APIs and Web Scraping for Science</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>So my team’s most recent application, Helix, involved genome visualization. We integrated it with the <a href="http://23andme.com" target="_blank" rel="external">23andme</a> API, but still needed a way to find out interesting information about specific RSIDs (used by researchers and databases to refer to specific base pairs of DNA). By far the most useful and open source repository of genetic information is <a href="http://snpedia.org" target="_blank" rel="external">SNPedia</a>, but I needed access to lots of information and to integrate calls to specific SNPs. Basically I needed an API. So being ever resourceful, I decided to make my own.</p>
+<p>Tools for the task were an easy choice. I needed a small fast server that I could implement a web scrapper on. I have always wanted a reason to use <a href="http://www.crummy.com/software/BeautifulSoup/" target="_blank" rel="external">BeautifulSoup</a>, but it’s a Python library so I knew it would be easier to build a Python server to run the API endpoints. I chose <a href="http://flask.pocoo.org/" target="_blank" rel="external">Flask</a> because of its lightweight nature and how much it reminds me of a Node/Express server at times.</p>
+<p>Thankfully there are some really good tutorials for both Flask and BeautifulSoup, my favorites (and the ones I referenced when I hit weirdness) were <a href="http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask" target="_blank" rel="external">Designing a RESTful API</a> and <a href="http://www.briancarpio.com/2012/12/02/website-scraping-with-python-and-beautiful-soup/" target="_blank" rel="external">Website Scraping with BeautifulSoup</a>. Both of these tutorials said a lot of things better than I could have myself.</p>
+<p>For access to my SNPedia API and information on how to use it, <a href="https://github.com/leaena/snp-api" target="_blank" rel="external">check out my project on GitHub</a>.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../categories/Tech-Tips">Tech Tips</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="">API</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../BeautifulSoup">BeautifulSoup</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../DNA">DNA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../SNP">SNP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../flask">flask</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../python">python</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-lindsey-learns-apis" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2013/10/lindsey-learns-apis/" class="article-date">
+  <time datetime="2013-10-23T20:14:23.000Z" itemprop="datePublished">Oct 23 2013</time>
+</a>
+		</span>
+		<span class="meta-elements author">Lindsey Smith</span>
+		<div class="commentscount">
+			
+				<a href="http://leaena.github.io/2013/10/lindsey-learns-apis/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2013/10/lindsey-learns-apis/">Lindsey Learns APIs</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Starting this countdown to California/Hack Reactor has brought back my love of learning in ways that online classes couldn’t do. I love to learn. I’m the kind of girl that if I don’t know the answer to your question (<a href="http://www.wisegeek.com/what-are-inchworms.htm" target="_blank" rel="external">“Are inch worms an inch long?”</a> - bad example as I do know that they get their name from the way they “inch” forward, but still), I will stop the conversation immediately, whip out my phone and find you the answer. I’m sure I’ve pissed off friends and relatives, but I think they are used to me by now. It’s something that I just <em>have</em> to do. Some people will make up things or say “who cares”, but I really want to get down to the truth, learn a new bit of trivia, something.</p>
+<p>So now that I’m learning more things I keep coming up with questions. Like suddenly the veil has been lifted and JSON isn’t this mythical acronym but something I can actually parse and use. But my brain of course took it a step further. APIs are similar, right? - said my brain. But what exactly <em>are</em> they? I’ve pulled data out of one but it was very hand-holdy. How does that data even get there? How does an app get an API? To Google, my friends.</p>
+<p>According to <a href="http://apievangelist.com/" target="_blank" rel="external">API Evangelist</a>, APIs are tools individuals can use to access companies’/individual apps’ data and functions. They allow external users to access internal info safely. There’s _lots_of stuff on this page though and my eyes kinda glazed over about half a page down. Time for a new track.</p>
+<p>I learn better by doing so maybe make our own little API? Unsurprisingly, the internet has us covered. Let’s <a href="http://blog.andreaolivato.net/programming/create-your-first-api-set-in-php.html" target="_blank" rel="external">Create your first API</a>. This is in PHP and very straightforward. But if you’re like me, you may want something in our own favorite web app language: JavaScript! So let’s go ahead and try <a href="http://coenraets.org/blog/2012/10/creating-a-rest-api-using-node-js-express-and-mongodb/" target="_blank" rel="external">Creating a REST API Using Node.js</a>.</p>
+<p>Obviously I’ve only just scratched the surface of this stuff but I want to try and play around with this and more in my last two weeks of down time. One last link for good measure: <a href="http://lcsd05.cs.tamu.edu/slides/keynote.pdf" target="_blank" rel="external">How to Design a Good API</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="../../categories/Programming">Programming</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="">API</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:leaena.github.io">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">Leaena.com</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2014 Lindsey Smith<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'leaena';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="../../js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>
